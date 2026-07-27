@@ -1,26 +1,169 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Base palette — from color-palette-kkn */
+    --green-700: #2E7D32;
+    --green-800: #256428;
+    --green-400: #66BB6A;
+    --green-300: #85CB88;
+    --green-100: #E3F1E3;
+
+    --navy-700: #0B4F7A;
+    --navy-800: #093F61;
+    --navy-100: #E0EDF6;
+
+    --sky-400: #4DA6E1;
+    --sky-500: #2E90D4;
+    --sky-100: #E4F1FA;
+
+    --amber-400: #F8B51F;
+    --amber-500: #E3A00A;
+    --amber-100: #FDF0D3;
+
+    --paper: #F7F9F2;
+
+    --neutral-0: #FFFFFF;
+    --neutral-50: #F7F9F2;
+    --neutral-100: #EDF1E8;
+    --neutral-200: #DCE3D8;
+    --neutral-300: #C2CCBE;
+    --neutral-500: #79857B;
+    --neutral-600: #5A665D;
+    --neutral-800: #2A342D;
+    --neutral-900: #14201A;
+
+    --surface-page: var(--neutral-50);
+    --surface-card: var(--neutral-0);
+    --surface-sunken: var(--neutral-100);
+    --surface-inverse: var(--neutral-900);
+
+    --text-primary: var(--neutral-900);
+    --text-secondary: var(--neutral-600);
+    --text-inverse: var(--neutral-50);
+    --text-on-brand: #FFFFFF;
+
+    --brand-primary: var(--green-700);
+    --brand-primary-hover: var(--green-800);
+    --brand-secondary: var(--navy-700);
+    --brand-secondary-hover: var(--navy-800);
+
+    --accent: var(--amber-400);
+    --accent-hover: var(--amber-500);
+    --info: var(--sky-400);
+
+    --tint-brand: var(--green-100);
+    --tint-info: var(--sky-100);
+    --tint-accent: var(--amber-100);
+
+    --link: var(--navy-700);
+    --link-hover: var(--navy-800);
+
+    --border: var(--neutral-200);
+    --border-strong: var(--neutral-300);
+    --focus-ring: var(--sky-400);
+
+    --scrim: linear-gradient(180deg, rgba(10, 22, 15, 0) 40%, rgba(10, 22, 15, 0.78) 100%);
+
+    --radius-xs: 2px;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-pill: 999px;
+
+    --container: 1200px;
+    --gutter: 24px;
+
+    --shadow-card: 0 1px 2px rgba(20,32,26,.06), 0 4px 12px rgba(20,32,26,.06);
+    --shadow-raised: 0 2px 4px rgba(20,32,26,.08), 0 12px 32px rgba(20,32,26,.14);
+    --shadow-overlay: 0 8px 16px rgba(20,32,26,.16), 0 24px 64px rgba(20,32,26,.24);
+
+    --ease-out: cubic-bezier(.22,.61,.36,1);
+    --dur-fast: 150ms;
+    --dur-med: 280ms;
+  }
+
+  [data-theme="dark"] {
+    --surface-page: #0F1613;
+    --surface-card: #18221C;
+    --surface-sunken: #0B110E;
+    --surface-inverse: var(--neutral-50);
+
+    --text-primary: #F0F4EC;
+    --text-secondary: #9BA89D;
+    --text-inverse: var(--neutral-900);
+    --text-on-brand: #0F1613;
+
+    --brand-primary: var(--green-400);
+    --brand-primary-hover: var(--green-300);
+    --brand-secondary: var(--sky-400);
+    --brand-secondary-hover: #6FB9E9;
+
+    --accent: var(--amber-400);
+    --accent-hover: #FFC443;
+    --info: var(--sky-400);
+
+    --tint-brand: #1C2E20;
+    --tint-info: #142633;
+    --tint-accent: #33290F;
+
+    --link: #7FBEE8;
+    --link-hover: #A3D1F0;
+
+    --border: #2A362E;
+    --border-strong: #3B4A40;
+    --focus-ring: var(--sky-400);
+
+    --scrim: linear-gradient(180deg, rgba(5, 10, 7, 0) 40%, rgba(5, 10, 7, 0.85) 100%);
+
+    --shadow-card: 0 1px 2px rgba(0,0,0,.4), 0 4px 12px rgba(0,0,0,.35);
+    --shadow-raised: 0 2px 4px rgba(0,0,0,.45), 0 12px 32px rgba(0,0,0,.5);
+    --shadow-overlay: 0 8px 16px rgba(0,0,0,.5), 0 24px 64px rgba(0,0,0,.6);
+  }
+
+  body {
+    background-color: var(--surface-page);
+    color: var(--text-primary);
+    font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Custom Animation Utility Classes */
+@keyframes sgpFade {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes sgpSlideInR {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes sgpBackdrop {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes sgpDrop {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-sgp-fade {
+  animation: sgpFade 0.45s cubic-bezier(.22,.61,.36,1) forwards;
+}
+
+.animate-sgp-slide-in {
+  animation: sgpSlideInR 0.3s cubic-bezier(.22,.61,.36,1) forwards;
+}
+
+.animate-sgp-backdrop {
+  animation: sgpBackdrop 0.25s cubic-bezier(.22,.61,.36,1) forwards;
+}
+
+.animate-sgp-drop {
+  animation: sgpDrop 0.22s cubic-bezier(.22,.61,.36,1) forwards;
 }

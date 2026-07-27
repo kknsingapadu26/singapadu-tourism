@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="3fcf63af-dd6c-4b15-be2f-33bbceade3cf"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Singapadu — Village tourism</title>
+<style>/* No brand font binaries were provided. Archivo (Google Fonts) stands in for the
+   Helvetica/Univers grotesque used by the MySwitzerland.com reference. */
+/* vietnamese */
+@font-face {
+  font-family: 'Archivo';
+  font-style: italic;
+  font-weight: 400 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("56c6ea27-8ea1-4222-a10f-4d7cc24bfdc7") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Archivo';
+  font-style: italic;
+  font-weight: 400 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("f7be9404-26cf-494f-b7f9-49b52ab46891") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: italic;
+  font-weight: 400 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("dfeac375-e2d4-412e-8276-12a0a86c44af") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 400 900;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("829e7ad1-630d-485b-82b2-aba4ae2dc13b") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 400 900;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("21749040-a731-415b-9d0a-f102adefed88") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 400 900;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("a378d237-84b9-4960-8909-898c429f19a7") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+</style>
+<style>:root{
+/* Base palette — from color-palette-kkn.jpeg */
+--green-700:#2E7D32;--green-800:#256428;--green-400:#66BB6A;--green-300:#85CB88;--green-100:#E3F1E3;
+--navy-700:#0B4F7A;--navy-800:#093F61;--navy-100:#E0EDF6;
+--sky-400:#4DA6E1;--sky-500:#2E90D4;--sky-100:#E4F1FA;
+--amber-400:#F8B51F;--amber-500:#E3A00A;--amber-100:#FDF0D3;
+--paper:#F7F9F2;
+/* Neutrals — green-cast greys derived in oklch from the paper tone */
+--neutral-0:#FFFFFF;--neutral-50:#F7F9F2;--neutral-100:#EDF1E8;--neutral-200:#DCE3D8;--neutral-300:#C2CCBE;--neutral-500:#79857B;--neutral-600:#5A665D;--neutral-800:#2A342D;--neutral-900:#14201A;
+/* Semantic — light (default) */
+--surface-page:var(--neutral-50);--surface-card:var(--neutral-0);--surface-sunken:var(--neutral-100);--surface-inverse:var(--neutral-900);
+--text-primary:var(--neutral-900);--text-secondary:var(--neutral-600);--text-inverse:var(--neutral-50);--text-on-brand:#FFFFFF;
+--brand-primary:var(--green-700);--brand-primary-hover:var(--green-800);--brand-secondary:var(--navy-700);--brand-secondary-hover:var(--navy-800);
+--accent:var(--amber-400);--accent-hover:var(--amber-500);--info:var(--sky-400);
+--tint-brand:var(--green-100);--tint-info:var(--sky-100);--tint-accent:var(--amber-100);
+--link:var(--navy-700);--link-hover:var(--navy-800);
+--border:var(--neutral-200);--border-strong:var(--neutral-300);--focus-ring:var(--sky-400);
+--scrim:linear-gradient(180deg,rgba(10,22,15,0) 40%,rgba(10,22,15,.78) 100%);/* @kind other */
+--success:var(--green-700);--warning:var(--amber-500);--danger:#B3402E;
+}
+[data-theme="dark"]{
+--surface-page:#0F1613;--surface-card:#18221C;--surface-sunken:#0B110E;--surface-inverse:var(--neutral-50);
+--text-primary:#F0F4EC;--text-secondary:#9BA89D;--text-inverse:var(--neutral-900);--text-on-brand:#0F1613;
+--brand-primary:var(--green-400);--brand-primary-hover:var(--green-300);--brand-secondary:var(--sky-400);--brand-secondary-hover:#6FB9E9;
+--accent:var(--amber-400);--accent-hover:#FFC443;--info:var(--sky-400);
+--tint-brand:#1C2E20;--tint-info:#142633;--tint-accent:#33290F;
+--link:#7FBEE8;--link-hover:#A3D1F0;
+--border:#2A362E;--border-strong:#3B4A40;--focus-ring:var(--sky-400);
+--scrim:linear-gradient(180deg,rgba(5,10,7,0) 40%,rgba(5,10,7,.85) 100%);/* @kind other */
+--success:var(--green-400);--warning:var(--amber-400);--danger:#E0705C;
+}
+</style>
+<style>:root{
+--font-display:'Archivo',Helvetica,Arial,sans-serif;
+--font-body:'Archivo',Helvetica,Arial,sans-serif;
+/* Scale — Swiss-flat, big bold display, tight leading up top */
+--text-hero:clamp(44px,6vw,76px);--text-h1:44px;--text-h2:32px;--text-h3:24px;--text-h4:19px;
+--text-body-lg:18px;--text-body:16px;--text-sm:14px;--text-xs:12px;
+--weight-display:800;--weight-heading:700;--weight-medium:600;--weight-body:400;
+--leading-display:1.02;--leading-heading:1.15;--leading-body:1.6;
+--tracking-display:-0.02em;--tracking-heading:-0.01em;--tracking-caps:0.08em;
+}
+body{font-family:var(--font-body);font-size:var(--text-body);line-height:var(--leading-body);color:var(--text-primary);background:var(--surface-page);margin:0;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:var(--font-display);color:var(--text-primary);margin:0}
+h1{font-size:var(--text-h1);font-weight:var(--weight-display);line-height:var(--leading-display);letter-spacing:var(--tracking-display)}
+h2{font-size:var(--text-h2);font-weight:var(--weight-display);line-height:var(--leading-heading);letter-spacing:var(--tracking-display)}
+h3{font-size:var(--text-h3);font-weight:var(--weight-heading);line-height:var(--leading-heading);letter-spacing:var(--tracking-heading)}
+h4{font-size:var(--text-h4);font-weight:var(--weight-heading);line-height:var(--leading-heading)}
+p{margin:0;text-wrap:pretty}
+a{color:var(--link);text-decoration:none}
+a:hover{color:var(--link-hover);text-decoration:underline;text-underline-offset:3px}
+.eyebrow{font-size:var(--text-xs);font-weight:var(--weight-heading);letter-spacing:var(--tracking-caps);text-transform:uppercase;color:var(--brand-primary)}
+</style>
+<style>:root{
+--space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-5:24px;--space-6:32px;--space-7:48px;--space-8:64px;--space-9:96px;--space-10:128px;
+--radius-xs:2px;--radius-sm:4px;--radius-md:8px;--radius-lg:12px;--radius-pill:999px;
+--container:1200px;--gutter:var(--space-5);
+--shadow-card:0 1px 2px rgba(20,32,26,.06),0 4px 12px rgba(20,32,26,.06);
+--shadow-raised:0 2px 4px rgba(20,32,26,.08),0 12px 32px rgba(20,32,26,.14);
+--shadow-overlay:0 8px 16px rgba(20,32,26,.16),0 24px 64px rgba(20,32,26,.24);
+--ease-out:cubic-bezier(.22,.61,.36,1);/* @kind other */--dur-fast:150ms;/* @kind other */--dur-med:280ms;/* @kind other */
+}
+[data-theme="dark"]{
+--shadow-card:0 1px 2px rgba(0,0,0,.4),0 4px 12px rgba(0,0,0,.35);
+--shadow-raised:0 2px 4px rgba(0,0,0,.45),0 12px 32px rgba(0,0,0,.5);
+--shadow-overlay:0 8px 16px rgba(0,0,0,.5),0 24px 64px rgba(0,0,0,.6);
+}
+</style>
+<style>/* No brand font binaries were provided. Archivo (Google Fonts) stands in for the
+   Helvetica/Univers grotesque used by the MySwitzerland.com reference. */
+/* vietnamese */
+@font-face {
+  font-family: 'Archivo';
+  font-style: italic;
+  font-weight: 400 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("56c6ea27-8ea1-4222-a10f-4d7cc24bfdc7") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Archivo';
+  font-style: italic;
+  font-weight: 400 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("f7be9404-26cf-494f-b7f9-49b52ab46891") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: italic;
+  font-weight: 400 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("dfeac375-e2d4-412e-8276-12a0a86c44af") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 400 900;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("829e7ad1-630d-485b-82b2-aba4ae2dc13b") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 400 900;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("21749040-a731-415b-9d0a-f102adefed88") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 400 900;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("a378d237-84b9-4960-8909-898c429f19a7") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+:root{
+/* Base palette — from color-palette-kkn.jpeg */
+--green-700:#2E7D32;--green-800:#256428;--green-400:#66BB6A;--green-300:#85CB88;--green-100:#E3F1E3;
+--navy-700:#0B4F7A;--navy-800:#093F61;--navy-100:#E0EDF6;
+--sky-400:#4DA6E1;--sky-500:#2E90D4;--sky-100:#E4F1FA;
+--amber-400:#F8B51F;--amber-500:#E3A00A;--amber-100:#FDF0D3;
+--paper:#F7F9F2;
+/* Neutrals — green-cast greys derived in oklch from the paper tone */
+--neutral-0:#FFFFFF;--neutral-50:#F7F9F2;--neutral-100:#EDF1E8;--neutral-200:#DCE3D8;--neutral-300:#C2CCBE;--neutral-500:#79857B;--neutral-600:#5A665D;--neutral-800:#2A342D;--neutral-900:#14201A;
+/* Semantic — light (default) */
+--surface-page:var(--neutral-50);--surface-card:var(--neutral-0);--surface-sunken:var(--neutral-100);--surface-inverse:var(--neutral-900);
+--text-primary:var(--neutral-900);--text-secondary:var(--neutral-600);--text-inverse:var(--neutral-50);--text-on-brand:#FFFFFF;
+--brand-primary:var(--green-700);--brand-primary-hover:var(--green-800);--brand-secondary:var(--navy-700);--brand-secondary-hover:var(--navy-800);
+--accent:var(--amber-400);--accent-hover:var(--amber-500);--info:var(--sky-400);
+--tint-brand:var(--green-100);--tint-info:var(--sky-100);--tint-accent:var(--amber-100);
+--link:var(--navy-700);--link-hover:var(--navy-800);
+--border:var(--neutral-200);--border-strong:var(--neutral-300);--focus-ring:var(--sky-400);
+--scrim:linear-gradient(180deg,rgba(10,22,15,0) 40%,rgba(10,22,15,.78) 100%);/* @kind other */
+--success:var(--green-700);--warning:var(--amber-500);--danger:#B3402E;
+}
+[data-theme="dark"]{
+--surface-page:#0F1613;--surface-card:#18221C;--surface-sunken:#0B110E;--surface-inverse:var(--neutral-50);
+--text-primary:#F0F4EC;--text-secondary:#9BA89D;--text-inverse:var(--neutral-900);--text-on-brand:#0F1613;
+--brand-primary:var(--green-400);--brand-primary-hover:var(--green-300);--brand-secondary:var(--sky-400);--brand-secondary-hover:#6FB9E9;
+--accent:var(--amber-400);--accent-hover:#FFC443;--info:var(--sky-400);
+--tint-brand:#1C2E20;--tint-info:#142633;--tint-accent:#33290F;
+--link:#7FBEE8;--link-hover:#A3D1F0;
+--border:#2A362E;--border-strong:#3B4A40;--focus-ring:var(--sky-400);
+--scrim:linear-gradient(180deg,rgba(5,10,7,0) 40%,rgba(5,10,7,.85) 100%);/* @kind other */
+--success:var(--green-400);--warning:var(--amber-400);--danger:#E0705C;
+}
+
+:root{
+--font-display:'Archivo',Helvetica,Arial,sans-serif;
+--font-body:'Archivo',Helvetica,Arial,sans-serif;
+/* Scale — Swiss-flat, big bold display, tight leading up top */
+--text-hero:clamp(44px,6vw,76px);--text-h1:44px;--text-h2:32px;--text-h3:24px;--text-h4:19px;
+--text-body-lg:18px;--text-body:16px;--text-sm:14px;--text-xs:12px;
+--weight-display:800;--weight-heading:700;--weight-medium:600;--weight-body:400;
+--leading-display:1.02;--leading-heading:1.15;--leading-body:1.6;
+--tracking-display:-0.02em;--tracking-heading:-0.01em;--tracking-caps:0.08em;
+}
+body{font-family:var(--font-body);font-size:var(--text-body);line-height:var(--leading-body);color:var(--text-primary);background:var(--surface-page);margin:0;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:var(--font-display);color:var(--text-primary);margin:0}
+h1{font-size:var(--text-h1);font-weight:var(--weight-display);line-height:var(--leading-display);letter-spacing:var(--tracking-display)}
+h2{font-size:var(--text-h2);font-weight:var(--weight-display);line-height:var(--leading-heading);letter-spacing:var(--tracking-display)}
+h3{font-size:var(--text-h3);font-weight:var(--weight-heading);line-height:var(--leading-heading);letter-spacing:var(--tracking-heading)}
+h4{font-size:var(--text-h4);font-weight:var(--weight-heading);line-height:var(--leading-heading)}
+p{margin:0;text-wrap:pretty}
+a{color:var(--link);text-decoration:none}
+a:hover{color:var(--link-hover);text-decoration:underline;text-underline-offset:3px}
+.eyebrow{font-size:var(--text-xs);font-weight:var(--weight-heading);letter-spacing:var(--tracking-caps);text-transform:uppercase;color:var(--brand-primary)}
+
+:root{
+--space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-5:24px;--space-6:32px;--space-7:48px;--space-8:64px;--space-9:96px;--space-10:128px;
+--radius-xs:2px;--radius-sm:4px;--radius-md:8px;--radius-lg:12px;--radius-pill:999px;
+--container:1200px;--gutter:var(--space-5);
+--shadow-card:0 1px 2px rgba(20,32,26,.06),0 4px 12px rgba(20,32,26,.06);
+--shadow-raised:0 2px 4px rgba(20,32,26,.08),0 12px 32px rgba(20,32,26,.14);
+--shadow-overlay:0 8px 16px rgba(20,32,26,.16),0 24px 64px rgba(20,32,26,.24);
+--ease-out:cubic-bezier(.22,.61,.36,1);/* @kind other */--dur-fast:150ms;/* @kind other */--dur-med:280ms;/* @kind other */
+}
+[data-theme="dark"]{
+--shadow-card:0 1px 2px rgba(0,0,0,.4),0 4px 12px rgba(0,0,0,.35);
+--shadow-raised:0 2px 4px rgba(0,0,0,.45),0 12px 32px rgba(0,0,0,.5);
+--shadow-overlay:0 8px 16px rgba(0,0,0,.5),0 24px 64px rgba(0,0,0,.6);
+}
+
+</style>
+<script src="875aea2c-2a61-4fdb-812e-a94fd7ec24da"></script>
+<script src="af99aa88-a385-422f-8230-4bca196c6b09"></script>
+<style>
+body{margin:0;background:var(--surface-page)}
+a{color:var(--link);box-sizing:border-box}a:hover{color:var(--link-hover)}
+@keyframes sgpFade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes sgpSlideInR{from{transform:translateX(100%)}to{transform:none}}
+@keyframes sgpBackdrop{from{opacity:0}to{opacity:1}}
+@keyframes sgpDrop{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+.sgp-mob{display:none}
+@media (max-width:900px){
+  .sgp-desk{display:none !important}
+  .sgp-mob{display:flex !important}
+  .sgp-g2,.sgp-g3,.sgp-g4{grid-template-columns:1fr !important}
+  .sgp-foot{grid-template-columns:1fr 1fr !important}
+  .sgp-bento{grid-template-columns:repeat(2,1fr) !important;grid-auto-rows:150px !important}
+  .sgp-gal{grid-template-columns:repeat(2,1fr) !important;grid-auto-rows:130px !important}
+  .sgp-galwide{grid-column:span 2 !important}
+  .sgp-hero{height:calc(100svh - 54px) !important;min-height:520px !important}
+  .sgp-ht{font-size:clamp(30px,9vw,44px) !important}
+  .sgp-hsub{font-size:16px !important}
+  .sgp-hcontent{padding-bottom:112px !important}
+  .sgp-hloc{display:none !important}
+  .sgp-thumb{width:92px !important;height:50px !important}
+  .sgp-spotcard{left:16px !important;right:16px !important;bottom:88px !important;max-width:none !important;padding:20px !important}
+  .sgp-ev{flex-wrap:wrap !important}
+  .sgp-aside{position:static !important}
+  h1{font-size:clamp(30px,8vw,42px)}
+}
+@media (max-width:420px){
+  body{--gutter:16px}
+  .sgp-foot{grid-template-columns:1fr !important}
+  .sgp-evdate{width:84px !important}
+  .sgp-bento{grid-auto-rows:132px !important}
+}
+</style>
+</helmet>
+<div style="min-height:100vh;background:var(--surface-page);position:relative">
+  <div class="sgp-desk" style="position:fixed;top:0;left:0;right:0;z-index:70;transform:translateY({{ navY }});transition:transform 0.35s var(--ease-out);background:{{ navBg }};box-shadow:{{ navShadow }}">
+    <div style="background:var(--surface-card);border-bottom:1px solid var(--border)">
+    <div style="max-width:var(--container);margin:0 auto;padding:0 var(--gutter);height:40px;display:flex;align-items:center;gap:16px">
+      <span style="font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;font-weight:600;color:var(--text-secondary);white-space:nowrap">Desa Singapadu · Gianyar, Bali</span>
+      <div style="margin-left:auto;display:flex;align-items:center;gap:8px">
+        <button sc-camel-on-click="{{ setEn }}" style="{{ enBtnStyle }}">EN</button>
+        <button sc-camel-on-click="{{ setId }}" style="{{ idBtnStyle }}">ID</button>
+        <span style="width:1px;height:18px;background:var(--border-strong);margin:0 4px"></span>
+        <x-import component-from-global-scope="SingapaduTourismDesignSystem_660351.ThemeToggle" on-change="{{ persistTheme }}" hint-size="36px,36px"></x-import>
+      </div>
+    </div>
+    </div>
+    <div style="position:relative;height:72px">
+      <x-import component-from-global-scope="SingapaduTourismDesignSystem_660351.SiteHeader" transparent="{{ navTransparent }}" links="{{ navLinks }}" active="{{ activeNav }}" on-navigate="{{ navigate }}" hint-size="100%,72px"></x-import>
+    </div>
+  </div>
+
+  <div class="sgp-mob" style="position:sticky;top:0;z-index:60;align-items:center;justify-content:space-between;background:var(--surface-card);border-bottom:1px solid var(--border);padding:8px 16px;transform:translateY({{ navY }});transition:transform 0.3s var(--ease-out)">
+    <a href="#" sc-camel-on-click="{{ goHome }}" style="display:flex;align-items:center;gap:10px;text-decoration:none">
+      <img src="0d18d6b3-cec5-41e9-97f5-28c103119f1c" alt="Singapadu Tourism" style="width:38px;height:38px;object-fit:contain">
+      <span style="display:flex;flex-direction:column;line-height:1.1">
+        <span style="font-family:var(--font-display);font-weight:800;font-size:17px;color:var(--text-primary)">Singapadu</span>
+        <span style="font-size:9.5px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-secondary)">Village tourism</span>
+      </span>
+    </a>
+    <button sc-camel-on-click="{{ openMenu }}" aria-label="Menu" style="width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:none;cursor:pointer;color:var(--text-primary)">
+      <x-import component-from-global-scope="SingapaduTourismDesignSystem_660351.Icon" name="menu" size="{{ n24 }}" hint-size="24px,24px"></x-import>
+    </button>
+  </div>
+
+  <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+    <div class="sgp-mob" sc-camel-on-click="{{ closeMenu }}" style="position:fixed;inset:0;z-index:999;background:rgba(8,14,10,0.55);animation:sgpBackdrop 0.25s var(--ease-out) both"></div>
+    <div class="sgp-mob" data-screen-label="Mobile menu" style="position:fixed;top:0;right:0;bottom:0;width:min(400px,88vw);z-index:1000;flex-direction:column;background:#0F2A13;overflow-y:auto;box-shadow:var(--shadow-overlay);animation:sgpSlideInR 0.3s var(--ease-out) both">
+      <div style="display:flex;align-items:center;gap:12px;background:#3C8F41;padding:14px 20px">
+        <img src="0d18d6b3-cec5-41e9-97f5-28c103119f1c" alt="" style="width:36px;height:36px;object-fit:contain">
+        <span style="font-family:var(--font-display);font-weight:800;font-size:20px;color:#fff">Singapadu</span>
+        <button sc-camel-on-click="{{ closeMenu }}" aria-label="Close" style="margin-left:auto;width:42px;height:42px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.16);border:none;border-radius:var(--radius-sm);cursor:pointer">
+          <x-import component-from-global-scope="SingapaduTourismDesignSystem_660351.Icon" name="x" size="{{ n22 }}" color="#fff" hint-size="22px,22px"></x-import>
+        </button>
+      </div>
+      <button sc-camel-on-click="{{ mGoHome }}" style="display:block;width:100%;text-align:left;background:#2E7D32;border:none;padding:20px 22px;cursor:pointer;font-family:var(--font-display);font-weight:800;font-size:25px;color:#fff">{{ t.nav.home }}</button>
+      <button sc-camel-on-click="{{ toggleMDest }}" style="display:flex;align-items:center;justify-content:space-between;width:100%;text-align:left;background:#27682B;border:none;padding:20px 22px;cursor:pointer;font-family:var(--font-display);font-weight:800;font-size:25px;color:#fff">
+        <span>{{ t.nav.destinations }}</span>
+        <span style="{{ mChevStyle }}"><x-import component-from-global-scope="SingapaduTourismDesignSystem_660351.Icon" name="chevron-right" size="{{ n24 }}" color="#fff" hint-size="24px,24px"></x-import></span>
+      </button>
+      <sc-if value="{{ mDestOpen }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex;flex-direction:column;background:#1E5522;animation:sgpDrop 0.22s var(--ease-out) both">
+          <sc-for list="{{ drawerDests }}" as="d" hint-placeholder-count="6">
+            <button sc-camel-on-click="{{ d.go }}" style="display:block;width:100%;text-align:left;background:none;border:none;border-top:1px solid rgba(255,255,255,0.08);padding:13px 22px 13px 34px;cursor:pointer;font-family:var(--font-body);font-size:16px;font-weight:600;color:rgba(255,255,255,0.92)">{{ d.title }}</button>
+          </sc-for>
+          <button sc-camel-on-click="{{ mGoDests }}" style="display:block;width:100%;text-align:left;background:none;border:none;border-top:1px solid rgba(255,255,255,0.08);padding:13px 22px 15px 34px;cursor:pointer;font-family:var(--font-body);font-size:16px;font-weight:700;color:var(--accent)">{{ t.menu.all }} →</button>
+        </div>
+      </sc-if>
+      <button sc-camel-on-click="{{ mGoEvents }}" style="display:block;width:100%;text-align:left;background:#215726;border:none;padding:20px 22px;cursor:pointer;font-family:var(--font-display);font-weight:800;font-size:25px;color:#fff">{{ t.nav.events }}</button>
+      <button sc-camel-on-click="{{ mGoAbout }}" style="display:block;width:100%;text-align:left;background:#1B471F;border:none;padding:20px 22px;cursor:pointer;font-family:var(--font-display);font-weight:800;font-size:25px;color:#fff">{{ t.nav.about }}</button>
+      <div style="flex:1;display:flex;flex-direction:column;gap:22px;background:#143619;padding:24px 22px 20px">
+        <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-start">
+          <span style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.65)">{{ t.menu.lang }}</span>
+          <div style="display:flex;gap:10px">
+            <button sc-camel-on-click="{{ setEn }}" style="{{ mEnStyle }}">EN</button>
+            <button sc-camel-on-click="{{ setId }}" style="{{ mIdStyle }}">ID</button>
+          </div>
+        </div>
+        <button sc-camel-on-click="{{ toggleTheme }}" style="display:flex;align-items:center;gap:12px;background:none;border:none;padding:0;cursor:pointer">
+          <span style="{{ mThemeTrack }}"><span style="{{ mThemeKnob }}"></span></span>
+          <span style="color:#fff;font-size:15px;font-weight:600;font-family:var(--font-body)">{{ t.menu.theme }}</span>
+        </button>
+        <div style="margin-top:auto;display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          <a href="{{ aboutMapLink }}" target="_blank" rel="noopener" style="display:flex;flex-direction:column;align-items:center;gap:8px;background:rgba(255,255,255,0.1);border-radius:var(--radius-sm);padding:16px 10px;text-decoration:none" style-hover="background:rgba(255,255,255,0.18)">
+            <x-import component-from-global-scope="SingapaduTourismDesignSystem_660351.Icon" name="map" size="{{ n22 }}" color="#fff" hint-size="22px,22px"></x-import>
+            <span style="font-size:13px;font-weight:700;color:#fff">{{ t.menu.map }}</span>
+          </a>
+          <a href="{{ waVillage }}" style="display:flex;flex-direction:column;align-items:center;gap:8px;background:rgba(255,255,255,0.1);border-radius:var(--radius-sm);padding:16px 10px;text-decoration:none" style-hover="background:rgba(255,255,255,0.18)">
+            <x-import component-from-global-scope="SingapaduTourismDesignSystem_660351.Icon" name="message-circle" size="{{ n22 }}" color="#fff" hint-size="22px,22px"></x-import>
+            <span style="font-size:13px;font-weight:700;color:#fff">{{ t.menu.contact }}</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+    <div data-screen-label="Home" style="animation:sgpFade 0.45s var(--ease-out) both">
+      <div class="sgp-hero" style="position:relative;overflow:hidden;height:100svh;min-height:600px;background:var(--surface-sunken)">
+          <sc-for list="{{ heroSlides }}" as="s" hint-placeholder-count="1">
+            <div style="{{ s.st }}">
+              <div style="position:absolute;inset:0;background:var(--scrim)"></div>
+              <div style="position:absolute;inset:0;display:flex;align-items:flex-end">
+                <div class="sgp-hcontent" style="width:100%;max-width:var(--container);margin:0 auto;padding:0 var(--gutter) 140px;display:flex;flex-direction:column;gap:16px;align-items:flex-start">
+                  <span style="font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent)">{{ s.cat }}</span>
+                  <h1 class="sgp-ht" style="color:#fff;font-size:var(--text-hero);margin:0;max-width:780px;text-shadow:0 2px 24px rgba(5,10,7,0.35)">{{ s.title }}</h1>
+                  <p class="sgp-hsub" style="color:rgba(255,255,255,0.9);font-size:19px;max-width:560px;margin:0;text-shadow:0 1px 16px rgba(5,10,7,0.4)">{{ s.sub }}</p>
+                  <div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:4px">
+                    <x-import component-from-global-scope="SingapaduTourismDesignSystem_660351.Button" variant="primary" icon-right="arrow-right" on-click="{{ s.go }}" hint-size="auto,44px">{{ s.cta }}</x-import>
+                    <a href="{{ waVillage }}" style="color:#fff;font-size:15px;font-weight:600;text-decoration:underline;text-underline-offset:3px">{{ t.home.quick.plan }}</a>
+                  </div>
+                </div>
+              </div>
+              <div class="sgp-hloc" style="position:absolute;right:26px;bottom:120px;display:flex;align-items:center;gap:6px;color:rgba(255,255,255,0.9);font-size:13px;font-weight:600;text-shadow:0 1px 12px rgba(5,10,7,0.5)">
+                <x-import component-from-global-scope="SingapaduTourismDesignSystem_660351.Icon" name="map-pin" size="{{ n14 }}" color="#fff" hint-size="14px,14px"></x-import>{{ s.loc }}
+              </div>
+            </div>
+          </sc-for>
+          <div style="position:absolute;left:0;right:0;bottom:0;z-index:5">
+            <div style="max-width:var(--container);margin:0 auto;padding:14px var(--gutter) 18px;display:flex;gap:10px;overflow-x:auto">
+              <sc-for list="{{ heroThumbs }}" as="th" hint-placeholder-count="4">
+                <button class="sgp-thumb" sc-camel-on-click="{{ th.pick }}" style="{{ th.st }}">
+                  <span style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(5,10,7,0.65))"></span>
+                  <span style="position:absolute;left:8px;bottom:5px;z-index:1;color:#fff;font-size:10.5px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase">{{ th.label }}</span>
+                </button>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+      <div style="background:var(--surface-card);border-bottom:1px solid var(--border)">
+        <div style="max-width:var(--container);margin:0 auto;padding:13px var(--gutter);display:flex;gap:30px;overflow-x:auto">
+          <sc-for list="{{ quickLinks }}" as="q" hint-placeholder-count="7">
+            <button sc-camel-on-click="{{ q.go }}" style="flex:none;display:flex;align-items:center;gap:8px;background:none;border:none;cursor:pointer;padding:4px 0;font-family:var(--font-body);font-size:14px;font-weight:600;color:var(--text-primary);white-space:nowrap" style-hover="text-decoration:underline;text-underline-offset:3px">
+              <x-import component-from-global-scope="SingapaduTourismDesignSystem_660351.Icon" name="{{ q.icon }}" size="{{ n18 }}" color="var(--brand-primary)" hint-size="18px,18px"></x-import>
+              <span>{{ q.label }}</span>
+            </button>
+          </sc-for>
+        </div>
+      </div>
+      <section style="max-width:var(--container);margin:0 auto;padding:var(--space-9) var(--gutter) 0">
+        <x-import component-from-global-scope="SingapaduTourismDesignSystem_660351.SectionHeader" eyebrow="{{ t.home.destEyebrow }}" title="{{ t.home.destTitle }}" action-label="{{ t.home.destAction }}" on-action="{{ goDests }}" hint-size="100%,72px"></x-import>
+        <div class="sgp-g3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-5)">
+          <sc-for list="{{ dests3 }}" as="d" hint-placeholder-count="3">
+            <x-import component-from-global-scope="SingapaduTourismDesignSystem_660351.DestinationCard" title="{{ d.title }}" category="{{ d.category }}" location="{{ d.location }}" image="{{ d.img }}" image-tone="{{ d.tone }}" image-label="{{ d.imgLabel }}" on-click="{{ d.open }}" hint-size="100%,440px"></x-import>
+          </sc-for>
+        </div>
+      </section>
+      <section style="max-width:var(--container);margin:0 auto;padding:var(--space-9) var(--gutter) 0">
+        <x-import component-from-global-scope="SingapaduTourismDesignSystem_660351.SectionHeader" eyebrow="{{ t.home.rec.eyebrow }}" title="{{ t.home.rec.title }}" action-label="{{ t.home.destAction }}" on-action="{{ goDests }}" hint-size="100%,72px"></x-import>
+        <div class="sgp-bento" style="display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:205px;gap:12px">
+          <div sc-camel-on-click="{{ goEvents }}" style="position:relative;overflow:hidden;border-radius:var(--radius-sm);grid-column:span 2;grid-row:span 2;cursor:pointer">
+            <img src="0127d3ab-863d-4b22-b615-9f5ae4a7bc1a" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform var(--dur-med) var(--ease-out)" style-hover="transform:scale(1.04)">
+            <div style="position:absolute;inset:0;background:var(--scrim)"></div>
+            <div style="position:absolute;left:18px;right:18px;bottom:16px;display:flex;flex-direction:column;gap:6px;pointer-events:none">
+              <span style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent)">{{ t.home.rec.tag }}</span>
+              <span style="font-family:var(--font-display);font-weight:700;font-size:26px;color:#fff;line-height:1.1">{{ t.home.rec.f }}</span>
+              <span style="font-size:14px;color:rgba(255,255,255,0.85)">{{ t.home.rec.fSub }}</span>
+            </div>
+          </div>
+          <div sc-camel-on-click="{{ goCraftCat }}" style="position:relative;overflow:hidden;border-radius:var(--radius-sm);cursor:pointer">
+            <img src="dadee8d8-ae8d-40ce-be0a-f8c6dd259da9" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform var(--dur-med) var(--ease-out)" style-hover="transform:scale(1.04)">
+            <div style="position:absolute;inset:0;background:var(--scrim)"></div>
+            <span style="position:absolute;left:16px;right:16px;bottom:14px;font-family:var(--font-display);font-weight:700;font-size:19px;color:#fff;line-height:1.15;pointer-events:none">{{ t.home.rec.c1 }}</span>
+          </div>
+          <div sc-camel-on-click="{{ openSubak }}" style="position:relative;overflow:hidden;border-radius:var(--radius-sm);cursor:pointer">
+            <img src="790acb55-9c0d-48cf-a0a5-c36874e7461f" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform var(--dur-med) var(--ease-out)" style-hover="transform:scale(1.04)">
+            <div style="position:absolute;inset:0;background:var(--scrim)"></div>
+            <span style="position:absolute;left:16px;right:16px;bottom:14px;font-family:var(--font-display);font-weight:700;font-size:19px;color:#fff;line-height:1.15;pointer-events:none">{{ t.home.rec.c2 }}</span>
+          </div>
+          <div sc-camel-on-click="{{ openZoo }}" style="position:relative;overflow:hidden;border-radius:var(--radius-sm);cursor:pointer">
+            <img src="2103253b-c2df-4ba2-9f70-35b3f7a94005" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform var(--dur-med) var(--ease-out)" style-hover="transform:scale(1.04)">
+            <div style="position:absolute;inset:0;background:var(--scrim)"></div>
+            <span style="position:absolute;left:16px;right:16px;bottom:14px;font-family:var(--font-display);font-weight:700;font-size:19px;color:#fff;line-height:1.15;pointer-events:none">{{ t.home.rec.c3 }}</span>
+          </div>
+          <div sc-camel-on-click="{{ openBarong }}" style="position:relative;overflow:hidden;border-radius:var(--radius-sm);cursor:pointer">
+            <img src="eae7d913-a713-405b-9b5b-dd0ad5c63c38" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform var(--dur-med) var(--ease-out)" style-hover="transform:scale(1.04)">
+            <div style="position:absolute;inset:0;background:var(--scrim)"></div>
+            <span style="position:absolute;left:16px;right:16px;bottom:14px;font-family:var(--font-display);font-weight:700;font-size:19px;color:#fff;line-height:1.15;pointer-events:none">{{ t.home.rec.c4 }}</span>
+          </div>
+        </div>
+      </section>
+      <section style="margin-top:var(--space-9);position:relative;height:76vh;min-height:520px;max-height:760px;overflow:hidden;background:var(--surface-sunken)">
+        <sc-for list="{{ spotSlides }}" as="sp" hint-placeholder-count="1">
+          <div style="{{ sp.st }}">
+            <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,10,7,0.08),rgba(5,10,7,0.55))"></div>
+          </div>
+        </sc-for>
+        <div style="position:absolute;inset:0;z-index:3">
+          <div style="position:relative;height:100%;max-width:var(--container);margin:0 auto;padding:0 var(--gutter)">
+            <div class="sgp-spotcard" style="position:absolute;left:24px;bottom:92px;max-width:440px;background:var(--surface-card);border-radius:var(--radius-sm);box-shadow:var(--shadow-overlay);padding:26px;display:flex;flex-direction:column;gap:12px;align-items:flex-start">
+              <span class="eyebrow">{{ t.home.spotEyebrow }}</span>
+              <h2 style="margin:0">{{ spot.title }}</h2>
+              <p style="margin:0;color:var(--text-secondary);font-size:15px">{{ spot.blurb }}</p>
+              <x-import component-from-global-scope="SingapaduTourismDesignSystem_660351.Button" variant="primary" icon-right="arrow-right" on-click="{{ spot.open }}" hint-size="auto,44px">{{ t.home.spotCta }}</x-import>
+            </div>
+            <div style="position:absolute;right:24px;bottom:26px;display:flex;align-items:center;gap:12px">
+              <span style="color:#fff;font-size:13px;font-weight:600;opacity:0.9">{{ spotCount }}</span>
+              <button sc-camel-on-click="{{ spotPrev }}" aria-label="Previous" style="width:46px;height:46px;display:flex;align-items:center;justify-content:center;border:1.5px solid rgba(255,255,255,0.6);border-radius:var(--radius-sm);background:rgba(12,20,15,0.35);cursor:pointer" style-hover="background:rgba(12,20,15,0.6)">
+                <x-import component-from-global-scope="SingapaduTourismDesignSystem_660351.Icon" name="chevron-left" size="{{ n20 }}" color="#fff" hint-size="20px,20px"></x-import>
+              </button>
+              <button sc-camel-on-click="{{ spotNext }}" aria-label="Next" style="width:46px;height:46px;display:flex;align-items:center;justify-content:center;border:1.5px solid rgba(255,255,255,0.6);border-radius:var(--radius-sm);background:rgba(12,20,15,0.35);cursor:pointer" style-hover="background:rgba(12,20,15,0.6)">
+                <x-import component-from-global-scope="SingapaduTourismDesignSystem_660351.Icon" name="chevron-right" size="{{ n20 }}" color="#fff" hint-size="20px,20px"></x-import>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section style="max-width:var(--container);margin:0 auto;padding:var(--space-9) var(--gutter) 0">
+        <div class="sgp-g2" style="display:grid;grid-template-columns:1.1fr 1fr;gap:var(--space-7);align-items:center">
+          <div style="border-radius:var(--radius-sm);overflow:hidden"><img src="6a7fb586-65a1-4819-aa23-ec2fc4cdf16d" alt="" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block"></div>
+          <div style="display:flex;flex-direction:column;gap:20px;align-items:flex-start">
+            <span class="eyebrow">{{ t.home.craftEyebrow }}</span>
+            <h2>{{ t.home.craftTitle }}</h2>
+            <p style="color:var(--text-secondary);font-size:17px">{{ t.home.craftBody }}</p>
+            <x-import component-from-global-scope="SingapaduTourismDesignSystem_660351.Button" variant="primary" icon-right="arrow-right" on-click="{{ goDests }}" hint-size="auto,44px">{{ t.home.craftCta }}</x-import>
+          </div>
+        </div>
+      </section>
+      <section style="max-width:var(--container);margin:0 auto;padding:var(--space-9) var(--gutter) 0">
+        <x-import component-from-global-scope="SingapaduTourismDesignSystem_660351.SectionHeader" eyebrow="{{ t.home.evEyebrow }}" title="{{ t.home.evTitle }}" action-label="{{ t.home.evAction }}" on-action="{{ goEvents }}" hint-size="100%,72px"></x-import>
+        <div class="sgp-g2" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-5)">
+          <sc-for list="{{ ev2 }}" as="e" hint-placeholder-count="2">
+            <div class="sgp-ev" style="display:flex;gap:18px;align-items:center;background:var(--surface-card);border:1px solid var(--border);border-radius:var(--radius-sm);box-shadow:var(--shadow-card);padding:18px">
+              <div class="sgp-evdate" style="flex:none;width:104px;display:flex;flex-direction:column;gap:2px;align-items:center;background:var(--tint-brand);border-radius:var(--radius-xs);padding:12px 8px">
+                <span style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--brand-primary)">{{ e.tag }}</span>
+                <span style="font-family:var(--font-display);font-weight:800;font-size:17px;color:var(--brand-primary);text-align:center">{{ e.date }}</span>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:4px">
+                <h4 style="margin:0">{{ e.title }}</h4>
+                <span style="font-size:13.5px;color:var(--text-secondary)">{{ e.loc }}</span>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </section>
+      <section style="max-width:var(--container);margin:0 auto;padding:var(--space-9) var(--gutter) var(--space-9)">
+        <x-import component-from-global-scope="SingapaduTourismDesignSystem_660351.SectionHeader" eyebrow="{{ t.home.tipsEyebrow }}" title="{{ t.home.tipsTitle }}" hint-size="100%,72px"></x-import>
+        <div class="sgp-g3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-5)">
+          <sc-for list="{{ tips6 }}" as="tp" hint-placeholder-count="6">
+            <div style="background:var(--surface-card);border:1px solid var(--border);border-radius:var(--radius-sm);box-shadow:var(--shadow-card);padding:22px;display:flex;flex-direction:column;gap:12px;align-items:flex-start">
+              <span style="width:42px;height:42px;border-radius:var(--radius-xs);background:var(--tint-brand);display:flex;align-items:center;justify-content:center">
+                <x-import component-from-global-scope="SingapaduTourismDesignSystem_660351.Icon" name="{{ tp.icon }}" size="{{ n20 }}" color="var(--brand-primary)" hint-size="20px,20px"></x-import>
+              </span>
+              <h4 style="margin:0">{{ tp.t }}</h4>
+              <p style="margin:0;font-size:14.5px;color:var(--text-secondary);line-height:1.6">{{ tp.b }}</p>
+            </div>
+          </sc-for>
+        </div>
+      </section>
+      <section style="background:#16241B;border-bottom:1px solid #2A362E">
+        <div style="max-width:var(--container);margin:0 auto;padding:var(--space-8) var(--gutter);display:flex;align-items:center;gap:28px;flex-wrap:wrap">
+          <div style="display:flex;flex-direction:column;gap:10px;flex:1;min-width:280px">
+            <span style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#66BB6A">{{ t.home.cta.eyebrow }}</span>
+            <h2 style="margin:0;color:#fff">{{ t.home.cta.title }}</h2>
+            <p style="margin:0;color:rgba(240,244,236,0.75);max-width:560px">{{ t.home.cta.body }}</p>
+          </div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+            <x-import component-from-global-scope="SingapaduTourismDesignSystem_660351.Button" variant="primary" icon="message-circle" href="{{ waVillage }}" hint-size="auto,44px">{{ t.home.cta.btn }}</x-import>
+            <button sc-camel-on-click="{{ goEvents }}" style="padding:11px 20px;border:1.5px solid rgba(255,255,255,0.55);border-radius:var(--radius-sm);background:transparent;color:#fff;font-family:var(--font-body);font-size:15px;font-weight:600;cursor:pointer;white-space:nowrap" style-hover="background:rgba(255,255,255,0.1)">{{ t.home.cta.btn2 }}</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isDests }}" hint-placeholder-val="{{ false }}">
+    <div data-screen-label="Destinations" style="animation:sgpFade 0.45s var(--ease-out) both">
+      <div class="sgp-desk" style="height:112px"></div>
+      <div style="max-width:var(--container);margin:0 auto;padding:var(--space-8) var(--gutter) var(--space-9)">
+        <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:var(--space-6)">
+          <span class="eyebrow">{{ t.dests.eyebrow }}</span>
+          <h1>{{ t.dests.title }}</h1>
+          <p style="color:var(--text-secondary);font-size:17px;max-width:560px">{{ t.dests.sub }}</p>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:var(--space-6)">
+          <sc-for list="{{ catTags }}" as="c" hint-placeholder-count="5">
+            <x-import component-from-global-scope="SingapaduTourismDesignSystem_660351.Tag" label="{{ c.label }}" selected="{{ c.sel }}" count="{{ c.count }}" on-click="{{ c.pick }}" hint-size="auto,36px"></x-import>
+          </sc-for>
+        </div>
+        <div class="sgp-g3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-5)">
+          <sc-for list="{{ destsFiltered }}" as="d" hint-placeholder-count="6">
+            <x-import component-from-global-scope="SingapaduTourismDesignSystem_660351.DestinationCard" title="{{ d.title }}" category="{{ d.category }}" location="{{ d.location }}" image="{{ d.img }}" image-tone="{{ d.tone }}" image-label="{{ d.imgLabel }}" on-click="{{ d.open }}" hint-size="100%,440px"></x-import>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isDetail }}" hint-placeholder-val="{{ false }}">
+    <div data-screen-label="Destination detail" style="animation:sgpFade 0.45s var(--ease-out) both">
+      <div class="sgp-desk" style="height:112px"></div>
+      <div style="max-width:var(--container);margin:0 auto;padding:var(--space-5) var(--gutter) var(--space-9)">
+        <div style="margin-bottom:var(--space-5)">
+          <x-import component-from-global-scope="SingapaduTourismDesignSystem_660351.Breadcrumb" items="{{ crumbs }}" hint-size="auto,20px"></x-import>
+        </div>
+        <div style="border-radius:var(--radius-sm);overflow:hidden;margin-bottom:var(--space-6)">
+          <div style="width:100%;aspect-ratio:21/9;min-height:220px;background-color:var(--surface-sunken);background-image:url({{ cur.imgWide }});background-size:cover;background-position:center"></div>
+        </div>
+        <div class="sgp-g2" style="display:grid;grid-template-columns:1.6fr 1fr;gap:var(--space-7);align-items:start">
+          <div style="display:flex;flex-direction:column;gap:20px">
+          <div style="display:flex;gap:8px">
+            <x-import component-from-global-scope="SingapaduTourismDesignSystem_660351.Badge" hint-size="auto,22px">{{ cur.category }}</x-import>
+            <x-import component-from-global-scope="SingapaduTourismDesignSystem_660351.Badge" tone="neutral" hint-size="auto,22px">Singapadu</x-import>
+          </div>
+          <h1>{{ cur.title }}</h1>
+          <p style="font-size:18px;color:var(--text-primary);max-width:640px">{{ cur.blurb }}</p>
+          <sc-for list="{{ cur.story }}" as="p" hint-placeholder-count="2">
+            <p style="color:var(--text-secondary);max-width:640px;margin:0">{{ p.text }}</p>
+          </sc-for>
+          </div>
+          <aside class="sgp-aside" style="background:var(--surface-card);border:1px solid var(--border);border-radius:var(--radius-sm);box-shadow:var(--shadow-card);padding:var(--space-5);display:flex;flex-direction:column;gap:18px;position:sticky;top:128px">
+            <h4 style="margin:0">{{ t.detail.plan }}</h4>
+            <div style="display:flex;gap:12px;align-items:flex-start">
+              <x-import component-from-global-scope="SingapaduTourismDesignSystem_660351.Icon" name="clock" size="{{ n20 }}" color="var(--brand-primary)" hint-size="20px,20px"></x-import>
+              <div style="display:flex;flex-direction:column;gap:2px">
+                <span style="font-size:12px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:var(--text-secondary)">{{ t.detail.hours }}</span>
+                <span style="font-size:15px;font-weight:600;color:var(--text-primary)">{{ cur.hours }}</span>
+              </div>
+            </div>
+            <div style="display:flex;gap:12px;align-items:flex-start">
+              <x-import component-from-global-scope="SingapaduTourismDesignSystem_660351.Icon" name="ticket" size="{{ n20 }}" color="var(--brand-primary)" hint-size="20px,20px"></x-import>
+              <div style="display:flex;flex-direction:column;gap:2px">
+                <span style="font-size:12px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:var(--text-secondary)">{{ t.detail.tickets }}</span>
+                <span style="font-size:15px;font-weight:600;color:var(--text-primary)">{{ cur.price }}</span>
+              </div>
+            </div>
+            <div style="display:flex;gap:12px;align-items:flex-start">
+              <x-import component-from-global-scope="SingapaduTourismDesignSystem_660351.Icon" name="map-pin" size="{{ n20 }}" color="var(--brand-primary)" hint-size="20px,20px"></x-import>
+              <div style="display:flex;flex-direction:column;gap:2px">
+                <span style="font-size:12px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:var(--text-secondary)">{{ t.detail.getting }}</span>
+                <span style="font-size:15px;font-weight:600;color:var(--text-primary)">{{ cur.distance }}</span>
+              </div>
+            </div>
+            <x-import component-from-global-scope="SingapaduTourismDesignSystem_660351.Button" variant="primary" full-width="{{ true }}" icon="message-circle" href="{{ cur.wa }}" hint-size="100%,44px">{{ t.detail.waBtn }}</x-import>
+            <x-import component-from-global-scope="SingapaduTourismDesignSystem_660351.Button" variant="outline" full-width="{{ true }}" icon="map" on-click="{{ goDests }}" hint-size="100%,44px">{{ t.detail.allBtn }}</x-import>
+          </aside>
+        </div>
+        <div style="margin-top:var(--space-9)">
+          <x-import component-from-global-scope="SingapaduTourismDesignSystem_660351.SectionHeader" eyebrow="{{ t.detail.galleryEyebrow }}" title="{{ t.detail.galleryTitle }}" hint-size="100%,72px"></x-import>
+          <div class="sgp-gal" style="display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:190px;gap:12px">
+            <div style="position:relative;overflow:hidden;border-radius:var(--radius-sm);grid-column:span 2;grid-row:span 2"><div style="position:absolute;inset:0;background-color:var(--surface-sunken);background-image:url({{ cur.g1 }});background-size:cover;background-position:center;transition:transform var(--dur-med) var(--ease-out)" style-hover="transform:scale(1.04)"></div></div>
+            <div style="position:relative;overflow:hidden;border-radius:var(--radius-sm)"><div style="position:absolute;inset:0;background-color:var(--surface-sunken);background-image:url({{ cur.g2 }});background-size:cover;background-position:center;transition:transform var(--dur-med) var(--ease-out)" style-hover="transform:scale(1.04)"></div></div>
+            <div style="position:relative;overflow:hidden;border-radius:var(--radius-sm)"><div style="position:absolute;inset:0;background-color:var(--surface-sunken);background-image:url({{ cur.g3 }});background-size:cover;background-position:center;transition:transform var(--dur-med) var(--ease-out)" style-hover="transform:scale(1.04)"></div></div>
+            <div class="sgp-galwide" style="position:relative;overflow:hidden;border-radius:var(--radius-sm);grid-column:span 3"><div style="position:absolute;inset:0;background-color:var(--surface-sunken);background-image:url({{ cur.g4 }});background-size:cover;background-position:center;transition:transform var(--dur-med) var(--ease-out)" style-hover="transform:scale(1.04)"></div></div>
+          </div>
+        </div>
+        <div class="sgp-g2" style="margin-top:var(--space-9);display:grid;grid-template-columns:1fr 1fr;gap:var(--space-7);align-items:start">
+          <div>
+            <x-import component-from-global-scope="SingapaduTourismDesignSystem_660351.SectionHeader" eyebrow="{{ t.detail.tipsEyebrow }}" title="{{ t.detail.tipsTitle }}" hint-size="100%,72px"></x-import>
+            <div style="display:flex;flex-direction:column;gap:14px">
+              <sc-for list="{{ cur.tips }}" as="tip" hint-placeholder-count="3">
+                <div style="display:flex;gap:12px;align-items:flex-start;background:var(--surface-card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px 16px">
+                  <x-import component-from-global-scope="SingapaduTourismDesignSystem_660351.Icon" name="check" size="{{ n20 }}" color="var(--brand-primary)" hint-size="20px,20px"></x-import>
+                  <span style="font-size:15px;color:var(--text-primary)">{{ tip.text }}</span>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+          <div>
+            <x-import component-from-global-scope="SingapaduTourismDesignSystem_660351.SectionHeader" eyebrow="{{ t.detail.mapEyebrow }}" title="{{ t.detail.mapTitle }}" hint-size="100%,72px"></x-import>
+            <sc-if value="{{ mapsOn }}" hint-placeholder-val="{{ true }}">
+              <iframe src="{{ cur.mapSrc }}" title="Map" style="width:100%;height:320px;border:0;border-radius:var(--radius-sm);display:block;background:var(--surface-sunken)"></iframe>
+            </sc-if>
+            <sc-if value="{{ mapsOff }}" hint-placeholder-val="{{ false }}">
+              <div style="height:320px;border-radius:var(--radius-sm);border:1px solid var(--border);background:var(--surface-sunken);display:flex;align-items:center;justify-content:center">
+                <x-import component-from-global-scope="SingapaduTourismDesignSystem_660351.Button" variant="outline" icon="map" href="{{ cur.mapLink }}" hint-size="auto,44px">{{ t.detail.mapOpen }}</x-import>
+              </div>
+            </sc-if>
+            <a href="{{ cur.mapLink }}" target="_blank" style="display:inline-block;margin-top:10px;font-size:14px;font-weight:600">{{ t.detail.mapOpen }}</a>
+          </div>
+        </div>
+        <div style="margin-top:var(--space-9)">
+          <x-import component-from-global-scope="SingapaduTourismDesignSystem_660351.SectionHeader" eyebrow="{{ t.detail.nearbyEyebrow }}" title="{{ t.detail.nearbyTitle }}" action-label="{{ t.detail.allBtn }}" on-action="{{ goDests }}" hint-size="100%,72px"></x-import>
+          <div class="sgp-g4" style="display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-5)">
+            <sc-for list="{{ related }}" as="d" hint-placeholder-count="4">
+              <x-import component-from-global-scope="SingapaduTourismDesignSystem_660351.DestinationCard" title="{{ d.title }}" category="{{ d.category }}" location="{{ d.location }}" image="{{ d.img }}" image-tone="{{ d.tone }}" image-label="{{ d.imgLabel }}" on-click="{{ d.open }}" hint-size="100%,340px"></x-import>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isEvents }}" hint-placeholder-val="{{ false }}">
+    <div data-screen-label="Events" style="animation:sgpFade 0.45s var(--ease-out) both">
+      <div class="sgp-desk" style="height:112px"></div>
+      <div style="max-width:960px;margin:0 auto;padding:var(--space-8) var(--gutter) var(--space-9)">
+        <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:var(--space-6)">
+          <span class="eyebrow">{{ t.events.eyebrow }}</span>
+          <h1>{{ t.events.title }}</h1>
+          <p style="color:var(--text-secondary);font-size:17px;max-width:620px">{{ t.events.sub }}</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:var(--space-4)">
+          <sc-for list="{{ events }}" as="e" hint-placeholder-count="5">
+            <div class="sgp-ev" style="display:flex;gap:22px;align-items:flex-start;background:var(--surface-card);border:1px solid var(--border);border-radius:var(--radius-sm);box-shadow:var(--shadow-card);padding:var(--space-5)">
+              <div class="sgp-evdate" style="flex:none;width:120px;display:flex;flex-direction:column;gap:2px;align-items:center;background:var(--tint-brand);border-radius:var(--radius-xs);padding:14px 10px">
+                <span style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--brand-primary)">{{ e.tag }}</span>
+                <span style="font-family:var(--font-display);font-weight:800;font-size:18px;color:var(--brand-primary);text-align:center;line-height:1.15">{{ e.date }}</span>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:8px">
+                <div><x-import component-from-global-scope="SingapaduTourismDesignSystem_660351.Badge" hint-size="auto,22px">{{ e.cat }}</x-import></div>
+                <h3 style="margin:0">{{ e.title }}</h3>
+                <p style="margin:0;color:var(--text-secondary)">{{ e.desc }}</p>
+                <span style="display:inline-flex;align-items:center;gap:6px;font-size:13.5px;font-weight:600;color:var(--text-secondary)">
+                  <x-import component-from-global-scope="SingapaduTourismDesignSystem_660351.Icon" name="map-pin" size="{{ n14 }}" hint-size="14px,14px"></x-import>{{ e.loc }}
+                </span>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+        <div class="sgp-ev" style="margin-top:var(--space-6);display:flex;align-items:center;gap:18px;background:var(--tint-accent);border-radius:var(--radius-sm);padding:18px 22px">
+          <x-import component-from-global-scope="SingapaduTourismDesignSystem_660351.Icon" name="calendar" size="{{ n20 }}" color="var(--accent-hover)" hint-size="20px,20px"></x-import>
+          <span style="font-size:14.5px;color:var(--text-primary);flex:1;min-width:200px">{{ t.events.note }}</span>
+          <x-import component-from-global-scope="SingapaduTourismDesignSystem_660351.Button" variant="primary" size="sm" icon="message-circle" href="{{ waVillage }}" hint-size="auto,36px">{{ t.events.ask }}</x-import>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isAbout }}" hint-placeholder-val="{{ false }}">
+    <div data-screen-label="About the village" style="animation:sgpFade 0.45s var(--ease-out) both">
+      <div class="sgp-desk" style="height:112px"></div>
+      <div style="max-width:var(--container);margin:0 auto;padding:var(--space-8) var(--gutter) var(--space-9)">
+        <div class="sgp-g2" style="display:grid;grid-template-columns:1.15fr 1fr;gap:var(--space-7);align-items:center;margin-bottom:var(--space-8)">
+          <div style="display:flex;flex-direction:column;gap:16px">
+            <span class="eyebrow">{{ t.about.eyebrow }}</span>
+            <h1>{{ t.about.title }}</h1>
+            <sc-for list="{{ aboutParas }}" as="p" hint-placeholder-count="2">
+              <p style="color:var(--text-secondary);font-size:17px;margin:0;max-width:600px">{{ p.text }}</p>
+            </sc-for>
+          </div>
+          <div style="border-radius:var(--radius-sm);overflow:hidden"><img src="a99d7d60-f28a-449d-aa3d-8807fa044de4" alt="" style="width:100%;aspect-ratio:7/8;object-fit:cover;display:block"></div>
+        </div>
+        <div class="sgp-g3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-5);margin-bottom:var(--space-8)">
+          <sc-for list="{{ aboutFacts }}" as="f" hint-placeholder-count="3">
+            <div style="display:flex;gap:14px;align-items:flex-start;background:var(--surface-card);border:1px solid var(--border);border-radius:var(--radius-sm);box-shadow:var(--shadow-card);padding:var(--space-5)">
+              <x-import component-from-global-scope="SingapaduTourismDesignSystem_660351.Icon" name="{{ f.icon }}" size="{{ n20 }}" color="var(--brand-primary)" hint-size="20px,20px"></x-import>
+              <div style="display:flex;flex-direction:column;gap:4px">
+                <span style="font-size:12px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:var(--text-secondary)">{{ f.label }}</span>
+                <span style="font-size:15px;font-weight:600;color:var(--text-primary)">{{ f.value }}</span>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+        <div class="sgp-g2" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-7);align-items:start">
+          <div style="display:flex;flex-direction:column;gap:16px;background:var(--surface-card);border:1px solid var(--border);border-radius:var(--radius-sm);box-shadow:var(--shadow-card);padding:var(--space-6)">
+            <span class="eyebrow">{{ t.about.partnerEyebrow }}</span>
+            <h3 style="margin:0">{{ t.about.partnerTitle }}</h3>
+            <p style="margin:0;color:var(--text-secondary)">{{ t.about.partnerBody }}</p>
+            <div style="display:flex;align-items:center;gap:28px;margin-top:6px;flex-wrap:wrap">
+              <img src="d23f7d26-d67c-4a1a-af28-39465498a2fe" alt="Desa Singapadu crest" style="height:56px;object-fit:contain">
+              <img src="b5365948-66ba-4da3-85e1-6d7cf6388792" alt="Politeknik Negeri Bali" style="height:56px;object-fit:contain">
+              <img src="0d18d6b3-cec5-41e9-97f5-28c103119f1c" alt="Singapadu Tourism" style="height:56px;object-fit:contain">
+            </div>
+          </div>
+          <div>
+            <sc-if value="{{ mapsOn }}" hint-placeholder-val="{{ true }}">
+              <iframe src="{{ aboutMapSrc }}" title="Village map" style="width:100%;height:330px;border:0;border-radius:var(--radius-sm);display:block;background:var(--surface-sunken)"></iframe>
+            </sc-if>
+            <sc-if value="{{ mapsOff }}" hint-placeholder-val="{{ false }}">
+              <div style="height:330px;border-radius:var(--radius-sm);border:1px solid var(--border);background:var(--surface-sunken);display:flex;align-items:center;justify-content:center">
+                <x-import component-from-global-scope="SingapaduTourismDesignSystem_660351.Button" variant="outline" icon="map" href="{{ aboutMapLink }}" hint-size="auto,44px">{{ t.detail.mapOpen }}</x-import>
+              </div>
+            </sc-if>
+            <span style="display:block;margin-top:10px;font-size:13.5px;color:var(--text-secondary)">{{ t.about.mapCaption }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <footer style="background:#101915;color:#F0F4EC">
+    <div class="sgp-foot" style="max-width:var(--container);margin:0 auto;padding:var(--space-8) var(--gutter) var(--space-6);display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px">
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div style="display:flex;align-items:center;gap:12px">
+          <img src="0d18d6b3-cec5-41e9-97f5-28c103119f1c" alt="Singapadu Tourism" style="width:52px;height:52px;object-fit:contain">
+          <span style="font-family:var(--font-display);font-weight:800;font-size:20px">Singapadu</span>
+        </div>
+        <p style="color:#9BA89D;font-size:14px;line-height:1.6;max-width:280px;margin:0">{{ t.footer.blurb }}</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start">
+        <span style="font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#9BA89D">{{ t.footer.explore }}</span>
+        <a href="#" sc-camel-on-click="{{ goHome }}" style="color:#DCE3D8;font-size:15px;text-decoration:none" style-hover="text-decoration:underline;color:#FFFFFF">{{ t.nav.home }}</a>
+        <a href="#" sc-camel-on-click="{{ goDests }}" style="color:#DCE3D8;font-size:15px;text-decoration:none" style-hover="text-decoration:underline;color:#FFFFFF">{{ t.nav.destinations }}</a>
+        <a href="#" sc-camel-on-click="{{ goEvents }}" style="color:#DCE3D8;font-size:15px;text-decoration:none" style-hover="text-decoration:underline;color:#FFFFFF">{{ t.nav.events }}</a>
+        <a href="#" sc-camel-on-click="{{ goAbout }}" style="color:#DCE3D8;font-size:15px;text-decoration:none" style-hover="text-decoration:underline;color:#FFFFFF">{{ t.nav.about }}</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start">
+        <span style="font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#9BA89D">{{ t.footer.visit }}</span>
+        <a href="#" sc-camel-on-click="{{ goAbout }}" style="color:#DCE3D8;font-size:15px;text-decoration:none" style-hover="text-decoration:underline;color:#FFFFFF">{{ t.footer.plan }}</a>
+        <a href="#" sc-camel-on-click="{{ goAbout }}" style="color:#DCE3D8;font-size:15px;text-decoration:none" style-hover="text-decoration:underline;color:#FFFFFF">{{ t.footer.getting }}</a>
+        <a href="{{ waVillage }}" style="color:#DCE3D8;font-size:15px;text-decoration:none" style-hover="text-decoration:underline;color:#FFFFFF">{{ t.footer.wa }}</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start">
+        <span style="font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#9BA89D">{{ t.footer.contact }}</span>
+        <span style="color:#DCE3D8;font-size:15px;line-height:1.5">Desa Singapadu, Sukawati,<br>Gianyar, Bali 80582</span>
+        <a href="mailto:info@singapadu.desa.id" style="color:#DCE3D8;font-size:15px;text-decoration:none" style-hover="text-decoration:underline;color:#FFFFFF">info@singapadu.desa.id</a>
+        <span style="color:#DCE3D8;font-size:15px">{{ waDisplay }}</span>
+      </div>
+    </div>
+    <div style="border-top:1px solid #2A362E">
+      <div style="max-width:var(--container);margin:0 auto;padding:var(--space-5) var(--gutter);display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+        <div style="display:flex;align-items:center;gap:12px">
+          <img src="d23f7d26-d67c-4a1a-af28-39465498a2fe" alt="Desa Singapadu crest" style="height:44px;object-fit:contain">
+          <span style="font-size:12.5px;color:#9BA89D;line-height:1.4">Pemerintah<br>Desa Singapadu</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px">
+          <img src="b5365948-66ba-4da3-85e1-6d7cf6388792" alt="Politeknik Negeri Bali" style="height:44px;object-fit:contain">
+          <span style="font-size:12.5px;color:#9BA89D;line-height:1.4">Politeknik<br>Negeri Bali</span>
+        </div>
+        <span style="margin-left:auto;font-size:13px;color:#79857B">© 2026 KKN Politeknik Negeri Bali × Desa Singapadu</span>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;defaultLang&quot;: {&quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;en&quot;, &quot;id&quot;], &quot;default&quot;: &quot;en&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Language&quot;}, &quot;whatsappNumber&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;+62 812-3956-2711&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Contact&quot;}, &quot;liveMaps&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Content&quot;}}">
+class Component extends DCLogic {
+  U = (pid, p) => (window.__resources && window.__resources[pid]) || ("https://images.unsplash.com/" + pid + "?auto=format&fit=crop&q=80&" + (p || "w=1200"));
+  IMG = {
+    terrace: "photo-1537996194471-e657df975ab4", ulundanu: "photo-1555400038-63f5ba517a47",
+    gates: "photo-1518548419970-58e3b4079ab2", tegallalang: "photo-1544644181-1484b3fdfc62",
+    valley: "photo-1559628233-100c798642d4", lempuyang: "photo-1531778272849-d1dd22444c06",
+    monkey: "photo-1554457945-ba5df6648602", gorilla: "photo-1463852247062-1bbca38f7805",
+    lake2: "photo-1604999333679-b86d54738315", volcano: "photo-1558005530-a7958896ec60",
+    beach: "photo-1573790387438-4da905039392"
+  };
+  FB = [(window.__resources||{}).phGreen || "assets/ph-green.svg", (window.__resources||{}).phNavy || "assets/ph-navy.svg", (window.__resources||{}).phAmber || "assets/ph-amber.svg", (window.__resources||{}).phSky || "assets/ph-sky.svg"];
+  SLIDES = [
+    { key: "barong", img: "lempuyang", cat: "Culture" },
+    { key: "subak", img: "terrace", cat: "Nature" },
+    { key: "carving", img: "gates", cat: "Craft" },
+    { key: "zoo", img: "monkey", cat: "Family" }
+  ];
+  TIPICONS = ["car", "landmark", "sun", "wallet", "backpack", "map"];
+  S = {
+    en: {
+      nav: { home: "Home", destinations: "Destinations", events: "Events", about: "About the village" },
+      cats: { All: "All", Culture: "Culture", Nature: "Nature", Craft: "Craft", Family: "Family", Sacred: "Sacred" },
+      menu: { lang: "Language", theme: "Dark mode", map: "Map", contact: "Help & contact", all: "All destinations" },
+      home: {
+        slides: [
+          { title: "Where the barong comes alive.", sub: "Masks carved, blessed and danced by the same families for generations.", loc: "Pura Puseh · village center", cta: "See the dance" },
+          { title: "Mornings that begin in the rice fields.", sub: "Walk the UNESCO-listed subak channels with the farmers who tend them.", loc: "Subak fields · north Singapadu", cta: "Walk the subak" },
+          { title: "Carved in stone, danced in fire.", sub: "Paras stone and pule wood — workshops open along one village road.", loc: "Banjar Sengguan", cta: "Meet the makers" },
+          { title: "Small travellers, big mornings.", sub: "Breakfast beside orangutans, then cool feet in the river valley.", loc: "Jl. Raya Singapadu", cta: "Take the kids" }
+        ],
+        quick: { all: "All destinations", plan: "Plan your visit" },
+        destEyebrow: "Destinations", destTitle: "Places to explore", destAction: "See all destinations",
+        rec: { eyebrow: "Experiences", title: "Pick your kind of day", tag: "Events", f: "The ceremony season", fSub: "Odalan, Galungan and the ngelawang barong — the calendar worth planning around.", c1: "Craft workshops", c2: "Morning in the subak", c3: "With kids", c4: "Sacred Singapadu" },
+        spotEyebrow: "Must-see", spotCta: "Discover",
+        craftEyebrow: "Craft", craftTitle: "The village that carves its gods",
+        craftBody: "Singapadu's sculptors cut temple guardians from paras stone and barong masks from sacred pule wood. Spend an afternoon in their workshops — most welcome visitors, and a few will hand you a chisel.",
+        craftCta: "Meet the makers",
+        evEyebrow: "Ceremonies", evTitle: "On the village calendar", evAction: "See all events",
+        tipsEyebrow: "Good to know", tipsTitle: "Plan an easy visit",
+        tips: [
+          { t: "Getting here", b: "Twenty minutes south of Ubud, forty-five from the airport. Every driver knows Jl. Raya Singapadu." },
+          { t: "Temple etiquette", b: "Sarong and sash at every temple — borrowed free at the gate. Shoulders covered, voices low." },
+          { t: "When to come", b: "April to October is the dry season. Arrive by 09:00 for cool light and a village at work." },
+          { t: "Cash & tickets", b: "Workshops and warungs are cash-first. The nearest ATMs line Jl. Raya Singapadu." },
+          { t: "What to pack", b: "Sandals you can rinse, a hat for the fields, a light layer for temple evenings." },
+          { t: "Getting around", b: "Everything sits along one shaded road — walk it, or ask the village office about scooters." }
+        ],
+        cta: { eyebrow: "Plan your visit", title: "One message to the village office.", body: "Tickets, guides and workshop seats — the office answers on WhatsApp, Monday to Friday, 08:00–15:00.", btn: "WhatsApp the village", btn2: "See events" }
+      },
+      dests: { eyebrow: "Destinations", title: "All of Singapadu, sorted.", sub: "Six places, one village road. Filter by what kind of morning you're after." },
+      detail: {
+        plan: "Plan your visit", hours: "Hours", tickets: "Tickets", getting: "Getting there",
+        waBtn: "Ask via WhatsApp", allBtn: "All destinations",
+        galleryEyebrow: "Gallery", galleryTitle: "A closer look",
+        tipsEyebrow: "Tips", tipsTitle: "Good to know",
+        mapEyebrow: "Map", mapTitle: "Where you'll find it", mapOpen: "Open in Google Maps",
+        nearbyEyebrow: "Nearby", nearbyTitle: "Keep exploring"
+      },
+      events: {
+        eyebrow: "Events", title: "Ceremonies and performances", sub: "The village lives by the pawukon and lunar calendars. These are the moments worth planning around.",
+        note: "Ceremony dates follow the Balinese pawukon and lunar calendars — confirm at the village office before you travel.",
+        ask: "Ask the village"
+      },
+      about: {
+        eyebrow: "About the village", title: "Get to know Singapadu.",
+        paras: [
+          "Singapadu sits between Ubud and the coast in Gianyar's Sukawati district — a ribbon of banjar neighbourhoods, temples and rice fields along one shaded road. Its name is said to come from singa (lion) and padu (to meet in contest), a memory of two rival kingdoms that settled here.",
+          "Today the village is known across Bali for what its families make: barong and rangda masks, temple carvings, gilded dance costumes and the gamelan that plays them all to life. Tourism here is village-run — every ticket and workshop fee goes back into the banjar."
+        ],
+        facts: [
+          { icon: "map-pin", label: "Location", value: "Sukawati, Gianyar — 20 min south of Ubud" },
+          { icon: "car", label: "Getting here", value: "About 45 min from Ngurah Rai Airport" },
+          { icon: "landmark", label: "Village office", value: "Mon–Fri, 08:00–15:00" }
+        ],
+        partnerEyebrow: "Partners", partnerTitle: "Built with the village",
+        partnerBody: "This site is a collaboration between the Singapadu village government and a community-service (KKN) team from Politeknik Negeri Bali.",
+        mapCaption: "Desa Singapadu, Sukawati district, Gianyar regency, Bali."
+      },
+      footer: {
+        blurb: "The village of barong dance, mask carving and living Balinese tradition. Sukawati, Gianyar, Bali.",
+        explore: "Explore", visit: "Visit", contact: "Contact",
+        plan: "Plan your visit", getting: "Getting here", wa: "WhatsApp the village"
+      },
+      waMsg: "Hello! I'd like to ask about {x} in Singapadu.",
+      waGeneral: "Hello! I have a question about visiting Singapadu."
+    },
+    id: {
+      nav: { home: "Beranda", destinations: "Destinasi", events: "Acara", about: "Tentang Desa" },
+      cats: { All: "Semua", Culture: "Budaya", Nature: "Alam", Craft: "Kriya", Family: "Keluarga", Sacred: "Sakral" },
+      menu: { lang: "Bahasa", theme: "Mode gelap", map: "Peta", contact: "Bantuan & kontak", all: "Semua destinasi" },
+      home: {
+        slides: [
+          { title: "Tempat barong menjadi hidup.", sub: "Topeng ditatah, disucikan, dan ditarikan keluarga yang sama lintas generasi.", loc: "Pura Puseh · pusat desa", cta: "Saksikan tarinya" },
+          { title: "Pagi yang dimulai di sawah.", sub: "Susuri saluran subak warisan UNESCO bersama para petani penggarapnya.", loc: "Persawahan subak · Singapadu utara", cta: "Susur subak" },
+          { title: "Terpahat di batu, hidup di tarian.", sub: "Batu paras dan kayu pule — sanggar terbuka di sepanjang satu jalan desa.", loc: "Banjar Sengguan", cta: "Temui perajin" },
+          { title: "Penjelajah kecil, pagi yang besar.", sub: "Sarapan di samping orangutan, lalu main air di lembah sungai.", loc: "Jl. Raya Singapadu", cta: "Ajak si kecil" }
+        ],
+        quick: { all: "Semua destinasi", plan: "Rencanakan kunjungan" },
+        destEyebrow: "Destinasi", destTitle: "Tempat untuk dijelajahi", destAction: "Lihat semua destinasi",
+        rec: { eyebrow: "Pengalaman", title: "Pilih hari versi Anda", tag: "Acara", f: "Musim upacara", fSub: "Odalan, Galungan, dan ngelawang barong — kalender yang layak direncanakan.", c1: "Lokakarya kriya", c2: "Pagi di subak", c3: "Bersama anak", c4: "Singapadu yang sakral" },
+        spotEyebrow: "Wajib disinggahi", spotCta: "Jelajahi",
+        craftEyebrow: "Kriya", craftTitle: "Desa yang memahat para dewanya",
+        craftBody: "Para pematung Singapadu memahat penjaga pura dari batu paras dan topeng barong dari kayu pule yang disakralkan. Habiskan sore di sanggar mereka — sebagian besar terbuka untuk pengunjung, dan beberapa akan menyerahkan pahatnya ke tangan Anda.",
+        craftCta: "Temui para perajin",
+        evEyebrow: "Upacara", evTitle: "Di kalender desa", evAction: "Lihat semua acara",
+        tipsEyebrow: "Perlu diketahui", tipsTitle: "Kunjungan tanpa repot",
+        tips: [
+          { t: "Menuju desa", b: "Dua puluh menit di selatan Ubud, empat puluh lima dari bandara. Semua sopir tahu Jl. Raya Singapadu." },
+          { t: "Etika pura", b: "Kamen dan selendang wajib di setiap pura — dipinjamkan gratis di gerbang. Bahu tertutup, suara pelan." },
+          { t: "Waktu terbaik", b: "April–Oktober musim kering. Datanglah sebelum 09.00: cahaya sejuk, desa sedang bekerja." },
+          { t: "Tunai & tiket", b: "Lokakarya dan warung utamanya tunai. ATM terdekat berjajar di Jl. Raya Singapadu." },
+          { t: "Bawaan", b: "Sandal yang mudah dibilas, topi untuk ke sawah, dan luaran tipis untuk malam di pura." },
+          { t: "Berkeliling", b: "Semua berada di satu jalan yang teduh — jalan kaki saja, atau tanyakan sewa skuter di kantor desa." }
+        ],
+        cta: { eyebrow: "Rencanakan kunjungan", title: "Cukup satu pesan ke kantor desa.", body: "Tiket, pemandu, dan kursi lokakarya — kantor desa membalas lewat WhatsApp, Senin–Jumat, 08.00–15.00.", btn: "WhatsApp desa", btn2: "Lihat acara" }
+      },
+      dests: { eyebrow: "Destinasi", title: "Seluruh Singapadu, tersusun rapi.", sub: "Enam tempat, satu jalan desa. Saring sesuai pagi seperti apa yang Anda cari." },
+      detail: {
+        plan: "Rencanakan kunjungan", hours: "Jam buka", tickets: "Tiket", getting: "Menuju lokasi",
+        waBtn: "Tanya via WhatsApp", allBtn: "Semua destinasi",
+        galleryEyebrow: "Galeri", galleryTitle: "Lebih dekat",
+        tipsEyebrow: "Kiat", tipsTitle: "Perlu diketahui",
+        mapEyebrow: "Peta", mapTitle: "Lokasi", mapOpen: "Buka di Google Maps",
+        nearbyEyebrow: "Di sekitar", nearbyTitle: "Lanjutkan menjelajah"
+      },
+      events: {
+        eyebrow: "Acara", title: "Upacara dan pementasan", sub: "Desa ini hidup mengikuti kalender pawukon dan sasih. Inilah momen-momen yang layak direncanakan.",
+        note: "Tanggal upacara mengikuti kalender pawukon dan sasih Bali — pastikan di kantor desa sebelum berkunjung.",
+        ask: "Tanya desa"
+      },
+      about: {
+        eyebrow: "Tentang desa", title: "Mengenal Singapadu.",
+        paras: [
+          "Singapadu terletak di antara Ubud dan pesisir, di Kecamatan Sukawati, Gianyar — deretan banjar, pura, dan persawahan di sepanjang satu jalan yang teduh. Namanya konon berasal dari kata singa dan padu, kenangan akan dua kerajaan yang pernah bertemu di sini.",
+          "Kini desa ini dikenal di seluruh Bali lewat karya keluarga-keluarganya: topeng barong dan rangda, ukiran pura, busana tari berprada emas, serta gamelan yang menghidupkan semuanya. Pariwisata di sini dikelola desa — setiap tiket dan biaya lokakarya kembali ke banjar."
+        ],
+        facts: [
+          { icon: "map-pin", label: "Lokasi", value: "Sukawati, Gianyar — 20 menit di selatan Ubud" },
+          { icon: "car", label: "Akses", value: "Sekitar 45 menit dari Bandara Ngurah Rai" },
+          { icon: "landmark", label: "Kantor desa", value: "Sen–Jum, 08.00–15.00" }
+        ],
+        partnerEyebrow: "Mitra", partnerTitle: "Dibangun bersama desa",
+        partnerBody: "Situs ini merupakan kolaborasi Pemerintah Desa Singapadu dengan tim KKN Politeknik Negeri Bali.",
+        mapCaption: "Desa Singapadu, Kecamatan Sukawati, Kabupaten Gianyar, Bali."
+      },
+      footer: {
+        blurb: "Desa tari barong, tatah topeng, dan tradisi Bali yang tetap hidup. Sukawati, Gianyar, Bali.",
+        explore: "Jelajahi", visit: "Berkunjung", contact: "Kontak",
+        plan: "Rencanakan kunjungan", getting: "Akses ke desa", wa: "WhatsApp desa"
+      },
+      waMsg: "Halo! Saya ingin bertanya tentang {x} di Singapadu.",
+      waGeneral: "Halo! Saya ingin bertanya tentang kunjungan ke Singapadu."
+    }
+  };
+  DESTS = [
+    { key: "barong", cat: "Culture", img: "lempuyang", g: ["gates", "ulundanu", "lake2", "volcano"], mapQ: "Pura Puseh Singapadu Gianyar",
+      en: { title: "Barong dance at Pura Puseh", location: "Pura Puseh · village center", blurb: "You'll hear the gamelan before you see the mask. Singapadu's barong is carved, blessed and danced by the same families — and has been for generations.", hours: "Performances Tue & Fri, 19:00", price: "IDR 100k · children free", distance: "0.4 km from village center",
+        story: ["Singapadu is one of Bali's great barong villages. The mask you'll see tonight was carved from sacred pule wood by a village master, blessed at the temple, and treated as a living being — it receives offerings before every performance.", "Performances happen on the open stage beside Pura Puseh. Come early to watch the gamelan warm up, and stay after: the dancers often let visitors see the masks up close."],
+        tips: ["Wear a sash (selendang) — provided at the gate", "Bring cash for tickets and offerings", "Photography is welcome, but no flash during trance scenes"] },
+      id: { title: "Tari Barong di Pura Puseh", location: "Pura Puseh · pusat desa", blurb: "Suara gamelan terdengar sebelum sang topeng terlihat. Barong Singapadu diukir, disucikan, dan ditarikan oleh keluarga yang sama — turun-temurun lintas generasi.", hours: "Pentas Selasa & Jumat, 19.00", price: "IDR 100 rb · anak-anak gratis", distance: "0,4 km dari pusat desa",
+        story: ["Singapadu adalah salah satu desa barong terkemuka di Bali. Topeng yang Anda saksikan malam ini ditatah dari kayu pule yang disakralkan oleh seorang undagi desa, disucikan di pura, dan diperlakukan sebagai sosok yang hidup — selalu dihaturkan banten sebelum pentas.", "Pentas digelar di panggung terbuka di samping Pura Puseh. Datanglah lebih awal untuk melihat penabuh gamelan bersiap, dan jangan buru-buru pulang: para penari kerap mempersilakan pengunjung melihat topeng dari dekat."],
+        tips: ["Kenakan selendang — disediakan di gerbang", "Bawa uang tunai untuk tiket dan punia", "Boleh memotret, tanpa lampu kilat saat adegan trance"] } },
+    { key: "zoo", cat: "Family", img: "monkey", g: ["gorilla", "terrace", "valley", "tegallalang"], mapQ: "Bali Zoo Singapadu",
+      en: { title: "Bali Zoo", location: "Jl. Raya Singapadu", blurb: "Six hectares of gardens along the village road, home to sun bears, gibbons and the breakfast-with-orangutans everyone photographs.", hours: "Daily, 09:00–17:00", price: "From IDR 150k", distance: "1.1 km from village center",
+        story: ["The zoo grew out of a family bird park and still feels like a garden first: shaded paths, temple trees, and enclosures built into the river valley's edge.", "Mornings are best — the animals are active, tour buses haven't arrived, and the breakfast sessions run until 10:30. Night safaris run on weekends."],
+        tips: ["Book the animal-encounter sessions a day ahead", "Strollers are fine — paths are paved", "Combine with the river trail next door for a full day"] },
+      id: { title: "Bali Zoo", location: "Jl. Raya Singapadu", blurb: "Enam hektare taman di sepanjang jalan desa, rumah bagi beruang madu, owa, dan sarapan bersama orangutan yang paling banyak difoto.", hours: "Setiap hari, 09.00–17.00", price: "Mulai IDR 150 rb", distance: "1,1 km dari pusat desa",
+        story: ["Kebun binatang ini berawal dari taman burung keluarga dan tetap terasa seperti taman: jalur teduh, pepohonan pura, dan kandang yang menyatu dengan tepi lembah sungai.", "Pagi hari adalah waktu terbaik — satwa sedang aktif, bus wisata belum tiba, dan sesi sarapan berlangsung hingga 10.30. Safari malam dibuka tiap akhir pekan."],
+        tips: ["Pesan sesi interaksi satwa sehari sebelumnya", "Kereta bayi aman — jalur sudah berpaving", "Gabungkan dengan jalur sungai di sebelahnya untuk seharian penuh"] } },
+    { key: "carving", cat: "Craft", img: "gates", g: ["lempuyang", "lake2", "ulundanu", "terrace"], mapQ: "Banjar Sengguan Singapadu",
+      en: { title: "Stone carving workshop", location: "Banjar Sengguan", blurb: "Learn paras-stone carving from the sculptors who restore Gianyar's temples. Two hours, tools included, dust guaranteed.", hours: "Mon–Sat, 10:00 & 14:00", price: "IDR 250k per person", distance: "0.8 km from village center",
+        story: ["Paras is soft volcanic stone — soft enough that a beginner can rough out a lotus panel in an afternoon, which is exactly what you'll do.", "Your teachers are working sculptors; between lessons they cut temple guardians and gate reliefs on commission. Finished pieces can be shipped home."],
+        tips: ["Wear clothes that can get dusty", "Workshops run in small groups — book ahead", "Your carving needs 2–3 days to dry before shipping"] },
+      id: { title: "Sanggar ukir batu paras", location: "Banjar Sengguan", blurb: "Belajar mengukir batu paras dari para pematung yang memugar pura-pura Gianyar. Dua jam, alat disediakan, dijamin berdebu.", hours: "Sen–Sab, 10.00 & 14.00", price: "IDR 250 rb per orang", distance: "0,8 km dari pusat desa",
+        story: ["Paras adalah batu vulkanik yang lunak — cukup lunak sehingga pemula bisa membentuk panel teratai dalam satu sore, dan itulah yang akan Anda kerjakan.", "Para pengajar adalah pematung aktif; di sela mengajar mereka mengerjakan pesanan arca penjaga pura dan relief gerbang. Karya jadi bisa dikirim ke rumah Anda."],
+        tips: ["Kenakan pakaian yang boleh kotor berdebu", "Kelas berkelompok kecil — pesan lebih dulu", "Ukiran Anda perlu 2–3 hari mengering sebelum dikirim"] } },
+    { key: "subak", cat: "Nature", img: "volcano", g: ["tegallalang", "valley", "terrace", "ulundanu"], mapQ: "Singapadu Kaler Gianyar",
+      en: { title: "Subak rice terrace walk", location: "North Singapadu", blurb: "A guided hour through the UNESCO-listed subak irrigation landscape, ending with young coconut at a farmer warung.", hours: "Daily, best 07:00–10:00", price: "IDR 75k with guide", distance: "1.6 km from village center",
+        story: ["Subak is Bali's thousand-year-old system of shared irrigation — water temples, canals and farmer councils that UNESCO lists as world heritage. Your guide is one of the farmers.", "The loop is flat and unhurried: weirs and water splits, a shrine to Dewi Sri, herons trailing the plough. Go at dawn if you can — the light on the paddies is the photograph."],
+        tips: ["Wear shoes you can rinse — bunds are muddy", "Bring a hat; there is little shade after 09:00", "Small notes appreciated at the warung"] },
+      id: { title: "Susur sawah subak", location: "Singapadu Utara", blurb: "Satu jam berjalan bersama pemandu menyusuri lanskap irigasi subak yang diakui UNESCO, ditutup kelapa muda di warung petani.", hours: "Setiap hari, terbaik 07.00–10.00", price: "IDR 75 rb dengan pemandu", distance: "1,6 km dari pusat desa",
+        story: ["Subak adalah sistem irigasi gotong royong Bali yang berusia seribu tahun — pura air, saluran, dan paruman petani yang tercatat sebagai warisan dunia UNESCO. Pemandu Anda adalah salah satu petaninya.", "Rutenya datar dan santai: bendung dan bagi air, pelinggih Dewi Sri, kuntul mengikuti bajak. Usahakan berangkat subuh — cahaya pagi di atas sawah itulah fotonya."],
+        tips: ["Kenakan alas kaki yang mudah dibilas — pematang berlumpur", "Bawa topi; nyaris tak ada naungan setelah pukul 09.00", "Uang kecil sangat dihargai di warung"] } },
+    { key: "river", cat: "Nature", img: "valley", g: ["volcano", "tegallalang", "lempuyang", "terrace"], mapQ: "Tukad Oos Gianyar",
+      en: { title: "Tukad Oos river trail", location: "West ridge", blurb: "Shaded river-valley path past bathing temples and kingfishers. Bring sandals you can get wet.", hours: "Open all day", price: "Free", distance: "2.0 km from village center",
+        story: ["The Oos river cuts a green gorge along Singapadu's western edge. The trail drops past ferns and carved bathing spots, some still in daily use — greet before you photograph.", "It links well with the subak walk: down the valley in the cool morning, up through the rice fields before lunch."],
+        tips: ["The stone steps are slippery after rain", "Respect bathing temples — no swimwear photos", "No entrance fee, but guides can be arranged at the office"] },
+      id: { title: "Jalur sungai Tukad Oos", location: "Tebing barat desa", blurb: "Jalur teduh menyusuri lembah sungai melewati pura pemandian dan burung raja udang. Bawa sandal yang boleh basah.", hours: "Buka sepanjang hari", price: "Gratis", distance: "2,0 km dari pusat desa",
+        story: ["Tukad Oos membelah ngarai hijau di tepi barat Singapadu. Jalurnya menurun melewati pakis dan pancuran pemandian berukir, sebagian masih dipakai sehari-hari — sapalah dahulu sebelum memotret.", "Jalur ini pas digabung dengan susur sawah: turun ke lembah saat pagi masih sejuk, naik lewat persawahan sebelum makan siang."],
+        tips: ["Anak tangga batu licin setelah hujan", "Hormati pura pemandian — jangan berfoto berpakaian renang", "Tanpa tiket masuk, pemandu bisa diatur di kantor desa"] } },
+    { key: "mask", cat: "Craft", img: null, tone: "amber", g: ["fb1", "fb0", "fb3", "fb2"], mapQ: "Banjar Mukti Singapadu",
+      en: { title: "Mask making studio", location: "Banjar Mukti", imgLabel: "Photo: mask carver at work", blurb: "Watch pule wood become a topeng face — or carve your own blank under a master carver's eye.", hours: "Mon–Sat, 09:00–16:00", price: "Visits free · workshop IDR 300k", distance: "0.6 km from village center",
+        story: ["Singapadu's mask carvers supply barong and topeng faces to temples across Bali. The studio is a family compound: grandfather sanding, grandson sketching, chickens underfoot.", "Visits are free and unhurried. The half-day workshop starts you on a pre-cut blank; the full topeng course, if you have a week, ends with a blessing."],
+        tips: ["Mornings are the best time to see carving", "Masks range from IDR 200k to several million", "Ask before touching finished masks — some are consecrated"] },
+      id: { title: "Studio tatah topeng", location: "Banjar Mukti", imgLabel: "Foto: penatah topeng di sanggar", blurb: "Saksikan kayu pule menjelma wajah topeng — atau tatah topeng Anda sendiri di bawah bimbingan sang maestro.", hours: "Sen–Sab, 09.00–16.00", price: "Kunjungan gratis · lokakarya IDR 300 rb", distance: "0,6 km dari pusat desa",
+        story: ["Para penatah topeng Singapadu memasok wajah barong dan topeng untuk pura-pura di seluruh Bali. Studionya berupa pekarangan keluarga: kakek mengamplas, cucu menggambar pola, ayam berkeliaran.", "Kunjungan gratis dan santai. Lokakarya setengah hari dimulai dari bakalan topeng; kursus topeng penuh, bila Anda punya waktu seminggu, ditutup dengan upacara pemberkatan."],
+        tips: ["Pagi hari waktu terbaik melihat proses menatah", "Harga topeng mulai IDR 200 rb hingga jutaan", "Minta izin sebelum menyentuh topeng jadi — sebagian telah dipasupati"] } }
+  ];
+  EVENTS = [
+    { key: "perf", cat: "Culture", en: { tag: "Weekly", date: "Tue & Fri", title: "Barong & keris dance", desc: "The village troupe performs the barong ket with full gamelan on the Pura Puseh stage. About 60 minutes.", loc: "Pura Puseh stage" }, id: { tag: "Mingguan", date: "Sel & Jum", title: "Tari Barong & keris", desc: "Sekaa desa mementaskan barong ket dengan gamelan lengkap di panggung Pura Puseh. Sekitar 60 menit.", loc: "Panggung Pura Puseh" } },
+    { key: "odalan", cat: "Sacred", en: { tag: "Aug 2026", date: "28 Aug", title: "Odalan at Pura Puseh", desc: "The temple's anniversary by the 210-day pawukon calendar: three days of decoration, procession and night gamelan.", loc: "Pura Puseh" }, id: { tag: "Agu 2026", date: "28 Agu", title: "Odalan Pura Puseh", desc: "Piodalan pura menurut kalender pawukon 210 hari: tiga hari penuh hiasan, iring-iringan, dan gamelan malam.", loc: "Pura Puseh" } },
+    { key: "purnama", cat: "Sacred", en: { tag: "Monthly", date: "Full moon", title: "Purnama offerings", desc: "On every full moon the temples fill with offerings and prayer from dusk. Visitors may watch respectfully from the outer courtyard.", loc: "All village temples" }, id: { tag: "Tiap bulan", date: "Purnama", title: "Persembahyangan Purnama", desc: "Setiap purnama, pura dipenuhi banten dan persembahyangan sejak senja. Pengunjung dipersilakan menyaksikan dengan hormat dari jaba pura.", loc: "Seluruh pura desa" } },
+    { key: "galungan", cat: "Culture", en: { tag: "Jan 2027", date: "13 & 23 Jan", title: "Galungan & Kuningan", desc: "Bali's great homecoming of the ancestors. Penjor poles arch over every street, and each family compound opens its shrines.", loc: "Village-wide" }, id: { tag: "Jan 2027", date: "13 & 23 Jan", title: "Galungan & Kuningan", desc: "Hari kemenangan dharma dan pulangnya para leluhur. Penjor melengkung di sepanjang jalan, dan sanggah setiap pekarangan dibuka.", loc: "Seluruh desa" } },
+    { key: "ngelawang", cat: "Culture", en: { tag: "Jan 2027", date: "14–22 Jan", title: "Ngelawang barong processions", desc: "Between Galungan and Kuningan, children and elders carry the barong door to door to cleanse the village. Small offerings welcome.", loc: "Village lanes" }, id: { tag: "Jan 2027", date: "14–22 Jan", title: "Ngelawang barong", desc: "Di antara Galungan dan Kuningan, barong diarak dari pintu ke pintu untuk menyucikan desa. Sesari seikhlasnya.", loc: "Gang-gang desa" } }
+  ];
+  constructor(props) {
+    super(props);
+    let lang = null, dark = false;
+    try { lang = localStorage.getItem("sgp-lang"); dark = localStorage.getItem("sgp-theme") === "dark"; } catch (e) {}
+    if (lang !== "en" && lang !== "id") lang = this.props.defaultLang === "id" ? "id" : "en";
+    this.state = { page: "home", destKey: "barong", cat: "All", lang, menuOpen: false, mDest: false, heroIdx: 0, spotIdx: 0, themeDark: dark, scrolled: false, navHidden: false };
+    this._fbi = 0;
+  }
+  componentDidMount() {
+    try { if (this.state.themeDark) document.documentElement.setAttribute("data-theme", "dark"); } catch (e) {}
+    this._err = (e) => {
+      const el = e.target;
+      if (el && el.tagName === "IMG" && el.src && el.src.indexOf("data:") !== 0 && !el.dataset.sgpfb) {
+        el.dataset.sgpfb = "1";
+        el.src = this.FB[this._fbi++ % this.FB.length];
+      }
+    };
+    document.addEventListener("error", this._err, true);
+    this._lastY = 0;
+    this._onScroll = () => {
+      const y = Math.max(0, window.scrollY || 0);
+      const scrolled = y > 60;
+      let navHidden = this.state.navHidden;
+      if (y > this._lastY + 4 && y > 150) navHidden = true;
+      else if (y < this._lastY - 4 || y < 80) navHidden = false;
+      this._lastY = y;
+      if (scrolled !== this.state.scrolled || navHidden !== this.state.navHidden) this.setState({ scrolled, navHidden });
+    };
+    window.addEventListener("scroll", this._onScroll, { passive: true });
+    this._startHero();
+  }
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.menuOpen !== this.state.menuOpen) {
+      try { document.body.style.overflow = this.state.menuOpen ? "hidden" : ""; } catch (e) {}
+    }
+  }
+  componentWillUnmount() {
+    document.removeEventListener("error", this._err, true);
+    if (this._onScroll) window.removeEventListener("scroll", this._onScroll);
+    if (this._hT) clearInterval(this._hT);
+    try { document.body.style.overflow = ""; } catch (e) {}
+  }
+  _startHero() {
+    if (this._hT) clearInterval(this._hT);
+    this._hT = setInterval(() => {
+      if (this.state.page === "home" && !this.state.menuOpen) this.setState((s) => ({ heroIdx: (s.heroIdx + 1) % this.SLIDES.length }));
+    }, 6500);
+  }
+  setPage(page, extra) {
+    this.setState(Object.assign({ page, navHidden: false, scrolled: false }, extra || {}));
+    this._lastY = 0;
+    try { window.scrollTo({ top: 0 }); } catch (e) {}
+  }
+  setLang(lang) {
+    this.setState({ lang });
+    try { localStorage.setItem("sgp-lang", lang); } catch (e) {}
+  }
+  setTheme(dark) {
+    this.setState({ themeDark: dark });
+    try {
+      if (dark) document.documentElement.setAttribute("data-theme", "dark");
+      else document.documentElement.removeAttribute("data-theme");
+      localStorage.setItem("sgp-theme", dark ? "dark" : "light");
+    } catch (e) {}
+  }
+  renderVals() {
+    const { page, destKey, cat, lang, menuOpen, mDest, heroIdx, spotIdx, themeDark, scrolled, navHidden } = this.state;
+    const t = this.S[lang];
+    const waNum = String(this.props.whatsappNumber ?? "+62 812-3956-2711");
+    const waDigits = waNum.replace(/\D/g, "");
+    const mkWa = (msg) => "https://wa.me/" + waDigits + "?text=" + encodeURIComponent(msg);
+    const mapsOn = this.props.liveMaps ?? true;
+    const stop = (fn) => (e) => { if (e && e.preventDefault) e.preventDefault(); fn(); };
+    const dests = this.DESTS.map((d) => Object.assign({}, d[lang], {
+      key: d.key,
+      category: t.cats[d.cat],
+      img: d.img ? this.U(this.IMG[d.img], "w=900&h=1120") : undefined,
+      tone: d.tone || "green",
+      open: () => this.setPage("detail", { destKey: d.key })
+    }));
+    const counts = {};
+    this.DESTS.forEach((d) => { counts[d.cat] = (counts[d.cat] || 0) + 1; });
+    const catTags = ["All", "Culture", "Nature", "Craft", "Family"].map((c) => ({
+      label: t.cats[c], sel: cat === c,
+      count: c === "All" ? this.DESTS.length : (counts[c] || 0),
+      pick: () => this.setState({ cat: c })
+    }));
+    const destsFiltered = dests.filter((d, i) => cat === "All" || this.DESTS[i].cat === cat);
+    const raw = this.DESTS.find((d) => d.key === destKey) || this.DESTS[0];
+    const loc = raw[lang];
+    const gi = (k, p) => k && k.indexOf("fb") === 0 ? this.FB[Number(k.slice(2))] : this.U(this.IMG[k], p);
+    const cur = Object.assign({}, loc, {
+      category: t.cats[raw.cat],
+      imgWide: raw.img ? this.U(this.IMG[raw.img], "w=2000&h=860") : this.FB[2],
+      g1: gi(raw.g[0], "w=1200&h=1000"),
+      g2: gi(raw.g[1], "w=700&h=500"),
+      g3: gi(raw.g[2], "w=700&h=500"),
+      g4: gi(raw.g[3], "w=1600&h=520"),
+      story: loc.story.map((s) => ({ text: s })),
+      tips: loc.tips.map((s) => ({ text: s })),
+      wa: mkWa(t.waMsg.replace("{x}", loc.title)),
+      mapSrc: "https://maps.google.com/maps?q=" + encodeURIComponent(raw.mapQ) + "&z=15&hl=" + lang + "&output=embed",
+      mapLink: "https://www.google.com/maps?q=" + encodeURIComponent(raw.mapQ)
+    });
+    const related = dests.filter((d) => d.key !== raw.key).slice(0, 4);
+    const events = this.EVENTS.map((e) => Object.assign({}, e[lang], { cat: t.cats[e.cat] }));
+    const activeNav = page === "destinations" || page === "detail" ? t.nav.destinations : page === "events" ? t.nav.events : page === "about" ? t.nav.about : "";
+    const navigate = (label) => {
+      if (label === "Home" || label === t.nav.home) this.setPage("home");
+      else if (label === t.nav.destinations) this.setPage("destinations");
+      else if (label === t.nav.events) this.setPage("events");
+      else if (label === t.nav.about) this.setPage("about");
+    };
+    const langBtn = (sel) => ({
+      padding: "3px 9px", fontSize: 11.5, fontWeight: 700, letterSpacing: "0.06em",
+      fontFamily: "var(--font-body)", borderRadius: "var(--radius-xs)", cursor: "pointer",
+      border: "1.5px solid " + (sel ? "var(--brand-primary)" : "transparent"),
+      background: sel ? "var(--brand-primary)" : "transparent",
+      color: sel ? "var(--text-on-brand)" : "var(--text-secondary)"
+    });
+    const mLangBtn = (sel) => ({
+      padding: "6px 16px", fontSize: 13, fontWeight: 700, letterSpacing: "0.06em",
+      fontFamily: "var(--font-body)", borderRadius: "var(--radius-xs)", cursor: "pointer",
+      border: "1.5px solid rgba(255,255,255,0.6)",
+      background: sel ? "#fff" : "transparent",
+      color: sel ? "#143619" : "#fff"
+    });
+    const heroSlides = this.SLIDES.map((c, i) => Object.assign({}, t.home.slides[i], {
+      cat: t.cats[c.cat],
+      st: {
+        position: "absolute", inset: 0,
+        backgroundImage: "url(" + this.U(this.IMG[c.img], "w=2000&h=1200") + ")",
+        backgroundSize: "cover", backgroundPosition: "center",
+        opacity: i === heroIdx ? 1 : 0, zIndex: i === heroIdx ? 2 : 1,
+        pointerEvents: i === heroIdx ? "auto" : "none",
+        transition: "opacity 0.9s var(--ease-out)"
+      },
+      go: stop(() => this.setPage("detail", { destKey: c.key }))
+    }));
+    const heroThumbs = this.SLIDES.map((c, i) => ({
+      label: t.cats[c.cat],
+      st: {
+        flex: "none", position: "relative", width: 132, height: 64, padding: 0,
+        borderRadius: "var(--radius-sm)", overflow: "hidden", cursor: "pointer",
+        border: "2px solid " + (i === heroIdx ? "var(--accent)" : "rgba(255,255,255,0.35)"),
+        backgroundImage: "url(" + this.U(this.IMG[c.img], "w=300&h=160") + ")",
+        backgroundSize: "cover", backgroundPosition: "center",
+        opacity: i === heroIdx ? 1 : 0.8,
+        transition: "opacity 0.2s, border-color 0.2s"
+      },
+      pick: () => { this.setState({ heroIdx: i }); this._startHero(); }
+    }));
+    const quickLinks = [
+      { icon: "map-pin", label: t.home.quick.all, go: stop(() => this.setPage("destinations", { cat: "All" })) },
+      { icon: "landmark", label: t.cats.Culture, go: stop(() => this.setPage("destinations", { cat: "Culture" })) },
+      { icon: "leaf", label: t.cats.Nature, go: stop(() => this.setPage("destinations", { cat: "Nature" })) },
+      { icon: "hammer", label: t.cats.Craft, go: stop(() => this.setPage("destinations", { cat: "Craft" })) },
+      { icon: "baby", label: t.cats.Family, go: stop(() => this.setPage("destinations", { cat: "Family" })) },
+      { icon: "calendar", label: t.nav.events, go: stop(() => this.setPage("events")) },
+      { icon: "message-circle", label: t.home.quick.plan, go: stop(() => { try { window.open(mkWa(t.waGeneral), "_blank"); } catch (e) {} }) }
+    ];
+    const spotSlides = this.DESTS.map((d, i) => ({
+      st: {
+        position: "absolute", inset: 0,
+        backgroundImage: "url(" + (d.img ? this.U(this.IMG[d.img], "w=2000&h=1100") : this.FB[2]) + ")",
+        backgroundSize: "cover", backgroundPosition: "center",
+        opacity: i === spotIdx ? 1 : 0, zIndex: i === spotIdx ? 1 : 0,
+        transition: "opacity 0.7s var(--ease-out)"
+      }
+    }));
+    const spotRaw = this.DESTS[spotIdx];
+    const spot = {
+      title: spotRaw[lang].title,
+      blurb: spotRaw[lang].blurb,
+      open: stop(() => this.setPage("detail", { destKey: spotRaw.key }))
+    };
+    const tips6 = t.home.tips.map((x, i) => ({ icon: this.TIPICONS[i], t: x.t, b: x.b }));
+    const closeNav = (fn) => stop(() => { this.setState({ menuOpen: false, mDest: false }); fn(); });
+    const drawerDests = dests.map((d) => ({
+      title: d.title,
+      go: closeNav(() => this.setPage("detail", { destKey: d.key }))
+    }));
+    return {
+      t, n14: 14, n18: 18, n20: 20, n22: 22, n24: 24,
+      isHome: page === "home", isDests: page === "destinations", isDetail: page === "detail",
+      isEvents: page === "events", isAbout: page === "about",
+      navLinks: [t.nav.destinations, t.nav.events, t.nav.about],
+      activeNav, navigate,
+      navY: navHidden && !menuOpen ? "-105%" : "0px",
+      navTransparent: page === "home" && !scrolled,
+      navBg: page === "home" && !scrolled ? "transparent" : "var(--surface-card)",
+      navShadow: page === "home" && !scrolled ? "none" : "var(--shadow-card)",
+      heroSlides, heroThumbs, quickLinks,
+      spotSlides, spot, spotCount: (spotIdx + 1) + " / " + this.DESTS.length,
+      spotPrev: () => this.setState((s) => ({ spotIdx: (s.spotIdx - 1 + this.DESTS.length) % this.DESTS.length })),
+      spotNext: () => this.setState((s) => ({ spotIdx: (s.spotIdx + 1) % this.DESTS.length })),
+      tips6,
+      goCraftCat: stop(() => this.setPage("destinations", { cat: "Craft" })),
+      openSubak: stop(() => this.setPage("detail", { destKey: "subak" })),
+      openZoo: stop(() => this.setPage("detail", { destKey: "zoo" })),
+      openBarong: stop(() => this.setPage("detail", { destKey: "barong" })),
+      dests3: dests.slice(0, 3), catTags, destsFiltered, cur, related,
+      crumbs: [
+        { label: t.nav.home, onClick: () => this.setPage("home") },
+        { label: t.nav.destinations, onClick: () => this.setPage("destinations") },
+        { label: cur.title }
+      ],
+      events, ev2: events.slice(0, 2),
+      mapsOn, mapsOff: !mapsOn,
+      aboutParas: t.about.paras.map((s) => ({ text: s })),
+      aboutFacts: t.about.facts,
+      aboutMapSrc: "https://maps.google.com/maps?q=" + encodeURIComponent("Desa Singapadu, Sukawati, Gianyar") + "&z=14&hl=" + lang + "&output=embed",
+      aboutMapLink: "https://www.google.com/maps?q=" + encodeURIComponent("Desa Singapadu, Sukawati, Gianyar"),
+      goHome: stop(() => this.setPage("home")),
+      goDests: stop(() => this.setPage("destinations")),
+      goEvents: stop(() => this.setPage("events")),
+      goAbout: stop(() => this.setPage("about")),
+      menuOpen,
+      openMenu: () => this.setState({ menuOpen: true }),
+      closeMenu: () => this.setState({ menuOpen: false, mDest: false }),
+      mDestOpen: mDest,
+      toggleMDest: () => this.setState((s) => ({ mDest: !s.mDest })),
+      mChevStyle: { display: "inline-flex", transform: mDest ? "rotate(90deg)" : "none", transition: "transform 0.2s var(--ease-out)" },
+      drawerDests,
+      mGoHome: closeNav(() => this.setPage("home")),
+      mGoDests: closeNav(() => this.setPage("destinations")),
+      mGoEvents: closeNav(() => this.setPage("events")),
+      mGoAbout: closeNav(() => this.setPage("about")),
+      mEnStyle: mLangBtn(lang === "en"), mIdStyle: mLangBtn(lang === "id"),
+      toggleTheme: () => this.setTheme(!themeDark),
+      mThemeTrack: { width: 42, height: 24, borderRadius: 12, background: themeDark ? "var(--accent)" : "rgba(255,255,255,0.25)", position: "relative", display: "inline-block", transition: "background 0.2s", flex: "none" },
+      mThemeKnob: { position: "absolute", top: 3, left: themeDark ? 21 : 3, width: 18, height: 18, borderRadius: 9, background: "#fff", transition: "left 0.2s" },
+      setEn: () => this.setLang("en"),
+      setId: () => this.setLang("id"),
+      enBtnStyle: langBtn(lang === "en"), idBtnStyle: langBtn(lang === "id"),
+      persistTheme: (dark) => this.setTheme(!!dark),
+      waVillage: mkWa(t.waGeneral),
+      waDisplay: waNum
+    };
+  }
+}
+</script>
+
+
+</body></html>
