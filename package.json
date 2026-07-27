@@ -10,8 +10,9 @@
     "images:heroes": "node scripts/optimize-images.mjs --profile heroes",
     "images:gallery": "node scripts/optimize-images.mjs --profile gallery",
     "images:watch": "node scripts/optimize-images.mjs --watch",
-    "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run lint && npm run typecheck && npm run build"
   },
   "dependencies": {
     "next": "16.2.12",

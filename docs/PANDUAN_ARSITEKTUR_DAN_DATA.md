@@ -26,27 +26,28 @@ Keputusan arsitektur:
 6. URL, konten SEO, dan HTML inti tetap dapat dibaca tanpa JavaScript.
 7. Bahasa menjadi bagian URL, bukan hanya state di `localStorage`, agar setiap versi dapat ditautkan dan diindeks.
 
-## 2. Struktur folder target
+## 2. Struktur folder project
 
 ```text
 singapadu-tourism/
 ├─ public/
-│  ├─ images/
-│  │  ├─ destinations/<destination-id>/
-│  │  ├─ events/<event-id>/
-│  │  └─ shared/
-│  └─ icons/
+│  ├─ logos-unoptimized/ dan logos/
+│  ├─ heroes-unoptimized/ dan heroes/
+│  └─ gallery-unoptimized/ dan gallery/
 ├─ src/
 │  ├─ app/
+│  │  ├─ (default)/
+│  │  │  ├─ layout.tsx
+│  │  │  └─ page.tsx
 │  │  ├─ [locale]/
+│  │  │  ├─ layout.tsx
 │  │  │  ├─ page.tsx
 │  │  │  ├─ destinasi/
 │  │  │  │  ├─ page.tsx
 │  │  │  │  └─ [slug]/page.tsx
 │  │  │  ├─ agenda/page.tsx
-│  │  │  └─ tentang/page.tsx
-│  │  ├─ layout.tsx
-│  │  ├─ not-found.tsx
+│  │  │  ├─ tentang/page.tsx
+│  │  │  └─ not-found.tsx
 │  │  ├─ robots.ts
 │  │  ├─ sitemap.ts
 │  │  └─ globals.css
@@ -54,28 +55,22 @@ singapadu-tourism/
 │  │  ├─ layout/
 │  │  ├─ destination/
 │  │  ├─ event/
+│  │  ├─ home/
+│  │  ├─ seo/
 │  │  └─ ui/
 │  ├─ content/
 │  │  ├─ destinations.ts
+│  │  ├─ destination-slugs.ts
 │  │  ├─ events.ts
 │  │  ├─ categories.ts
 │  │  ├─ site.ts
 │  │  └─ translations.ts
-│  ├─ domain/
-│  │  ├─ destination.ts
-│  │  ├─ event.ts
-│  │  ├─ shared.ts
-│  │  └─ validators.ts
-│  ├─ repositories/
-│  │  ├─ destination-repository.ts
-│  │  └─ event-repository.ts
+│  ├─ domain/tourism.ts
+│  ├─ repositories/tourism-repository.ts
 │  └─ lib/
 │     ├─ i18n.ts
-│     ├─ json-ld.ts
-│     └─ site-url.ts
-├─ tests/
-│  ├─ content.test.ts
-│  └─ routes.test.ts
+│     └─ json-ld.ts
+├─ scripts/optimize-images.mjs
 ├─ docs/
 │  └─ PANDUAN_ARSITEKTUR_DAN_DATA.md
 ├─ next.config.ts
@@ -419,7 +414,7 @@ Route `/` sebaiknya menjadi landing page Indonesia yang nyata atau halaman pemil
 
 ## 7. Validasi data dan quality gate
 
-TypeScript saja tidak cukup untuk memeriksa string kosong, format tanggal, URL, duplikasi, dan relasi. Tambahkan schema validator seperti Zod saat implementasi, kemudian jalankan validasi melalui test atau script sebelum build.
+TypeScript saja tidak cukup untuk memeriksa string kosong, format tanggal, URL, duplikasi, dan relasi. Implementasi saat ini menjalankan validasi build-time dari `tourism-repository.ts` ketika data dimuat. Jika kontrak konten berkembang atau sumber data menjadi eksternal, pindahkan aturan tersebut ke schema validator khusus seperti Zod tanpa mengubah API repository.
 
 Minimal validasi otomatis:
 
@@ -441,15 +436,15 @@ Quality gate sebelum merge:
 
 ```bash
 npm run lint
-npm run test
+npm run typecheck
 npm run build
 ```
 
-Tambahkan script `test` dan `validate:content` ketika validator diimplementasikan. Build harus gagal apabila konten `published` tidak valid.
+Perintah ringkasnya adalah `npm run check`. Tambahkan unit test repository dan script `validate:content` ketika volume konten atau jumlah kontributor meningkat. Build harus gagal apabila konten `published` tidak valid.
 
 ## 8. Gambar dan aset
 
-Jangan menyalin gambar base64 dari HTML referensi ke source code. Simpan setiap aset sebagai file mandiri di `public/images`.
+Jangan menyalin gambar base64 dari HTML referensi ke source code. Simpan aset asli sebagai file mandiri di folder `public/*-unoptimized`, kemudian jalankan profile optimizer yang sesuai agar UI hanya memakai output terkompresi.
 
 Aturan aset:
 
