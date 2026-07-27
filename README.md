@@ -1,5 +1,9 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Project Guide
+
+Panduan arsitektur, model data, static export, dan alur kontribusi tersedia di [docs/PANDUAN_ARSITEKTUR_DAN_DATA.md](docs/PANDUAN_ARSITEKTUR_DAN_DATA.md).
+
 ## Getting Started
 
 First, run the development server:
