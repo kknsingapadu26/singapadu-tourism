@@ -50,7 +50,9 @@ You can also invoke the script directly when selecting more than one profile:
 node scripts/optimize-images.mjs --profile heroes --profile gallery
 ```
 
-`npm run dev` optimizes all profiles once and watches every source directory. `npm run build` automatically optimizes all profiles before building. Content hashes skip unchanged sources, stale variants are removed safely, and every output directory contains a `manifest.json` with dimensions and `srcset`-ready paths.
+Image optimization is fully opt-in. Neither `npm run dev` nor `npm run build` runs it. Use `npm run images:watch` manually in a separate terminal only when you want continuous processing.
+
+Content hashes skip unchanged sources. Removing an original does not delete its generated files or manifest entry. Reprocessing a source with the same filename may update that source's matching outputs, but unrelated generated files are never removed. Every output directory contains a `manifest.json` with dimensions and `srcset`-ready paths.
 
 Use generated paths from the manifests in UI code. Do not reference files from an `*-unoptimized` directory on the website.
 
