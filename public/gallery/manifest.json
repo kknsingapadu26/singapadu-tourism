@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "profile": "gallery",
+  "config": {
+    "source": "public/gallery-unoptimized",
+    "output": "public/gallery",
+    "widths": [
+      480,
+      768,
+      1200,
+      1600
+    ],
+    "responsive": true,
+    "formats": {
+      "avif": {
+        "quality": 60,
+        "effort": 5
+      },
+      "webp": {
+        "quality": 82,
+        "effort": 5,
+        "smartSubsample": true
+      }
+    }
+  },
+  "images": []
+}

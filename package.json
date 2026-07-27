@@ -3,8 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "npm run images:optimize && concurrently --kill-others --names next,images \"next dev --webpack\" \"npm run images:watch\"",
+    "build": "next build --webpack",
+    "prebuild": "npm run images:optimize",
+    "images:optimize": "node scripts/optimize-images.mjs",
+    "images:logos": "node scripts/optimize-images.mjs --profile logos",
+    "images:heroes": "node scripts/optimize-images.mjs --profile heroes",
+    "images:gallery": "node scripts/optimize-images.mjs --profile gallery",
+    "images:watch": "node scripts/optimize-images.mjs --watch",
     "start": "next start",
     "lint": "eslint"
   },
@@ -18,8 +24,10 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "concurrently": "^10.0.4",
     "eslint": "^9",
     "eslint-config-next": "16.2.12",
+    "sharp": "^0.35.3",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

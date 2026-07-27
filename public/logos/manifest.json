@@ -1,0 +1,74 @@
+{
+  "version": 2,
+  "profile": "logos",
+  "config": {
+    "source": "public/logos-unoptimized",
+    "output": "public/logos",
+    "widths": [
+      512
+    ],
+    "responsive": false,
+    "formats": {
+      "webp": {
+        "lossless": true,
+        "effort": 6
+      }
+    }
+  },
+  "images": [
+    {
+      "source": "logo-desa-singapadu.png",
+      "sourceHash": "063bfcbb9c05dc63b3b399d90fd0201ee966cbf85453aff5fd0014033b472223",
+      "sourceFormat": "png",
+      "sourceWidth": 500,
+      "sourceHeight": 500,
+      "sourceBytes": 401622,
+      "hasAlpha": true,
+      "variants": [
+        {
+          "output": "/logos/logo-desa-singapadu.webp",
+          "format": "webp",
+          "width": 500,
+          "height": 500,
+          "bytes": 232434
+        }
+      ]
+    },
+    {
+      "source": "logo-kkn-singapadu.png",
+      "sourceHash": "125e56dfb3c8ffbf5f275887eb98359cad4d8e9c1d0e1a74031711043f3c2869",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 2059,
+      "sourceHeight": 2059,
+      "sourceBytes": 2066245,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/logos/logo-kkn-singapadu.webp",
+          "format": "webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 213772
+        }
+      ]
+    },
+    {
+      "source": "logo-pnb.png",
+      "sourceHash": "3021eff09b7845b57a73479343a99085d9a06c1b196159a1b97e101ab0cfee7c",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 1379,
+      "sourceHeight": 1379,
+      "sourceBytes": 379389,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/logos/logo-pnb.webp",
+          "format": "webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 42226
+        }
+      ]
+    }
+  ]
+}
