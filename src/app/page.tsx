@@ -1,7 +1,15 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Language, TRANSLATIONS } from '@/data/singapaduData';
+import {
+  APP_PAGES,
+  type AppPage,
+  type DestinationFilter,
+  type DestinationKey,
+  type Language,
+  type NavigationOptions,
+  TRANSLATIONS,
+} from '@/data/singapaduData';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 
@@ -24,29 +32,34 @@ import { AboutVillage } from '@/components/about/AboutVillage';
 export default function Home() {
   const [lang, setLang] = useState<Language>('en');
   const [dark, setDark] = useState<boolean>(false);
-  const [currentPage, setCurrentPage] = useState<'home' | 'destinations' | 'detail' | 'events' | 'about'>('home');
-  const [selectedDestKey, setSelectedDestKey] = useState<string>('barong');
-  const [categoryFilter, setCategoryFilter] = useState<string>('All');
+  const [currentPage, setCurrentPage] = useState<AppPage>('home');
+  const [selectedDestKey, setSelectedDestKey] = useState<DestinationKey>('barong');
+  const [categoryFilter, setCategoryFilter] = useState<DestinationFilter>('All');
 
   // Initialize theme and language from localStorage
   useEffect(() => {
-    try {
-      const savedLang = localStorage.getItem('sgp-lang');
-      if (savedLang === 'en' || savedLang === 'id') {
-        setLang(savedLang);
-      }
+    const frame = requestAnimationFrame(() => {
+      try {
+        const savedLang = localStorage.getItem('sgp-lang');
+        if (savedLang === 'en' || savedLang === 'id') {
+          setLang(savedLang);
+          document.documentElement.lang = savedLang;
+        }
 
-      const savedTheme = localStorage.getItem('sgp-theme');
-      const isDark = savedTheme === 'dark';
-      setDark(isDark);
-      if (isDark) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-      } else {
-        document.documentElement.removeAttribute('data-theme');
+        const savedTheme = localStorage.getItem('sgp-theme');
+        const isDark = savedTheme === 'dark';
+        setDark(isDark);
+        if (isDark) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.removeAttribute('data-theme');
+        }
+      } catch {
+        // LocalStorage fallback
       }
-    } catch (e) {
-      // LocalStorage fallback
-    }
+    });
+
+    return () => cancelAnimationFrame(frame);
   }, []);
 
   const handleToggleTheme = (isDark: boolean) => {
@@ -59,18 +72,19 @@ export default function Home() {
         document.documentElement.removeAttribute('data-theme');
         localStorage.setItem('sgp-theme', 'light');
       }
-    } catch (e) {}
+    } catch {}
   };
 
   const handleSetLang = (newLang: Language) => {
     setLang(newLang);
+    document.documentElement.lang = newLang;
     try {
       localStorage.setItem('sgp-lang', newLang);
-    } catch (e) {}
+    } catch {}
   };
 
-  const handleNavigate = (page: string, extra?: Record<string, any>) => {
-    if (page === 'home' || page === 'destinations' || page === 'detail' || page === 'events' || page === 'about') {
+  const handleNavigate = (page: AppPage, extra?: NavigationOptions) => {
+    if (APP_PAGES.includes(page)) {
       setCurrentPage(page);
     }
 

@@ -1,13 +1,13 @@
 'use client';
 
 import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
-import { Language, TRANSLATIONS, DESTS } from '@/data/singapaduData';
+import { type Language, type Navigate, TRANSLATIONS, DESTS } from '@/data/singapaduData';
 import { Button } from '../ui/Button';
+import { Icon } from '../ui/Icon';
 
 interface MustSeeSpotlightProps {
   lang: Language;
-  onNavigate: (page: string, extra?: Record<string, any>) => void;
+  onNavigate: Navigate;
 }
 
 export const MustSeeSpotlight: React.FC<MustSeeSpotlightProps> = ({ lang, onNavigate }) => {
@@ -27,7 +27,7 @@ export const MustSeeSpotlight: React.FC<MustSeeSpotlightProps> = ({ lang, onNavi
         <img
           src={spotRaw.img || "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&q=80&w=1600"}
           alt={spotLoc.title}
-          className="w-full h-full object-cover transition-all duration-700"
+          className="w-full h-full object-cover transition-all duration-[var(--dur-med)] ease-[var(--ease-out)]"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/60" />
       </div>
@@ -40,7 +40,7 @@ export const MustSeeSpotlight: React.FC<MustSeeSpotlightProps> = ({ lang, onNavi
             {t.home.spotEyebrow}
           </span>
 
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-[var(--text-primary)] leading-tight">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-[var(--text-primary)] leading-[1.02] tracking-[-0.02em]">
             {spotLoc.title}
           </h2>
 
@@ -52,7 +52,7 @@ export const MustSeeSpotlight: React.FC<MustSeeSpotlightProps> = ({ lang, onNavi
             <Button
               variant="primary"
               onClick={() => onNavigate('detail', { destKey: spotRaw.key })}
-              icon={<ArrowRight className="w-4 h-4" />}
+              icon={<Icon name="arrow-right" className="w-4 h-4" />}
             >
               {t.home.spotCta}
             </Button>
@@ -70,7 +70,7 @@ export const MustSeeSpotlight: React.FC<MustSeeSpotlightProps> = ({ lang, onNavi
             aria-label="Previous spot"
             className="w-11 h-11 flex items-center justify-center border-1.5 border-white/60 rounded-sm bg-black/35 hover:bg-black/65 text-white transition-colors cursor-pointer"
           >
-            <ChevronLeft className="w-5 h-5" />
+            <Icon name="chevron-left" className="w-5 h-5" />
           </button>
 
           <button
@@ -78,7 +78,7 @@ export const MustSeeSpotlight: React.FC<MustSeeSpotlightProps> = ({ lang, onNavi
             aria-label="Next spot"
             className="w-11 h-11 flex items-center justify-center border-1.5 border-white/60 rounded-sm bg-black/35 hover:bg-black/65 text-white transition-colors cursor-pointer"
           >
-            <ChevronRight className="w-5 h-5" />
+            <Icon name="chevron-right" className="w-5 h-5" />
           </button>
         </div>
       </div>

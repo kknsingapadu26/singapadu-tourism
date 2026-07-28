@@ -1,12 +1,12 @@
 'use client';
 
 import React from 'react';
-import { Language, TRANSLATIONS, EVENTS } from '@/data/singapaduData';
+import { type Language, type Navigate, TRANSLATIONS, EVENTS } from '@/data/singapaduData';
 import { SectionHeader } from '../ui/SectionHeader';
 
 interface EventsPreviewProps {
   lang: Language;
-  onNavigate: (page: string, extra?: Record<string, any>) => void;
+  onNavigate: Navigate;
 }
 
 export const EventsPreview: React.FC<EventsPreviewProps> = ({ lang, onNavigate }) => {
@@ -44,7 +44,7 @@ export const EventsPreview: React.FC<EventsPreviewProps> = ({ lang, onNavigate }
 
               {/* Title & Location */}
               <div className="flex flex-col gap-1">
-                <h4 className="text-lg font-extrabold text-[var(--text-primary)] leading-tight">
+                <h4 className="text-lg font-bold text-[var(--text-primary)] leading-tight">
                   {loc.title}
                 </h4>
                 <span className="text-xs sm:text-sm text-[var(--text-secondary)]">

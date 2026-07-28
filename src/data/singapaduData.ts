@@ -1,57 +1,64 @@
-export type Language = 'en' | 'id';
+export const LANGUAGES = ['en', 'id'] as const;
+export type Language = (typeof LANGUAGES)[number];
 
-export interface Destination {
+export const DESTINATION_CATEGORIES = ['Culture', 'Nature', 'Craft', 'Family', 'Sacred'] as const;
+export type DestinationCategory = (typeof DESTINATION_CATEGORIES)[number];
+
+export const DESTINATION_FILTERS = ['All', ...DESTINATION_CATEGORIES] as const;
+export type DestinationFilter = (typeof DESTINATION_FILTERS)[number];
+
+export const APP_PAGES = ['home', 'destinations', 'detail', 'events', 'about'] as const;
+export type AppPage = (typeof APP_PAGES)[number];
+
+export interface NavigationOptions {
+  destKey?: DestinationKey;
+  cat?: DestinationFilter;
+}
+
+export type Navigate = (page: AppPage, options?: NavigationOptions) => void;
+
+export type Localized<T> = Record<Language, T>;
+
+export interface DestinationContent {
+  title: string;
+  location: string;
+  blurb: string;
+  hours: string;
+  price: string;
+  distance: string;
+  story: readonly string[];
+  tips: readonly string[];
+}
+
+type DestinationSchema = {
   key: string;
-  cat: 'Culture' | 'Nature' | 'Craft' | 'Family' | 'Sacred';
+  cat: DestinationCategory;
   img?: string;
   tone?: 'green' | 'amber' | 'sky' | 'navy';
   imgLabel?: string;
   mapQ: string;
-  en: {
-    title: string;
-    location: string;
-    blurb: string;
-    hours: string;
-    price: string;
-    distance: string;
-    story: string[];
-    tips: string[];
-  };
-  id: {
-    title: string;
-    location: string;
-    blurb: string;
-    hours: string;
-    price: string;
-    distance: string;
-    story: string[];
-    tips: string[];
-  };
-  gallery: string[];
+  gallery: readonly [string, string, string, string, ...string[]];
+} & Localized<DestinationContent>;
+
+export type Destination = (typeof DESTS)[number];
+export type DestinationKey = Destination['key'];
+
+export interface EventContent {
+  tag: string;
+  date: string;
+  title: string;
+  desc: string;
+  loc: string;
 }
 
-export interface EventItem {
+export type EventItem = {
   key: string;
-  cat: 'Culture' | 'Nature' | 'Craft' | 'Family' | 'Sacred';
-  en: {
-    tag: string;
-    date: string;
-    title: string;
-    desc: string;
-    loc: string;
-  };
-  id: {
-    tag: string;
-    date: string;
-    title: string;
-    desc: string;
-    loc: string;
-  };
-}
+  cat: DestinationCategory;
+} & Localized<EventContent>;
 
 export interface HeroSlide {
-  key: string;
-  cat: 'Culture' | 'Nature' | 'Craft' | 'Family';
+  key: DestinationKey;
+  cat: Exclude<DestinationCategory, 'Sacred'>;
   img: string;
 }
 
@@ -62,12 +69,13 @@ export const HERO_SLIDES: HeroSlide[] = [
   { key: "zoo", img: "https://images.unsplash.com/photo-1554457945-ba5df6648602?auto=format&fit=crop&q=80&w=1600", cat: "Family" }
 ];
 
-export const DESTS: Destination[] = [
+export const DESTS = [
   {
     key: "barong",
     cat: "Culture",
     img: "https://images.unsplash.com/photo-1531778272849-d1dd22444c06?auto=format&fit=crop&q=80&w=900",
     tone: "green",
+    imgLabel: undefined,
     mapQ: "Pura Puseh Singapadu Gianyar",
     gallery: [
       "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&q=80&w=1200",
@@ -115,6 +123,7 @@ export const DESTS: Destination[] = [
     cat: "Family",
     img: "https://images.unsplash.com/photo-1554457945-ba5df6648602?auto=format&fit=crop&q=80&w=900",
     tone: "green",
+    imgLabel: undefined,
     mapQ: "Bali Zoo Singapadu",
     gallery: [
       "https://images.unsplash.com/photo-1463852247062-1bbca38f7805?auto=format&fit=crop&q=80&w=1200",
@@ -162,6 +171,7 @@ export const DESTS: Destination[] = [
     cat: "Craft",
     img: "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&q=80&w=900",
     tone: "amber",
+    imgLabel: undefined,
     mapQ: "Banjar Sengguan Singapadu",
     gallery: [
       "https://images.unsplash.com/photo-1531778272849-d1dd22444c06?auto=format&fit=crop&q=80&w=1200",
@@ -209,6 +219,7 @@ export const DESTS: Destination[] = [
     cat: "Nature",
     img: "https://images.unsplash.com/photo-1558005530-a7958896ec60?auto=format&fit=crop&q=80&w=900",
     tone: "sky",
+    imgLabel: undefined,
     mapQ: "Singapadu Kaler Gianyar",
     gallery: [
       "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&q=80&w=1200",
@@ -256,6 +267,7 @@ export const DESTS: Destination[] = [
     cat: "Nature",
     img: "https://images.unsplash.com/photo-1559628233-100c798642d4?auto=format&fit=crop&q=80&w=900",
     tone: "navy",
+    imgLabel: undefined,
     mapQ: "Tukad Oos Gianyar",
     gallery: [
       "https://images.unsplash.com/photo-1558005530-a7958896ec60?auto=format&fit=crop&q=80&w=1200",
@@ -346,7 +358,7 @@ export const DESTS: Destination[] = [
       ]
     }
   }
-];
+] as const satisfies readonly DestinationSchema[];
 
 export const EVENTS: EventItem[] = [
   {
@@ -548,10 +560,10 @@ export const TRANSLATIONS = {
     waMsg: "Halo! Saya ingin bertanya tentang {x} di Singapadu.",
     waGeneral: "Halo! Saya ingin bertanya tentang kunjungan ke Singapadu."
   }
-};
+} satisfies Localized<unknown>;
 
 export const CONTACT_INFO = {
   whatsappNumber: "+62 812-3956-2711",
   email: "info@singapadu.desa.id",
   address: "Desa Singapadu, Sukawati, Gianyar, Bali 80582"
-};
+} as const;

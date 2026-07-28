@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import { MapPin, ArrowRight } from 'lucide-react';
 import { Badge } from './Badge';
+import { Icon } from './Icon';
 
 interface DestinationCardProps {
   title: string;
@@ -32,19 +32,19 @@ export const DestinationCard: React.FC<DestinationCardProps> = ({
   return (
     <div
       onClick={onClick}
-      className="group relative flex flex-col h-full bg-[var(--surface-card)] border border-[var(--border)] rounded-xl overflow-hidden shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-raised)] hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+      className="group relative flex flex-col h-full bg-[var(--surface-card)] border border-[var(--border)] rounded-sm overflow-hidden shadow-[var(--shadow-card)] transition-shadow duration-[var(--dur-med)] ease-[var(--ease-out)] cursor-pointer"
     >
       {/* Image container */}
-      <div className="relative w-full aspect-[4/3] bg-neutral-200 dark:bg-neutral-800 overflow-hidden">
+      <div className="relative w-full aspect-[4/3] bg-[var(--surface-sunken)] overflow-hidden">
         {img ? (
           <img
             src={img}
             alt={title}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            className="w-full h-full object-cover transition-transform duration-[var(--dur-med)] ease-[var(--ease-out)] group-hover:scale-103"
             loading="lazy"
           />
         ) : (
-          <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-amber-100 to-amber-200 dark:from-amber-950 dark:to-neutral-900 text-amber-900 dark:text-amber-200 p-4 text-center">
+          <div className="w-full h-full flex flex-col items-center justify-center bg-[var(--tint-accent)] text-[var(--category-craft-text)] p-4 text-center">
             <span className="text-sm font-semibold">{imgLabel || title}</span>
           </div>
         )}
@@ -56,11 +56,11 @@ export const DestinationCard: React.FC<DestinationCardProps> = ({
       {/* Content */}
       <div className="flex flex-col flex-1 p-5">
         <div className="flex items-center gap-1.5 text-xs text-[var(--text-secondary)] font-medium mb-1.5">
-          <MapPin className="w-3.5 h-3.5 text-[var(--brand-primary)] flex-shrink-0" />
+          <Icon name="map-pin" className="w-3.5 h-3.5 text-[var(--brand-primary)] flex-shrink-0" />
           <span className="truncate">{location}</span>
         </div>
 
-        <h3 className="text-lg font-bold text-[var(--text-primary)] group-hover:text-[var(--brand-primary)] transition-colors duration-200 line-clamp-1 mb-2">
+        <h3 className="text-lg font-bold text-[var(--text-primary)] group-hover:text-[var(--brand-primary)] transition-colors duration-[var(--dur-fast)] line-clamp-1 mb-2">
           {title}
         </h3>
 
@@ -78,9 +78,9 @@ export const DestinationCard: React.FC<DestinationCardProps> = ({
             <span className="text-xs text-[var(--text-secondary)]">{hours}</span>
           )}
 
-          <span className="inline-flex items-center gap-1 text-xs font-bold text-[var(--brand-primary)] group-hover:translate-x-1 transition-transform duration-200">
+          <span className="inline-flex items-center gap-1 text-xs font-bold text-[var(--brand-primary)] group-hover:translate-x-1 transition-transform duration-[var(--dur-fast)]">
             {lang === 'id' ? 'Lihat' : 'Explore'}
-            <ArrowRight className="w-3.5 h-3.5" />
+            <Icon name="arrow-right" className="w-3.5 h-3.5" />
           </span>
         </div>
       </div>

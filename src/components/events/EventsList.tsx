@@ -1,10 +1,10 @@
 'use client';
 
 import React from 'react';
-import { Calendar, MapPin, MessageCircle } from 'lucide-react';
 import { Language, TRANSLATIONS, EVENTS, CONTACT_INFO } from '@/data/singapaduData';
 import { Badge } from '../ui/Badge';
 import { Button } from '../ui/Button';
+import { Icon } from '../ui/Icon';
 
 interface EventsListProps {
   lang: Language;
@@ -18,10 +18,10 @@ export const EventsList: React.FC<EventsListProps> = ({ lang }) => {
     <div className="pt-32 pb-24 max-w-[960px] mx-auto px-6">
       {/* Header section */}
       <div className="flex flex-col gap-3 mb-8">
-        <span className="text-xs font-bold uppercase tracking-[0.1em] text-[var(--brand-primary)]">
+        <span className="text-xs font-bold uppercase tracking-[0.08em] text-[var(--brand-primary)]">
           {t.events.eyebrow}
         </span>
-        <h1 className="text-3xl sm:text-5xl font-extrabold text-[var(--text-primary)] leading-tight">
+        <h1 className="text-3xl sm:text-5xl font-extrabold text-[var(--text-primary)] leading-[1.02] tracking-[-0.02em]">
           {t.events.title}
         </h1>
         <p className="text-base sm:text-lg text-[var(--text-secondary)] max-w-[620px]">
@@ -53,14 +53,14 @@ export const EventsList: React.FC<EventsListProps> = ({ lang }) => {
                 <div>
                   <Badge category={ev.cat}>{(t.cats as Record<string, string>)[ev.cat]}</Badge>
                 </div>
-                <h3 className="text-xl font-extrabold text-[var(--text-primary)] m-0 leading-snug">
+                <h3 className="text-xl font-bold text-[var(--text-primary)] m-0 leading-snug">
                   {loc.title}
                 </h3>
                 <p className="text-sm text-[var(--text-secondary)] m-0 leading-relaxed">
                   {loc.desc}
                 </p>
                 <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-[var(--text-secondary)] pt-0.5">
-                  <MapPin className="w-3.5 h-3.5 text-[var(--brand-primary)]" />
+                  <Icon name="map-pin" className="w-3.5 h-3.5 text-[var(--brand-primary)]" />
                   <span>{loc.loc}</span>
                 </div>
               </div>
@@ -71,7 +71,7 @@ export const EventsList: React.FC<EventsListProps> = ({ lang }) => {
 
       {/* Pawukon Calendar Note Card (Bottom) */}
       <div className="mt-6 flex flex-col sm:flex-row items-start sm:items-center gap-4.5 bg-[var(--tint-accent)] rounded-sm p-5.5">
-        <Calendar className="w-5 h-5 text-[var(--brand-primary)] flex-shrink-0 mt-0.5 sm:mt-0" />
+        <Icon name="calendar" className="w-5 h-5 text-[var(--brand-primary)] flex-shrink-0 mt-0.5 sm:mt-0" />
         <span className="text-sm text-[var(--text-primary)] flex-1 min-w-[200px] leading-relaxed">
           {t.events.note}
         </span>
@@ -79,7 +79,7 @@ export const EventsList: React.FC<EventsListProps> = ({ lang }) => {
           <Button
             variant="primary"
             size="sm"
-            icon={<MessageCircle className="w-4 h-4" />}
+            icon={<Icon name="message-circle" className="w-4 h-4" />}
           >
             {t.events.ask}
           </Button>

@@ -1,13 +1,13 @@
 'use client';
 
 import React from 'react';
-import { Language, TRANSLATIONS, DESTS } from '@/data/singapaduData';
+import { type Language, type Navigate, TRANSLATIONS, DESTS } from '@/data/singapaduData';
 import { SectionHeader } from '../ui/SectionHeader';
 import { DestinationCard } from '../ui/DestinationCard';
 
 interface PlacesToExploreProps {
   lang: Language;
-  onNavigate: (page: string, extra?: Record<string, any>) => void;
+  onNavigate: Navigate;
 }
 
 export const PlacesToExplore: React.FC<PlacesToExploreProps> = ({ lang, onNavigate }) => {
