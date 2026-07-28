@@ -84,21 +84,19 @@ export const Header: React.FC<HeaderProps> = ({
               <div className="flex items-center gap-1 bg-neutral-200/50 dark:bg-neutral-800/50 p-0.5 rounded-md">
                 <button
                   onClick={() => onSetLang('en')}
-                  className={`px-2 py-0.5 rounded text-[11px] font-bold tracking-wider transition-colors cursor-pointer ${
-                    lang === 'en'
-                      ? 'bg-[var(--brand-primary)] text-white shadow-xs'
-                      : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
-                  }`}
+                  className={`px-2 py-0.5 rounded text-[11px] font-bold tracking-wider transition-colors cursor-pointer ${lang === 'en'
+                    ? 'bg-[var(--brand-primary)] text-white shadow-xs'
+                    : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
+                    }`}
                 >
                   EN
                 </button>
                 <button
                   onClick={() => onSetLang('id')}
-                  className={`px-2 py-0.5 rounded text-[11px] font-bold tracking-wider transition-colors cursor-pointer ${
-                    lang === 'id'
-                      ? 'bg-[var(--brand-primary)] text-white shadow-xs'
-                      : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
-                  }`}
+                  className={`px-2 py-0.5 rounded text-[11px] font-bold tracking-wider transition-colors cursor-pointer ${lang === 'id'
+                    ? 'bg-[var(--brand-primary)] text-white shadow-xs'
+                    : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
+                    }`}
                 >
                   ID
                 </button>
@@ -117,9 +115,11 @@ export const Header: React.FC<HeaderProps> = ({
             onClick={() => onNavigate('home')}
             className="flex items-center gap-3 cursor-pointer text-left group"
           >
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-600 to-green-800 text-white flex items-center justify-center font-extrabold text-lg shadow-md group-hover:scale-105 transition-transform">
-              S
-            </div>
+            <img
+              src="/logos/logo-kkn-singapadu.webp"
+              alt="Logo Desa Singapadu"
+              className="w-10 h-10 object-contain group-hover:scale-105 transition-transform"
+            />
             <div>
               <span className="block font-extrabold text-lg tracking-tight leading-tight group-hover:text-[var(--brand-primary)] transition-colors">
                 Singapadu
@@ -138,11 +138,10 @@ export const Header: React.FC<HeaderProps> = ({
                 <button
                   key={item.key}
                   onClick={() => handleNavClick(item.key)}
-                  className={`text-sm font-semibold tracking-wide transition-colors cursor-pointer relative py-1 ${
-                    isActive
-                      ? 'text-[var(--brand-primary)]'
-                      : 'hover:text-[var(--brand-primary)]'
-                  }`}
+                  className={`text-sm font-semibold tracking-wide transition-colors cursor-pointer relative py-1 ${isActive
+                    ? 'text-[var(--brand-primary)]'
+                    : 'hover:text-[var(--brand-primary)]'
+                    }`}
                 >
                   {item.label}
                   {isActive && (
@@ -181,9 +180,11 @@ export const Header: React.FC<HeaderProps> = ({
               {/* Drawer Header */}
               <div className="flex items-center justify-between pb-6 border-b border-[var(--border)]">
                 <div className="flex items-center gap-2.5">
-                  <div className="w-8 h-8 rounded-lg bg-[var(--brand-primary)] text-white flex items-center justify-center font-bold">
-                    S
-                  </div>
+                  <img
+                    src="/logos/logo-desa-singapadu.webp"
+                    alt="Logo Singapadu"
+                    className="w-8 h-8 object-contain"
+                  />
                   <span className="font-extrabold text-base">Singapadu Tourism</span>
                 </div>
                 <button
@@ -203,17 +204,15 @@ export const Header: React.FC<HeaderProps> = ({
                 <div className="flex items-center gap-1">
                   <button
                     onClick={() => onSetLang('en')}
-                    className={`px-3 py-1 rounded text-xs font-bold transition-colors ${
-                      lang === 'en' ? 'bg-[var(--brand-primary)] text-white' : 'bg-neutral-200 dark:bg-neutral-800 text-[var(--text-secondary)]'
-                    }`}
+                    className={`px-3 py-1 rounded text-xs font-bold transition-colors ${lang === 'en' ? 'bg-[var(--brand-primary)] text-white' : 'bg-neutral-200 dark:bg-neutral-800 text-[var(--text-secondary)]'
+                      }`}
                   >
                     EN
                   </button>
                   <button
                     onClick={() => onSetLang('id')}
-                    className={`px-3 py-1 rounded text-xs font-bold transition-colors ${
-                      lang === 'id' ? 'bg-[var(--brand-primary)] text-white' : 'bg-neutral-200 dark:bg-neutral-800 text-[var(--text-secondary)]'
-                    }`}
+                    className={`px-3 py-1 rounded text-xs font-bold transition-colors ${lang === 'id' ? 'bg-[var(--brand-primary)] text-white' : 'bg-neutral-200 dark:bg-neutral-800 text-[var(--text-secondary)]'
+                      }`}
                   >
                     ID
                   </button>

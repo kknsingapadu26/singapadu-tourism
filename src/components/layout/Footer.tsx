@@ -20,9 +20,11 @@ export const Footer: React.FC<FooterProps> = ({ lang, onNavigate }) => {
           {/* Col 1: Brand & Blurb */}
           <div className="md:col-span-1 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-600 to-green-800 text-white flex items-center justify-center font-extrabold text-lg shadow-md">
-                S
-              </div>
+              <img
+                src="/logos/logo-desa-singapadu.webp"
+                alt="Logo Desa Singapadu"
+                className="w-10 h-10 object-contain rounded-xl"
+              />
               <div>
                 <span className="block font-extrabold text-lg tracking-tight text-white">
                   Singapadu
@@ -133,23 +135,39 @@ export const Footer: React.FC<FooterProps> = ({ lang, onNavigate }) => {
         {/* Partners & Copyright */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-6 flex-wrap">
-            {/* Government Logo Crest Placeholder */}
+            {/* Government Logo Crest */}
             <div className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-lg bg-emerald-900/60 border border-emerald-700/40 text-emerald-300 flex items-center justify-center font-bold text-xs">
-                DESA
-              </div>
+              <img
+                src="/logos/logo-desa-singapadu.webp"
+                alt="Pemerintah Desa Singapadu"
+                className="w-9 h-9 object-contain"
+              />
               <span className="text-xs text-[#9BA89D] leading-tight">
                 Pemerintah<br />Desa Singapadu
               </span>
             </div>
 
-            {/* University Crest Placeholder */}
+            {/* University Crest */}
             <div className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-lg bg-sky-900/60 border border-sky-700/40 text-sky-300 flex items-center justify-center font-bold text-xs">
-                PNB
-              </div>
+              <img
+                src="/logos/logo-pnb.webp"
+                alt="Politeknik Negeri Bali"
+                className="w-9 h-9 object-contain"
+              />
               <span className="text-xs text-[#9BA89D] leading-tight">
                 Politeknik<br />Negeri Bali
+              </span>
+            </div>
+
+            {/* KKN Logo Crest */}
+            <div className="flex items-center gap-2.5">
+              <img
+                src="/logos/logo-kkn-singapadu.webp"
+                alt="KKN Singapadu"
+                className="w-9 h-9 object-contain rounded-full"
+              />
+              <span className="text-xs text-[#9BA89D] leading-tight">
+                KKN Singapadu<br />2026
               </span>
             </div>
           </div>
