@@ -1,65 +1,163 @@
-import Image from "next/image";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { Language, TRANSLATIONS } from '@/data/singapaduData';
+import { Header } from '@/components/layout/Header';
+import { Footer } from '@/components/layout/Footer';
+
+// Section & View Components
+import { Hero } from '@/components/home/Hero';
+import { QuickLinks } from '@/components/home/QuickLinks';
+import { PlacesToExplore } from '@/components/home/PlacesToExplore';
+import { BentoGrid } from '@/components/home/BentoGrid';
+import { MustSeeSpotlight } from '@/components/home/MustSeeSpotlight';
+import { CraftHighlight } from '@/components/home/CraftHighlight';
+import { EventsPreview } from '@/components/home/EventsPreview';
+import { TipsSection } from '@/components/home/TipsSection';
+import { CtaBanner } from '@/components/home/CtaBanner';
+
+import { DestinationsList } from '@/components/destinations/DestinationsList';
+import { DestinationDetail } from '@/components/destinations/DestinationDetail';
+import { EventsList } from '@/components/events/EventsList';
+import { AboutVillage } from '@/components/about/AboutVillage';
 
 export default function Home() {
+  const [lang, setLang] = useState<Language>('en');
+  const [dark, setDark] = useState<boolean>(false);
+  const [currentPage, setCurrentPage] = useState<'home' | 'destinations' | 'detail' | 'events' | 'about'>('home');
+  const [selectedDestKey, setSelectedDestKey] = useState<string>('barong');
+  const [categoryFilter, setCategoryFilter] = useState<string>('All');
+
+  // Initialize theme and language from localStorage
+  useEffect(() => {
+    try {
+      const savedLang = localStorage.getItem('sgp-lang');
+      if (savedLang === 'en' || savedLang === 'id') {
+        setLang(savedLang);
+      }
+
+      const savedTheme = localStorage.getItem('sgp-theme');
+      const isDark = savedTheme === 'dark';
+      setDark(isDark);
+      if (isDark) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+      }
+    } catch (e) {
+      // LocalStorage fallback
+    }
+  }, []);
+
+  const handleToggleTheme = (isDark: boolean) => {
+    setDark(isDark);
+    try {
+      if (isDark) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('sgp-theme', 'dark');
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('sgp-theme', 'light');
+      }
+    } catch (e) {}
+  };
+
+  const handleSetLang = (newLang: Language) => {
+    setLang(newLang);
+    try {
+      localStorage.setItem('sgp-lang', newLang);
+    } catch (e) {}
+  };
+
+  const handleNavigate = (page: string, extra?: Record<string, any>) => {
+    if (page === 'home' || page === 'destinations' || page === 'detail' || page === 'events' || page === 'about') {
+      setCurrentPage(page);
+    }
+
+    if (extra?.destKey) {
+      setSelectedDestKey(extra.destKey);
+    }
+
+    if (extra?.cat) {
+      setCategoryFilter(extra.cat);
+    }
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const activeNavLabel =
+    currentPage === 'destinations' || currentPage === 'detail'
+      ? TRANSLATIONS[lang].nav.destinations
+      : currentPage === 'events'
+      ? TRANSLATIONS[lang].nav.events
+      : currentPage === 'about'
+      ? TRANSLATIONS[lang].nav.about
+      : TRANSLATIONS[lang].nav.home;
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+    <div className="min-h-screen flex flex-col justify-between bg-[var(--surface-page)] text-[var(--text-primary)]">
+      {/* Navigation Header */}
+      <Header
+        lang={lang}
+        onSetLang={handleSetLang}
+        dark={dark}
+        onToggleTheme={handleToggleTheme}
+        activeNav={activeNavLabel}
+        onNavigate={handleNavigate}
+        isTransparent={currentPage === 'home'}
+      />
+
+      {/* Main Page View Content */}
+      <main className="flex-1">
+        {currentPage === 'home' && (
+          <div className="animate-sgp-fade">
+            <Hero lang={lang} onNavigate={handleNavigate} />
+            <QuickLinks lang={lang} onNavigate={handleNavigate} />
+            <PlacesToExplore lang={lang} onNavigate={handleNavigate} />
+            <BentoGrid lang={lang} onNavigate={handleNavigate} />
+            <MustSeeSpotlight lang={lang} onNavigate={handleNavigate} />
+            <CraftHighlight lang={lang} onNavigate={handleNavigate} />
+            <EventsPreview lang={lang} onNavigate={handleNavigate} />
+            <TipsSection lang={lang} />
+            <CtaBanner lang={lang} onNavigate={handleNavigate} />
+          </div>
+        )}
+
+        {currentPage === 'destinations' && (
+          <div className="animate-sgp-fade">
+            <DestinationsList
+              lang={lang}
+              initialCat={categoryFilter}
+              onNavigate={handleNavigate}
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+          </div>
+        )}
+
+        {currentPage === 'detail' && (
+          <div className="animate-sgp-fade">
+            <DestinationDetail
+              lang={lang}
+              destKey={selectedDestKey}
+              onNavigate={handleNavigate}
+            />
+          </div>
+        )}
+
+        {currentPage === 'events' && (
+          <div className="animate-sgp-fade">
+            <EventsList lang={lang} />
+          </div>
+        )}
+
+        {currentPage === 'about' && (
+          <div className="animate-sgp-fade">
+            <AboutVillage lang={lang} />
+          </div>
+        )}
       </main>
+
+      {/* Footer */}
+      <Footer lang={lang} onNavigate={handleNavigate} />
     </div>
   );
 }
