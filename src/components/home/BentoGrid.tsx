@@ -1,12 +1,12 @@
 'use client';
 
 import React from 'react';
-import { Language, TRANSLATIONS, DESTS } from '@/data/singapaduData';
+import { type Language, type Navigate, TRANSLATIONS, DESTS } from '@/data';
 import { SectionHeader } from '../ui/SectionHeader';
 
 interface BentoGridProps {
   lang: Language;
-  onNavigate: (page: string, extra?: Record<string, any>) => void;
+  onNavigate: Navigate;
 }
 
 export const BentoGrid: React.FC<BentoGridProps> = ({ lang, onNavigate }) => {
@@ -39,7 +39,7 @@ export const BentoGrid: React.FC<BentoGridProps> = ({ lang, onNavigate }) => {
           <img
             src={barongDest?.img || "https://images.unsplash.com/photo-1531778272849-d1dd22444c06?auto=format&fit=crop&q=80&w=1200"}
             alt={rec.f}
-            className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-[var(--dur-med)] ease-[var(--ease-out)] group-hover:scale-103"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/10" />
 
@@ -47,7 +47,7 @@ export const BentoGrid: React.FC<BentoGridProps> = ({ lang, onNavigate }) => {
             <span className="text-[11px] font-bold uppercase tracking-wider text-[var(--accent)]">
               {rec.tag}
             </span>
-            <h3 className="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
+            <h3 className="text-2xl sm:text-3xl font-bold text-white leading-tight">
               {rec.f}
             </h3>
             <p className="text-sm text-white/85 max-w-md line-clamp-2">
@@ -64,7 +64,7 @@ export const BentoGrid: React.FC<BentoGridProps> = ({ lang, onNavigate }) => {
           <img
             src={carvingDest?.img || "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&q=80&w=800"}
             alt={rec.c1}
-            className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-[var(--dur-med)] ease-[var(--ease-out)] group-hover:scale-103"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/10" />
           <span className="absolute left-4 right-4 bottom-3.5 z-10 font-bold text-lg text-white leading-snug">
@@ -80,7 +80,7 @@ export const BentoGrid: React.FC<BentoGridProps> = ({ lang, onNavigate }) => {
           <img
             src={subakDest?.img || "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&q=80&w=800"}
             alt={rec.c2}
-            className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-[var(--dur-med)] ease-[var(--ease-out)] group-hover:scale-103"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/10" />
           <span className="absolute left-4 right-4 bottom-3.5 z-10 font-bold text-lg text-white leading-snug">
@@ -96,7 +96,7 @@ export const BentoGrid: React.FC<BentoGridProps> = ({ lang, onNavigate }) => {
           <img
             src={zooDest?.img || "https://images.unsplash.com/photo-1554457945-ba5df6648602?auto=format&fit=crop&q=80&w=800"}
             alt={rec.c3}
-            className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-[var(--dur-med)] ease-[var(--ease-out)] group-hover:scale-103"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/10" />
           <span className="absolute left-4 right-4 bottom-3.5 z-10 font-bold text-lg text-white leading-snug">
@@ -112,7 +112,7 @@ export const BentoGrid: React.FC<BentoGridProps> = ({ lang, onNavigate }) => {
           <img
             src={barongDest?.img || "https://images.unsplash.com/photo-1531778272849-d1dd22444c06?auto=format&fit=crop&q=80&w=800"}
             alt={rec.c4}
-            className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-[var(--dur-med)] ease-[var(--ease-out)] group-hover:scale-103"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/10" />
           <span className="absolute left-4 right-4 bottom-3.5 z-10 font-bold text-lg text-white leading-snug">

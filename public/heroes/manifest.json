@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "profile": "heroes",
+  "config": {
+    "source": "public/heroes-unoptimized",
+    "output": "public/heroes",
+    "widths": [
+      768,
+      1280,
+      1600,
+      1920,
+      2560
+    ],
+    "responsive": true,
+    "formats": {
+      "avif": {
+        "quality": 60,
+        "effort": 5
+      },
+      "webp": {
+        "quality": 82,
+        "effort": 5,
+        "smartSubsample": true
+      }
+    }
+  },
+  "images": []
+}

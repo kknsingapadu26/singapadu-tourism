@@ -1,13 +1,13 @@
 'use client';
 
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
-import { Language, TRANSLATIONS } from '@/data/singapaduData';
+import { type Language, type Navigate, TRANSLATIONS } from '@/data';
 import { Button } from '../ui/Button';
+import { Icon } from '../ui/Icon';
 
 interface CraftHighlightProps {
   lang: Language;
-  onNavigate: (page: string, extra?: Record<string, any>) => void;
+  onNavigate: Navigate;
 }
 
 export const CraftHighlight: React.FC<CraftHighlightProps> = ({ lang, onNavigate }) => {
@@ -31,7 +31,7 @@ export const CraftHighlight: React.FC<CraftHighlightProps> = ({ lang, onNavigate
             {t.home.craftEyebrow}
           </span>
 
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[var(--text-primary)] leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[var(--text-primary)] leading-[1.02] tracking-[-0.02em]">
             {t.home.craftTitle}
           </h2>
 
@@ -43,7 +43,7 @@ export const CraftHighlight: React.FC<CraftHighlightProps> = ({ lang, onNavigate
             <Button
               variant="primary"
               onClick={() => onNavigate('destinations', { cat: 'Craft' })}
-              icon={<ArrowRight className="w-4 h-4" />}
+              icon={<Icon name="arrow-right" className="w-4 h-4" />}
             >
               {t.home.craftCta}
             </Button>

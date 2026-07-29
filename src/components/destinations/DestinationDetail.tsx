@@ -1,18 +1,18 @@
 'use client';
 
 import React from 'react';
-import { Clock, Ticket, MapPin, MessageCircle, Map, Check, ExternalLink, ArrowLeft, Home } from 'lucide-react';
-import { Language, TRANSLATIONS, DESTS, CONTACT_INFO } from '@/data/singapaduData';
+import { type DestinationKey, type Language, type Navigate, TRANSLATIONS, DESTS, CONTACT_INFO } from '@/data';
 import { Breadcrumb } from '../ui/Breadcrumb';
 import { Badge } from '../ui/Badge';
 import { Button } from '../ui/Button';
 import { SectionHeader } from '../ui/SectionHeader';
 import { DestinationCard } from '../ui/DestinationCard';
+import { Icon } from '../ui/Icon';
 
 interface DestinationDetailProps {
   lang: Language;
-  destKey: string;
-  onNavigate: (page: string, extra?: Record<string, any>) => void;
+  destKey: DestinationKey;
+  onNavigate: Navigate;
 }
 
 export const DestinationDetail: React.FC<DestinationDetailProps> = ({
@@ -48,7 +48,7 @@ export const DestinationDetail: React.FC<DestinationDetailProps> = ({
           onClick={() => onNavigate('destinations')}
           className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-sm bg-[var(--surface-card)] border border-[var(--border)] text-xs font-bold text-[var(--text-primary)] hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)] transition-all cursor-pointer shadow-xs"
         >
-          <ArrowLeft className="w-4 h-4" />
+          <Icon name="arrow-left" className="w-4 h-4" />
           <span>{lang === 'id' ? 'Kembali ke Destinasi' : 'Back to Destinations'}</span>
         </button>
 
@@ -58,7 +58,7 @@ export const DestinationDetail: React.FC<DestinationDetailProps> = ({
             onClick={() => onNavigate('home')}
             className="inline-flex items-center gap-1.5 font-bold text-[var(--text-secondary)] hover:text-[var(--brand-primary)] transition-colors cursor-pointer"
           >
-            <Home className="w-3.5 h-3.5" />
+            <Icon name="home" className="w-3.5 h-3.5" />
             <span>{t.nav.home}</span>
           </button>
           <span className="text-[var(--text-secondary)] opacity-50">/</span>
@@ -91,7 +91,7 @@ export const DestinationDetail: React.FC<DestinationDetailProps> = ({
             <Badge tone="neutral">Singapadu</Badge>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl font-extrabold text-[var(--text-primary)] leading-tight">
+          <h1 className="text-3xl sm:text-5xl font-extrabold text-[var(--text-primary)] leading-[1.02] tracking-[-0.02em]">
             {loc.title}
           </h1>
 
@@ -114,7 +114,7 @@ export const DestinationDetail: React.FC<DestinationDetailProps> = ({
 
           {/* Visit Meta Info */}
           <div className="flex items-start gap-3">
-            <Clock className="w-5 h-5 text-[var(--brand-primary)] mt-0.5 flex-shrink-0" />
+            <Icon name="clock" className="w-5 h-5 text-[var(--brand-primary)] mt-0.5 flex-shrink-0" />
             <div className="flex flex-col gap-0.5">
               <span className="text-xs font-bold uppercase tracking-wider text-[var(--text-secondary)]">
                 {t.detail.hours}
@@ -126,7 +126,7 @@ export const DestinationDetail: React.FC<DestinationDetailProps> = ({
           </div>
 
           <div className="flex items-start gap-3">
-            <Ticket className="w-5 h-5 text-[var(--brand-primary)] mt-0.5 flex-shrink-0" />
+            <Icon name="ticket" className="w-5 h-5 text-[var(--brand-primary)] mt-0.5 flex-shrink-0" />
             <div className="flex flex-col gap-0.5">
               <span className="text-xs font-bold uppercase tracking-wider text-[var(--text-secondary)]">
                 {t.detail.tickets}
@@ -138,7 +138,7 @@ export const DestinationDetail: React.FC<DestinationDetailProps> = ({
           </div>
 
           <div className="flex items-start gap-3">
-            <MapPin className="w-5 h-5 text-[var(--brand-primary)] mt-0.5 flex-shrink-0" />
+            <Icon name="map-pin" className="w-5 h-5 text-[var(--brand-primary)] mt-0.5 flex-shrink-0" />
             <div className="flex flex-col gap-0.5">
               <span className="text-xs font-bold uppercase tracking-wider text-[var(--text-secondary)]">
                 {t.detail.getting}
@@ -155,7 +155,7 @@ export const DestinationDetail: React.FC<DestinationDetailProps> = ({
               <Button
                 variant="primary"
                 fullWidth
-                icon={<MessageCircle className="w-4 h-4" />}
+                icon={<Icon name="message-circle" className="w-4 h-4" />}
               >
                 {t.detail.waBtn}
               </Button>
@@ -164,7 +164,7 @@ export const DestinationDetail: React.FC<DestinationDetailProps> = ({
             <Button
               variant="outline"
               fullWidth
-              icon={<Map className="w-4 h-4" />}
+              icon={<Icon name="map" className="w-4 h-4" />}
               onClick={() => onNavigate('destinations')}
             >
               {t.detail.allBtn}
@@ -186,7 +186,7 @@ export const DestinationDetail: React.FC<DestinationDetailProps> = ({
             <img
               src={galleryImgs[0]}
               alt={`${loc.title} gallery 1`}
-              className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-104"
+              className="w-full h-full object-cover transition-transform duration-[var(--dur-med)] ease-[var(--ease-out)] group-hover:scale-103"
             />
           </div>
 
@@ -195,7 +195,7 @@ export const DestinationDetail: React.FC<DestinationDetailProps> = ({
             <img
               src={galleryImgs[1]}
               alt={`${loc.title} gallery 2`}
-              className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-104"
+              className="w-full h-full object-cover transition-transform duration-[var(--dur-med)] ease-[var(--ease-out)] group-hover:scale-103"
             />
           </div>
 
@@ -204,7 +204,7 @@ export const DestinationDetail: React.FC<DestinationDetailProps> = ({
             <img
               src={galleryImgs[2]}
               alt={`${loc.title} gallery 3`}
-              className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-104"
+              className="w-full h-full object-cover transition-transform duration-[var(--dur-med)] ease-[var(--ease-out)] group-hover:scale-103"
             />
           </div>
 
@@ -213,7 +213,7 @@ export const DestinationDetail: React.FC<DestinationDetailProps> = ({
             <img
               src={galleryImgs[3]}
               alt={`${loc.title} gallery 4`}
-              className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-104"
+              className="w-full h-full object-cover transition-transform duration-[var(--dur-med)] ease-[var(--ease-out)] group-hover:scale-103"
             />
           </div>
         </div>
@@ -233,7 +233,7 @@ export const DestinationDetail: React.FC<DestinationDetailProps> = ({
                 key={idx}
                 className="flex items-start gap-3 bg-[var(--surface-card)] border border-[var(--border)] rounded-sm p-4 text-sm text-[var(--text-primary)]"
               >
-                <Check className="w-5 h-5 text-[var(--brand-primary)] mt-0.5 flex-shrink-0" />
+                <Icon name="check" className="w-5 h-5 text-[var(--brand-primary)] mt-0.5 flex-shrink-0" />
                 <span>{tip}</span>
               </div>
             ))}
@@ -262,7 +262,7 @@ export const DestinationDetail: React.FC<DestinationDetailProps> = ({
             className="inline-flex items-center gap-1.5 mt-3 text-sm font-semibold text-[var(--brand-primary)] hover:underline"
           >
             <span>{t.detail.mapOpen}</span>
-            <ExternalLink className="w-3.5 h-3.5" />
+            <Icon name="external-link" className="w-3.5 h-3.5" />
           </a>
         </div>
       </div>

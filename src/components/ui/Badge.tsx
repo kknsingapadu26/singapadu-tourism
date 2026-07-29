@@ -11,20 +11,20 @@ interface BadgeProps {
 }
 
 export const Badge: React.FC<BadgeProps> = ({ children, category, tone, className = '', size = 'md' }) => {
-  let colorStyles = "bg-[var(--tint-brand)] text-[var(--brand-primary)] border-[var(--brand-primary)]/20";
+  let colorStyles = "bg-[var(--category-culture-bg)] text-[var(--category-culture-text)] border-[var(--category-culture-border)]";
 
   if (tone === 'neutral') {
-    colorStyles = "bg-neutral-100 dark:bg-neutral-800 text-[var(--text-secondary)] border-[var(--border)]";
+    colorStyles = "bg-[var(--surface-sunken)] text-[var(--text-secondary)] border-[var(--border)]";
   } else if (category === 'Culture' || category === 'Budaya') {
-    colorStyles = "bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800";
+    colorStyles = "bg-[var(--category-culture-bg)] text-[var(--category-culture-text)] border-[var(--category-culture-border)]";
   } else if (category === 'Nature' || category === 'Alam') {
-    colorStyles = "bg-sky-50 dark:bg-sky-950/40 text-sky-700 dark:text-sky-300 border-sky-200 dark:border-sky-800";
+    colorStyles = "bg-[var(--category-nature-bg)] text-[var(--category-nature-text)] border-[var(--category-nature-border)]";
   } else if (category === 'Craft' || category === 'Kriya') {
-    colorStyles = "bg-amber-50 dark:bg-amber-950/40 text-amber-800 dark:text-amber-300 border-amber-200 dark:border-amber-800";
+    colorStyles = "bg-[var(--category-craft-bg)] text-[var(--category-craft-text)] border-[var(--category-craft-border)]";
   } else if (category === 'Family' || category === 'Keluarga') {
-    colorStyles = "bg-indigo-50 dark:bg-indigo-950/40 text-indigo-700 dark:text-indigo-300 border-indigo-200 dark:border-indigo-800";
+    colorStyles = "bg-[var(--category-family-bg)] text-[var(--category-family-text)] border-[var(--category-family-border)]";
   } else if (category === 'Sacred' || category === 'Sakral') {
-    colorStyles = "bg-purple-50 dark:bg-purple-950/40 text-purple-700 dark:text-purple-300 border-purple-200 dark:border-purple-800";
+    colorStyles = "bg-[var(--category-sacred-bg)] text-[var(--category-sacred-text)] border-[var(--category-sacred-border)]";
   }
 
   const sizeStyles = size === 'sm' 

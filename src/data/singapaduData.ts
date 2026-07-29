@@ -1,73 +1,25 @@
-export type Language = 'en' | 'id';
+import type {
+  ContactInfo,
+  Destination as DestinationSchema,
+  EventItem,
+  HeroSlide,
+  Localized,
+} from './schema';
 
-export interface Destination {
-  key: string;
-  cat: 'Culture' | 'Nature' | 'Craft' | 'Family' | 'Sacred';
-  img?: string;
-  tone?: 'green' | 'amber' | 'sky' | 'navy';
-  imgLabel?: string;
-  mapQ: string;
-  en: {
-    title: string;
-    location: string;
-    blurb: string;
-    hours: string;
-    price: string;
-    distance: string;
-    story: string[];
-    tips: string[];
-  };
-  id: {
-    title: string;
-    location: string;
-    blurb: string;
-    hours: string;
-    price: string;
-    distance: string;
-    story: string[];
-    tips: string[];
-  };
-  gallery: string[];
-}
-
-export interface EventItem {
-  key: string;
-  cat: 'Culture' | 'Nature' | 'Craft' | 'Family' | 'Sacred';
-  en: {
-    tag: string;
-    date: string;
-    title: string;
-    desc: string;
-    loc: string;
-  };
-  id: {
-    tag: string;
-    date: string;
-    title: string;
-    desc: string;
-    loc: string;
-  };
-}
-
-export interface HeroSlide {
-  key: string;
-  cat: 'Culture' | 'Nature' | 'Craft' | 'Family';
-  img: string;
-}
-
-export const HERO_SLIDES: HeroSlide[] = [
+export const HERO_SLIDES = [
   { key: "barong", img: "https://images.unsplash.com/photo-1531778272849-d1dd22444c06?auto=format&fit=crop&q=80&w=1600", cat: "Culture" },
   { key: "subak", img: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&q=80&w=1600", cat: "Nature" },
   { key: "carving", img: "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&q=80&w=1600", cat: "Craft" },
   { key: "zoo", img: "https://images.unsplash.com/photo-1554457945-ba5df6648602?auto=format&fit=crop&q=80&w=1600", cat: "Family" }
-];
+] as const satisfies readonly HeroSlide<DestinationKey>[];
 
-export const DESTS: Destination[] = [
+export const DESTS = [
   {
     key: "barong",
     cat: "Culture",
     img: "https://images.unsplash.com/photo-1531778272849-d1dd22444c06?auto=format&fit=crop&q=80&w=900",
     tone: "green",
+    imgLabel: undefined,
     mapQ: "Pura Puseh Singapadu Gianyar",
     gallery: [
       "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&q=80&w=1200",
@@ -115,6 +67,7 @@ export const DESTS: Destination[] = [
     cat: "Family",
     img: "https://images.unsplash.com/photo-1554457945-ba5df6648602?auto=format&fit=crop&q=80&w=900",
     tone: "green",
+    imgLabel: undefined,
     mapQ: "Bali Zoo Singapadu",
     gallery: [
       "https://images.unsplash.com/photo-1463852247062-1bbca38f7805?auto=format&fit=crop&q=80&w=1200",
@@ -162,6 +115,7 @@ export const DESTS: Destination[] = [
     cat: "Craft",
     img: "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&q=80&w=900",
     tone: "amber",
+    imgLabel: undefined,
     mapQ: "Banjar Sengguan Singapadu",
     gallery: [
       "https://images.unsplash.com/photo-1531778272849-d1dd22444c06?auto=format&fit=crop&q=80&w=1200",
@@ -209,6 +163,7 @@ export const DESTS: Destination[] = [
     cat: "Nature",
     img: "https://images.unsplash.com/photo-1558005530-a7958896ec60?auto=format&fit=crop&q=80&w=900",
     tone: "sky",
+    imgLabel: undefined,
     mapQ: "Singapadu Kaler Gianyar",
     gallery: [
       "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&q=80&w=1200",
@@ -256,6 +211,7 @@ export const DESTS: Destination[] = [
     cat: "Nature",
     img: "https://images.unsplash.com/photo-1559628233-100c798642d4?auto=format&fit=crop&q=80&w=900",
     tone: "navy",
+    imgLabel: undefined,
     mapQ: "Tukad Oos Gianyar",
     gallery: [
       "https://images.unsplash.com/photo-1558005530-a7958896ec60?auto=format&fit=crop&q=80&w=1200",
@@ -346,7 +302,10 @@ export const DESTS: Destination[] = [
       ]
     }
   }
-];
+] as const satisfies readonly DestinationSchema[];
+
+export type DestinationRecord = (typeof DESTS)[number];
+export type DestinationKey = DestinationRecord['key'];
 
 export const EVENTS: EventItem[] = [
   {
@@ -548,10 +507,10 @@ export const TRANSLATIONS = {
     waMsg: "Halo! Saya ingin bertanya tentang {x} di Singapadu.",
     waGeneral: "Halo! Saya ingin bertanya tentang kunjungan ke Singapadu."
   }
-};
+} satisfies Localized<unknown>;
 
 export const CONTACT_INFO = {
   whatsappNumber: "+62 812-3956-2711",
   email: "info@singapadu.desa.id",
   address: "Desa Singapadu, Sukawati, Gianyar, Bali 80582"
-};
+} as const satisfies ContactInfo;

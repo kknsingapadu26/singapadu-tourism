@@ -1,9 +1,9 @@
 'use client';
 
 import React from 'react';
-import { Car, Landmark, Sun, Wallet, Backpack, Map } from 'lucide-react';
-import { Language, TRANSLATIONS } from '@/data/singapaduData';
+import { Language, TRANSLATIONS } from '@/data';
 import { SectionHeader } from '../ui/SectionHeader';
+import { Icon, type IconName } from '../ui/Icon';
 
 interface TipsSectionProps {
   lang: Language;
@@ -12,14 +12,7 @@ interface TipsSectionProps {
 export const TipsSection: React.FC<TipsSectionProps> = ({ lang }) => {
   const t = TRANSLATIONS[lang];
 
-  const icons = [
-    <Car className="w-5 h-5 text-[var(--brand-primary)]" />,
-    <Landmark className="w-5 h-5 text-[var(--brand-primary)]" />,
-    <Sun className="w-5 h-5 text-[var(--brand-primary)]" />,
-    <Wallet className="w-5 h-5 text-[var(--brand-primary)]" />,
-    <Backpack className="w-5 h-5 text-[var(--brand-primary)]" />,
-    <Map className="w-5 h-5 text-[var(--brand-primary)]" />
-  ];
+  const icons: IconName[] = ['car', 'landmark', 'sun', 'wallet', 'backpack', 'map'];
 
   return (
     <section className="max-w-[1200px] mx-auto px-6 py-20">
@@ -35,7 +28,7 @@ export const TipsSection: React.FC<TipsSectionProps> = ({ lang }) => {
             className="bg-[var(--surface-card)] border border-[var(--border)] rounded-sm shadow-[var(--shadow-card)] p-5.5 flex flex-col gap-3 items-start"
           >
             <span className="w-10.5 h-10.5 rounded-xs bg-[var(--tint-brand)] flex items-center justify-center">
-              {icons[idx]}
+              <Icon name={icons[idx]} className="w-5 h-5 text-[var(--brand-primary)]" />
             </span>
 
             <h4 className="text-base font-bold text-[var(--text-primary)]">

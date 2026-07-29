@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Archivo } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
+const archivo = Archivo({
   subsets: ["latin"],
-  variable: "--font-sans"
+  variable: "--font-sans",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -16,7 +17,8 @@ export const metadata: Metadata = {
     description: "The village of Barong dance, mask carving and living Balinese tradition.",
     url: "https://singapadu.desa.id",
     siteName: "Desa Wisata Singapadu",
-    locale: "id_ID",
+    locale: "en_US",
+    alternateLocale: ["id_ID"],
     type: "website",
   },
 };
@@ -27,8 +29,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id" className={`${inter.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col bg-[var(--surface-page)] text-[var(--text-primary)] transition-colors duration-300">
+    <html lang="en" className={`${archivo.variable} h-full antialiased`}>
+      <body className="min-h-full flex flex-col bg-[var(--surface-page)] text-[var(--text-primary)] transition-colors duration-[var(--dur-med)]">
         {children}
       </body>
     </html>

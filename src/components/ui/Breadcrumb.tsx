@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { ChevronRight } from 'lucide-react';
+import { Icon } from './Icon';
 
 export interface BreadcrumbItem {
   label: string;
@@ -20,7 +20,7 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
           const isLast = index === items.length - 1;
           return (
             <li key={index} className="inline-flex items-center gap-1.5">
-              {index > 0 && <ChevronRight className="w-3.5 h-3.5 text-neutral-400" />}
+              {index > 0 && <Icon name="chevron-right" className="w-3.5 h-3.5 text-[var(--text-secondary)]" />}
               {item.onClick && !isLast ? (
                 <button
                   onClick={item.onClick}

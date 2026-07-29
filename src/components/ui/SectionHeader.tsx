@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { Icon } from './Icon';
 
 interface SectionHeaderProps {
   eyebrow?: string;
@@ -30,11 +31,11 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
     >
       <div>
         {eyebrow && (
-          <span className="inline-block text-xs font-bold uppercase tracking-widest text-[var(--brand-primary)] mb-1">
+          <span className="inline-block text-xs font-bold uppercase tracking-[0.08em] text-[var(--brand-primary)] mb-1">
             {eyebrow}
           </span>
         )}
-        <h2 className="text-2xl md:text-3xl font-extrabold text-[var(--text-primary)] tracking-tight">
+        <h2 className="text-2xl md:text-3xl font-extrabold text-[var(--text-primary)] tracking-[-0.02em] leading-[1.02]">
           {title}
         </h2>
         {subtext && (
@@ -50,7 +51,7 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
           className="inline-flex items-center text-sm font-bold text-[var(--brand-primary)] hover:text-[var(--brand-primary-hover)] transition-colors cursor-pointer group flex-shrink-0"
         >
           <span>{action.label}</span>
-          <span className="ml-1 group-hover:translate-x-1 transition-transform">→</span>
+          <Icon name="arrow-right" className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform duration-[var(--dur-fast)]" />
         </button>
       )}
     </div>

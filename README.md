@@ -1,5 +1,9 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Project Guide
+
+Panduan arsitektur, model data, static export, dan alur kontribusi tersedia di [docs/PANDUAN_ARSITEKTUR_DAN_DATA.md](docs/PANDUAN_ARSITEKTUR_DAN_DATA.md).
+
 ## Getting Started
 
 First, run the development server:
@@ -15,6 +19,42 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Image optimization
+
+Put original files into the source directory for the appropriate profile:
+
+| Profile | Source | Generated output | Variants |
+| --- | --- | --- | --- |
+| Logo | `public/logos-unoptimized` | `public/logos` | Lossless WebP, maximum 512 px |
+| Hero | `public/heroes-unoptimized` | `public/heroes` | AVIF and WebP at 768–2560 px |
+| Gallery | `public/gallery-unoptimized` | `public/gallery` | AVIF and WebP at 480–1600 px |
+
+Optimize only the profile currently being edited:
+
+```bash
+npm run images:logos
+npm run images:heroes
+npm run images:gallery
+```
+
+Optimize everything by omitting the profile:
+
+```bash
+npm run images:optimize
+```
+
+You can also invoke the script directly when selecting more than one profile:
+
+```bash
+node scripts/optimize-images.mjs --profile heroes --profile gallery
+```
+
+Image optimization is fully opt-in. Neither `npm run dev` nor `npm run build` runs it. Use `npm run images:watch` manually in a separate terminal only when you want continuous processing.
+
+Content hashes skip unchanged sources. Removing an original does not delete its generated files or manifest entry. Reprocessing a source with the same filename may update that source's matching outputs, but unrelated generated files are never removed. Every output directory contains a `manifest.json` with dimensions and `srcset`-ready paths.
+
+Use generated paths from the manifests in UI code. Do not reference files from an `*-unoptimized` directory on the website.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
