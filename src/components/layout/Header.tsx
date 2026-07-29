@@ -84,21 +84,19 @@ export const Header: React.FC<HeaderProps> = ({
               <div className="flex items-center gap-1 bg-[var(--surface-sunken)] p-0.5 rounded-sm">
                 <button
                   onClick={() => onSetLang('en')}
-                  className={`px-2 py-0.5 rounded text-[11px] font-bold tracking-wider transition-colors cursor-pointer ${
-                    lang === 'en'
-                      ? 'bg-[var(--brand-primary)] text-white shadow-xs'
-                      : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
-                  }`}
+                  className={`px-2 py-0.5 rounded text-[11px] font-bold tracking-wider transition-colors cursor-pointer ${lang === 'en'
+                    ? 'bg-[var(--brand-primary)] text-white shadow-xs'
+                    : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
+                    }`}
                 >
                   EN
                 </button>
                 <button
                   onClick={() => onSetLang('id')}
-                  className={`px-2 py-0.5 rounded text-[11px] font-bold tracking-wider transition-colors cursor-pointer ${
-                    lang === 'id'
-                      ? 'bg-[var(--brand-primary)] text-white shadow-xs'
-                      : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
-                  }`}
+                  className={`px-2 py-0.5 rounded text-[11px] font-bold tracking-wider transition-colors cursor-pointer ${lang === 'id'
+                    ? 'bg-[var(--brand-primary)] text-white shadow-xs'
+                    : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
+                    }`}
                 >
                   ID
                 </button>
@@ -117,9 +115,11 @@ export const Header: React.FC<HeaderProps> = ({
             onClick={() => onNavigate('home')}
             className="flex items-center gap-3 cursor-pointer text-left group"
           >
-            <div className="w-10 h-10 rounded-sm bg-[var(--brand-primary)] text-[var(--text-on-brand)] flex items-center justify-center font-extrabold text-lg shadow-[var(--shadow-card)] transition-colors duration-[var(--dur-fast)]">
-              S
-            </div>
+            <img
+              src="/logos/logo-kkn-singapadu.webp"
+              alt="Logo Desa Singapadu"
+              className="w-10 h-10 object-contain group-hover:scale-105 transition-transform"
+            />
             <div>
               <span className="block font-extrabold text-lg tracking-tight leading-tight group-hover:text-[var(--brand-primary)] transition-colors">
                 Singapadu
@@ -138,11 +138,10 @@ export const Header: React.FC<HeaderProps> = ({
                 <button
                   key={item.key}
                   onClick={() => handleNavClick(item.key)}
-                  className={`text-sm font-semibold tracking-wide transition-colors cursor-pointer relative py-1 ${
-                    isActive
-                      ? 'text-[var(--brand-primary)]'
-                      : 'hover:text-[var(--brand-primary)]'
-                  }`}
+                  className={`text-sm font-semibold tracking-wide transition-colors cursor-pointer relative py-1 ${isActive
+                    ? 'text-[var(--brand-primary)]'
+                    : 'hover:text-[var(--brand-primary)]'
+                    }`}
                 >
                   {item.label}
                   {isActive && (
@@ -181,9 +180,11 @@ export const Header: React.FC<HeaderProps> = ({
               {/* Drawer Header */}
               <div className="flex items-center justify-between pb-6 border-b border-[var(--border)]">
                 <div className="flex items-center gap-2.5">
-                  <div className="w-8 h-8 rounded-sm bg-[var(--brand-primary)] text-[var(--text-on-brand)] flex items-center justify-center font-bold">
-                    S
-                  </div>
+                  <img
+                    src="/logos/logo-desa-singapadu.webp"
+                    alt="Logo Singapadu"
+                    className="w-8 h-8 object-contain"
+                  />
                   <span className="font-extrabold text-base">Singapadu Tourism</span>
                 </div>
                 <button
