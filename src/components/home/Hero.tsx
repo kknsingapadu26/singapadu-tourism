@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { type Language, type Navigate, TRANSLATIONS, HERO_SLIDES, CONTACT_INFO } from '@/data/singapaduData';
+import { type Language, type Navigate, TRANSLATIONS, HERO_SLIDES, CONTACT_INFO } from '@/data';
 import { Icon } from '../ui/Icon';
 
 interface HeroProps {

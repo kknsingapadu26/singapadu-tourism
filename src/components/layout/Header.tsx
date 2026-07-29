@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { type AppPage, type DestinationKey, type Language, type Navigate, TRANSLATIONS, DESTS } from '@/data/singapaduData';
+import { type AppPage, type DestinationKey, type Language, type Navigate, TRANSLATIONS, DESTS } from '@/data';
 import { ThemeToggle } from '../ui/ThemeToggle';
 import { Icon } from '../ui/Icon';
 

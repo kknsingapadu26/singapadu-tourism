@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { type Language, type Navigate, TRANSLATIONS, DESTS } from '@/data/singapaduData';
+import { type Language, type Navigate, TRANSLATIONS, DESTS } from '@/data';
 import { SectionHeader } from '../ui/SectionHeader';
 import { DestinationCard } from '../ui/DestinationCard';
 

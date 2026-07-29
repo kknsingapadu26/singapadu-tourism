@@ -1,73 +1,17 @@
-export const LANGUAGES = ['en', 'id'] as const;
-export type Language = (typeof LANGUAGES)[number];
+import type {
+  ContactInfo,
+  Destination as DestinationSchema,
+  EventItem,
+  HeroSlide,
+  Localized,
+} from './schema';
 
-export const DESTINATION_CATEGORIES = ['Culture', 'Nature', 'Craft', 'Family', 'Sacred'] as const;
-export type DestinationCategory = (typeof DESTINATION_CATEGORIES)[number];
-
-export const DESTINATION_FILTERS = ['All', ...DESTINATION_CATEGORIES] as const;
-export type DestinationFilter = (typeof DESTINATION_FILTERS)[number];
-
-export const APP_PAGES = ['home', 'destinations', 'detail', 'events', 'about'] as const;
-export type AppPage = (typeof APP_PAGES)[number];
-
-export interface NavigationOptions {
-  destKey?: DestinationKey;
-  cat?: DestinationFilter;
-}
-
-export type Navigate = (page: AppPage, options?: NavigationOptions) => void;
-
-export type Localized<T> = Record<Language, T>;
-
-export interface DestinationContent {
-  title: string;
-  location: string;
-  blurb: string;
-  hours: string;
-  price: string;
-  distance: string;
-  story: readonly string[];
-  tips: readonly string[];
-}
-
-type DestinationSchema = {
-  key: string;
-  cat: DestinationCategory;
-  img?: string;
-  tone?: 'green' | 'amber' | 'sky' | 'navy';
-  imgLabel?: string;
-  mapQ: string;
-  gallery: readonly [string, string, string, string, ...string[]];
-} & Localized<DestinationContent>;
-
-export type Destination = (typeof DESTS)[number];
-export type DestinationKey = Destination['key'];
-
-export interface EventContent {
-  tag: string;
-  date: string;
-  title: string;
-  desc: string;
-  loc: string;
-}
-
-export type EventItem = {
-  key: string;
-  cat: DestinationCategory;
-} & Localized<EventContent>;
-
-export interface HeroSlide {
-  key: DestinationKey;
-  cat: Exclude<DestinationCategory, 'Sacred'>;
-  img: string;
-}
-
-export const HERO_SLIDES: HeroSlide[] = [
+export const HERO_SLIDES = [
   { key: "barong", img: "https://images.unsplash.com/photo-1531778272849-d1dd22444c06?auto=format&fit=crop&q=80&w=1600", cat: "Culture" },
   { key: "subak", img: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&q=80&w=1600", cat: "Nature" },
   { key: "carving", img: "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&q=80&w=1600", cat: "Craft" },
   { key: "zoo", img: "https://images.unsplash.com/photo-1554457945-ba5df6648602?auto=format&fit=crop&q=80&w=1600", cat: "Family" }
-];
+] as const satisfies readonly HeroSlide<DestinationKey>[];
 
 export const DESTS = [
   {
@@ -360,6 +304,9 @@ export const DESTS = [
   }
 ] as const satisfies readonly DestinationSchema[];
 
+export type DestinationRecord = (typeof DESTS)[number];
+export type DestinationKey = DestinationRecord['key'];
+
 export const EVENTS: EventItem[] = [
   {
     key: "perf",
@@ -566,4 +513,4 @@ export const CONTACT_INFO = {
   whatsappNumber: "+62 812-3956-2711",
   email: "info@singapadu.desa.id",
   address: "Desa Singapadu, Sukawati, Gianyar, Bali 80582"
-} as const;
+} as const satisfies ContactInfo;

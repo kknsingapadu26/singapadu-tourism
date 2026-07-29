@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Language, TRANSLATIONS } from '@/data/singapaduData';
+import { Language, TRANSLATIONS } from '@/data';
 import { Icon, type IconName } from '../ui/Icon';
 
 interface AboutVillageProps {

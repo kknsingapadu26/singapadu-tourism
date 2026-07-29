@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { type Language, type Navigate, TRANSLATIONS, DESTS } from '@/data/singapaduData';
+import { type Language, type Navigate, TRANSLATIONS, DESTS } from '@/data';
 import { Button } from '../ui/Button';
 import { Icon } from '../ui/Icon';
 

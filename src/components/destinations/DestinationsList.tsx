@@ -8,7 +8,7 @@ import {
   type Navigate,
   TRANSLATIONS,
   DESTS,
-} from '@/data/singapaduData';
+} from '@/data';
 import { Tag } from '../ui/Tag';
 import { DestinationCard } from '../ui/DestinationCard';
 

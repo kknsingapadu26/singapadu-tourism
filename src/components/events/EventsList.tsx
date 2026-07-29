@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Language, TRANSLATIONS, EVENTS, CONTACT_INFO } from '@/data/singapaduData';
+import { Language, TRANSLATIONS, EVENTS, CONTACT_INFO } from '@/data';
 import { Badge } from '../ui/Badge';
 import { Button } from '../ui/Button';
 import { Icon } from '../ui/Icon';

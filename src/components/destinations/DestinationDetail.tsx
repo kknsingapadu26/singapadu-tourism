@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { type DestinationKey, type Language, type Navigate, TRANSLATIONS, DESTS, CONTACT_INFO } from '@/data/singapaduData';
+import { type DestinationKey, type Language, type Navigate, TRANSLATIONS, DESTS, CONTACT_INFO } from '@/data';
 import { Breadcrumb } from '../ui/Breadcrumb';
 import { Badge } from '../ui/Badge';
 import { Button } from '../ui/Button';

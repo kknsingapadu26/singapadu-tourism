@@ -9,7 +9,7 @@ import {
   type Language,
   type NavigationOptions,
   TRANSLATIONS,
-} from '@/data/singapaduData';
+} from '@/data';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 
