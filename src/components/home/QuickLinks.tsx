@@ -25,7 +25,7 @@ export const QuickLinks: React.FC<QuickLinksProps> = ({ lang, onNavigate }) => {
 
   return (
     <div className="bg-[var(--surface-card)] border-b border-[var(--border)]">
-      <div className="max-w-[1200px] mx-auto px-6 py-3.5 flex items-center gap-7 overflow-x-auto no-scrollbar">
+      <div className="max-w-[1200px] mx-auto px-6 py-3.5 flex items-center gap-7 overflow-x-auto overflow-y-hidden no-scrollbar">
         {links.map((item, idx) => (
           <button
             key={idx}

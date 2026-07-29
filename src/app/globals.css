@@ -74,12 +74,25 @@
     --tint-info: var(--sky-100);
     --tint-accent: var(--amber-100);
 
+    /* Mobile navigation — a brand-green tonal staircase */
+    --mobile-nav-header: color-mix(in srgb, var(--green-700) 82%, var(--green-400));
+    --mobile-nav-level-1: color-mix(in srgb, var(--green-700) 72%, var(--green-400));
+    --mobile-nav-level-2: var(--green-700);
+    --mobile-nav-level-3: color-mix(in srgb, var(--green-700) 72%, var(--neutral-900));
+    --mobile-nav-level-4: color-mix(in srgb, var(--green-700) 52%, var(--neutral-900));
+    --mobile-nav-surface: color-mix(in srgb, var(--green-700) 28%, var(--neutral-900));
+    --mobile-nav-action: color-mix(in srgb, var(--green-700) 44%, var(--neutral-800));
+
     --link: var(--navy-700);
     --link-hover: var(--navy-800);
 
     --border: var(--neutral-200);
     --border-strong: var(--neutral-300);
     --focus-ring: var(--sky-400);
+
+    --scrollbar-track: var(--surface-sunken);
+    --scrollbar-thumb: var(--brand-primary);
+    --scrollbar-thumb-hover: var(--brand-primary-hover);
 
     --scrim: linear-gradient(180deg, rgba(10, 22, 15, 0) 40%, rgba(10, 22, 15, 0.78) 100%);
 
@@ -108,6 +121,7 @@
     --ease-out: cubic-bezier(.22,.61,.36,1);
     --dur-fast: 150ms;
     --dur-med: 280ms;
+    --dur-carousel: 560ms;
   }
 
   [data-theme="dark"] {
@@ -176,6 +190,39 @@
     transition: background-color var(--dur-med) var(--ease-out), color var(--dur-med) var(--ease-out);
   }
 
+  * {
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+    scrollbar-width: thin;
+  }
+
+  *::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+  }
+
+  *::-webkit-scrollbar-thumb {
+    min-height: 32px;
+    background: var(--scrollbar-thumb);
+    border: 3px solid var(--scrollbar-track);
+    border-radius: var(--radius-sm);
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
+  }
+
+  *::-webkit-scrollbar-button {
+    display: none;
+  }
+
+  *::-webkit-scrollbar-corner {
+    background: var(--scrollbar-track);
+  }
+
   h1,
   h2 {
     font-weight: var(--type-display-weight);
@@ -198,6 +245,17 @@
   button:active,
   [role="button"]:active {
     scale: 0.98;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
   }
 }
 

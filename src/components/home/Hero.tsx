@@ -92,7 +92,7 @@ export const Hero: React.FC<HeroProps> = ({ lang, onNavigate }) => {
 
       {/* Thumbnails Bar (Bottom) */}
       <div className="absolute left-0 right-0 bottom-0 z-30 bg-gradient-to-t from-black/80 to-transparent pt-6 pb-4">
-        <div className="max-w-[1200px] mx-auto px-6 flex items-center gap-3 overflow-x-auto no-scrollbar">
+        <div className="max-w-[1200px] mx-auto px-6 flex items-center gap-3 overflow-x-auto overflow-y-hidden no-scrollbar">
           {HERO_SLIDES.map((slide, idx) => {
             const isSelected = idx === activeIdx;
             return (
