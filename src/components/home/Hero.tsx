@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { type Language, type Navigate, TRANSLATIONS, HERO_SLIDES, CONTACT_INFO } from '@/data';
 import { Icon } from '../ui/Icon';
 
@@ -34,10 +35,13 @@ export const Hero: React.FC<HeroProps> = ({ lang, onNavigate }) => {
             idx === activeIdx ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
           }`}
         >
-          <img
+          <Image
             src={slide.img}
             alt={t.home.slides[idx]?.title}
-            className="w-full h-full object-cover object-center"
+            fill
+            sizes="100vw"
+            preload={idx === 0}
+            className="object-cover object-center"
           />
           {/* Scrim Overlay */}
           <div className="absolute inset-0" style={{ backgroundImage: 'var(--scrim)' }} />
@@ -105,7 +109,13 @@ export const Hero: React.FC<HeroProps> = ({ lang, onNavigate }) => {
                     : 'border-white/35 opacity-75 hover:opacity-100'
                 }`}
               >
-                <img src={slide.img} alt="" className="w-full h-full object-cover" />
+                <Image
+                  src={slide.img}
+                  alt=""
+                  fill
+                  sizes="128px"
+                  className="object-cover"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                 <span className="absolute left-2 bottom-1.5 z-10 text-[10.5px] font-bold uppercase tracking-wider text-white">
                   {(t.cats as Record<string, string>)[slide.cat]}

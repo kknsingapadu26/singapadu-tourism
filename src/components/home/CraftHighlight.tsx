@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { type Language, type Navigate, TRANSLATIONS } from '@/data';
 import { Button } from '../ui/Button';
 import { Icon } from '../ui/Icon';
@@ -17,11 +18,13 @@ export const CraftHighlight: React.FC<CraftHighlightProps> = ({ lang, onNavigate
     <section className="max-w-[1200px] mx-auto px-6 pt-20">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         {/* Left Image */}
-        <div className="lg:col-span-6 rounded-sm overflow-hidden shadow-md">
-          <img
+        <div className="relative aspect-[4/3] lg:col-span-6 rounded-sm overflow-hidden shadow-md">
+          <Image
             src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&q=80&w=1000"
             alt="Paras stone & mask carving Singapadu"
-            className="w-full aspect-[4/3] object-cover block"
+            fill
+            sizes="(max-width: 1024px) 100vw, 600px"
+            className="object-cover"
           />
         </div>
 

@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { Badge } from './Badge';
 import { Icon } from './Icon';
 
@@ -37,11 +38,12 @@ export const DestinationCard: React.FC<DestinationCardProps> = ({
       {/* Image container */}
       <div className="relative w-full aspect-[4/3] bg-[var(--surface-sunken)] overflow-hidden">
         {img ? (
-          <img
+          <Image
             src={img}
             alt={title}
-            className="w-full h-full object-cover transition-transform duration-[var(--dur-med)] ease-[var(--ease-out)] group-hover:scale-103"
-            loading="lazy"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
+            className="object-cover transition-transform duration-[var(--dur-med)] ease-[var(--ease-out)] group-hover:scale-103"
           />
         ) : (
           <div className="w-full h-full flex flex-col items-center justify-center bg-[var(--tint-accent)] text-[var(--category-craft-text)] p-4 text-center">

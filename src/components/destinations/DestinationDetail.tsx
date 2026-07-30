@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { type DestinationKey, type Language, type Navigate, TRANSLATIONS, DESTS, CONTACT_INFO } from '@/data';
 import { Breadcrumb } from '../ui/Breadcrumb';
 import { Badge } from '../ui/Badge';
@@ -73,11 +74,14 @@ export const DestinationDetail: React.FC<DestinationDetailProps> = ({
 
       {/* Main Wide Cover Image Banner */}
       <div className="rounded-sm overflow-hidden mb-8 border border-[var(--border)] shadow-sm bg-[var(--surface-sunken)]">
-        <div className="w-full aspect-[21/9] min-h-[220px] max-h-[460px]">
-          <img
+        <div className="relative w-full aspect-[21/9] min-h-[220px] max-h-[460px]">
+          <Image
             src={dest.img || "https://images.unsplash.com/photo-1531778272849-d1dd22444c06?auto=format&fit=crop&q=80&w=2000"}
             alt={loc.title}
-            className="w-full h-full object-cover object-center"
+            fill
+            sizes="(max-width: 1200px) 100vw, 1200px"
+            preload
+            className="object-cover object-center"
           />
         </div>
       </div>
@@ -183,37 +187,45 @@ export const DestinationDetail: React.FC<DestinationDetailProps> = ({
         <div className="grid grid-cols-1 sm:grid-cols-3 auto-rows-[190px] gap-3">
           {/* Mosaic Item 1: 2x2 Span */}
           <div className="sm:col-span-2 sm:row-span-2 relative overflow-hidden rounded-sm bg-[var(--surface-sunken)] group">
-            <img
+            <Image
               src={galleryImgs[0]}
               alt={`${loc.title} gallery 1`}
-              className="w-full h-full object-cover transition-transform duration-[var(--dur-med)] ease-[var(--ease-out)] group-hover:scale-103"
+              fill
+              sizes="(max-width: 640px) 100vw, (max-width: 1200px) 66vw, 800px"
+              className="object-cover transition-transform duration-[var(--dur-med)] ease-[var(--ease-out)] group-hover:scale-103"
             />
           </div>
 
           {/* Mosaic Item 2 */}
           <div className="relative overflow-hidden rounded-sm bg-[var(--surface-sunken)] group">
-            <img
+            <Image
               src={galleryImgs[1]}
               alt={`${loc.title} gallery 2`}
-              className="w-full h-full object-cover transition-transform duration-[var(--dur-med)] ease-[var(--ease-out)] group-hover:scale-103"
+              fill
+              sizes="(max-width: 640px) 100vw, (max-width: 1200px) 33vw, 400px"
+              className="object-cover transition-transform duration-[var(--dur-med)] ease-[var(--ease-out)] group-hover:scale-103"
             />
           </div>
 
           {/* Mosaic Item 3 */}
           <div className="relative overflow-hidden rounded-sm bg-[var(--surface-sunken)] group">
-            <img
+            <Image
               src={galleryImgs[2]}
               alt={`${loc.title} gallery 3`}
-              className="w-full h-full object-cover transition-transform duration-[var(--dur-med)] ease-[var(--ease-out)] group-hover:scale-103"
+              fill
+              sizes="(max-width: 640px) 100vw, (max-width: 1200px) 33vw, 400px"
+              className="object-cover transition-transform duration-[var(--dur-med)] ease-[var(--ease-out)] group-hover:scale-103"
             />
           </div>
 
           {/* Mosaic Item 4: Full Row Width */}
           <div className="sm:col-span-3 relative overflow-hidden rounded-sm bg-[var(--surface-sunken)] group h-[190px]">
-            <img
+            <Image
               src={galleryImgs[3]}
               alt={`${loc.title} gallery 4`}
-              className="w-full h-full object-cover transition-transform duration-[var(--dur-med)] ease-[var(--ease-out)] group-hover:scale-103"
+              fill
+              sizes="(max-width: 1200px) 100vw, 1200px"
+              className="object-cover transition-transform duration-[var(--dur-med)] ease-[var(--ease-out)] group-hover:scale-103"
             />
           </div>
         </div>

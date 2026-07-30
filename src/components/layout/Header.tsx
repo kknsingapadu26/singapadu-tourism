@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { type AppPage, type DestinationKey, type Language, type Navigate, TRANSLATIONS, DESTS } from '@/data';
 import { ThemeToggle } from '../ui/ThemeToggle';
 import { Icon } from '../ui/Icon';
@@ -172,9 +173,11 @@ export const Header: React.FC<HeaderProps> = ({
             onClick={() => onNavigate('home')}
             className="flex items-center gap-3 cursor-pointer text-left group"
           >
-            <img
+            <Image
               src="/logos/logo-kkn-singapadu.webp"
               alt="Logo Desa Singapadu"
+              width={40}
+              height={40}
               className="w-10 h-10 object-contain drop-shadow-[0_2px_8px_rgba(0,0,0,.65)] group-hover:scale-103 transition-transform duration-[var(--dur-med)] ease-[var(--ease-out)]"
             />
             <div>

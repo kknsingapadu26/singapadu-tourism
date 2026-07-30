@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { Language, TRANSLATIONS } from '@/data';
 import { Icon, type IconName } from '../ui/Icon';
 
@@ -34,11 +35,14 @@ export const AboutVillage: React.FC<AboutVillageProps> = ({ lang }) => {
         </div>
 
         {/* Feature Village Photo */}
-        <div className="lg:col-span-5 rounded-sm overflow-hidden shadow-md">
-          <img
+        <div className="relative aspect-[7/8] lg:col-span-5 rounded-sm overflow-hidden shadow-md">
+          <Image
             src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&q=80&w=1000"
             alt="Singapadu village tradition"
-            className="w-full aspect-[7/8] object-cover block"
+            fill
+            sizes="(max-width: 1024px) 100vw, 460px"
+            preload
+            className="object-cover"
           />
         </div>
       </div>

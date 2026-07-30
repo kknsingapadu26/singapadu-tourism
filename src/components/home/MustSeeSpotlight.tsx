@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { type Language, type Navigate, TRANSLATIONS, DESTS } from '@/data';
 import { Button } from '../ui/Button';
 import { Icon } from '../ui/Icon';
@@ -30,13 +31,15 @@ export const MustSeeSpotlight: React.FC<MustSeeSpotlightProps> = ({ lang, onNavi
             {DESTS.map((spot, idx) => {
               const isSelected = idx === spotIdx;
               return (
-                <img
+                <Image
                   key={spot.key}
                   src={spot.img || "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&q=80&w=1600"}
                   alt={isSelected ? spot[lang].title : ''}
+                  fill
+                  sizes="(max-width: 1360px) 100vw, 1360px"
                   aria-hidden={!isSelected}
                   style={{ clipPath: clipPathFor(idx) }}
-                  className={`absolute inset-0 h-full w-full object-cover transition-[clip-path,scale] duration-[var(--dur-carousel)] ease-[var(--ease-out)] ${
+                  className={`object-cover transition-[clip-path,scale] duration-[var(--dur-carousel)] ease-[var(--ease-out)] ${
                     isSelected ? 'z-10 scale-100' : 'z-0 scale-[1.025]'
                   }`}
                 />
