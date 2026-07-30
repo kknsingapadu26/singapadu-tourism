@@ -8,7 +8,7 @@ export function DestinationDetailRoute({ destKey }: { destKey: DestinationKey })
   const { lang, navigate } = useSite();
 
   return (
-    <div className="animate-sgp-fade">
+    <div className="animate-sgp-route">
       <DestinationDetail lang={lang} destKey={destKey} onNavigate={navigate} />
     </div>
   );

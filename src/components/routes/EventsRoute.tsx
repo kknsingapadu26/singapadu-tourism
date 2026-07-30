@@ -7,7 +7,7 @@ export function EventsRoute() {
   const { lang } = useSite();
 
   return (
-    <div className="animate-sgp-fade">
+    <div className="animate-sgp-route">
       <EventsList lang={lang} />
     </div>
   );

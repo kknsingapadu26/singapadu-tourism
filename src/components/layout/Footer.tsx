@@ -2,15 +2,16 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { type Language, type Navigate, TRANSLATIONS, CONTACT_INFO } from '@/data';
+import Link from 'next/link';
+import { type Language, TRANSLATIONS, CONTACT_INFO } from '@/data';
+import { getNavigationHref } from '@/lib/navigation';
 import { Icon } from '../ui/Icon';
 
 interface FooterProps {
   lang: Language;
-  onNavigate: Navigate;
 }
 
-export const Footer: React.FC<FooterProps> = ({ lang, onNavigate }) => {
+export const Footer: React.FC<FooterProps> = ({ lang }) => {
   const t = TRANSLATIONS[lang];
   const waLink = `https://wa.me/${CONTACT_INFO.whatsappNumber.replace(/\D/g, '')}?text=${encodeURIComponent(t.waGeneral)}`;
 
@@ -49,28 +50,28 @@ export const Footer: React.FC<FooterProps> = ({ lang, onNavigate }) => {
             </h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <button
-                  onClick={() => onNavigate('destinations')}
+                <Link
+                  href={getNavigationHref('destinations')}
                   className="hover:text-white transition-colors cursor-pointer"
                 >
                   {t.nav.destinations}
-                </button>
+                </Link>
               </li>
               <li>
-                <button
-                  onClick={() => onNavigate('events')}
+                <Link
+                  href={getNavigationHref('events')}
                   className="hover:text-white transition-colors cursor-pointer"
                 >
                   {t.nav.events}
-                </button>
+                </Link>
               </li>
               <li>
-                <button
-                  onClick={() => onNavigate('about')}
+                <Link
+                  href={getNavigationHref('about')}
                   className="hover:text-white transition-colors cursor-pointer"
                 >
                   {t.nav.about}
-                </button>
+                </Link>
               </li>
             </ul>
           </div>
@@ -82,20 +83,20 @@ export const Footer: React.FC<FooterProps> = ({ lang, onNavigate }) => {
             </h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <button
-                  onClick={() => onNavigate('about')}
+                <Link
+                  href={getNavigationHref('about')}
                   className="hover:text-white transition-colors cursor-pointer"
                 >
                   {t.footer.plan}
-                </button>
+                </Link>
               </li>
               <li>
-                <button
-                  onClick={() => onNavigate('about')}
+                <Link
+                  href={getNavigationHref('about')}
                   className="hover:text-white transition-colors cursor-pointer"
                 >
                   {t.footer.getting}
-                </button>
+                </Link>
               </li>
               <li>
                 <a

@@ -14,6 +14,7 @@ interface DestinationCardProps {
   imgLabel?: string;
   price?: string;
   hours?: string;
+  eager?: boolean;
   onClick: () => void;
   lang?: 'en' | 'id';
 }
@@ -27,6 +28,7 @@ export const DestinationCard: React.FC<DestinationCardProps> = ({
   imgLabel,
   price,
   hours,
+  eager = false,
   onClick,
   lang = 'en'
 }) => {
@@ -43,6 +45,7 @@ export const DestinationCard: React.FC<DestinationCardProps> = ({
             alt={title}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
+            loading={eager ? 'eager' : 'lazy'}
             className="object-cover transition-transform duration-[var(--dur-med)] ease-[var(--ease-out)] group-hover:scale-103"
           />
         ) : (

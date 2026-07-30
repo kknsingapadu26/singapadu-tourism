@@ -15,7 +15,7 @@ export function HomeRoute() {
   const { lang, navigate } = useSite();
 
   return (
-    <div className="animate-sgp-fade">
+    <div className="animate-sgp-route">
       <Hero lang={lang} onNavigate={navigate} />
       <QuickLinks lang={lang} onNavigate={navigate} />
       <PlacesToExplore lang={lang} onNavigate={navigate} />

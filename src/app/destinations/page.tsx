@@ -1,9 +1,6 @@
 import type { Metadata } from 'next';
+import { Suspense } from 'react';
 import { DestinationsRoute } from '@/components/routes/DestinationsRoute';
-import {
-  DESTINATION_FILTERS,
-  type DestinationFilter,
-} from '@/data';
 
 export const metadata: Metadata = {
   title: 'Destinations',
@@ -11,16 +8,28 @@ export const metadata: Metadata = {
   alternates: { canonical: '/destinations' },
 };
 
-function destinationFilter(value: string | string[] | undefined): DestinationFilter {
-  const candidate = Array.isArray(value) ? value[0] : value;
-  return DESTINATION_FILTERS.find((filter) => filter === candidate) ?? 'All';
+function DestinationsFallback() {
+  return (
+    <div
+      role="status"
+      aria-label="Loading destinations"
+      className="mx-auto min-h-[70vh] max-w-[1200px] px-6 pb-24 pt-32"
+    >
+      <div className="h-3 w-28 animate-pulse rounded-sm bg-[var(--tint-brand)]" />
+      <div className="mt-5 h-12 max-w-xl animate-pulse rounded-sm bg-[var(--surface-sunken)]" />
+      <div className="mt-8 flex gap-3">
+        <div className="h-8 w-20 animate-pulse rounded-full bg-[var(--surface-sunken)]" />
+        <div className="h-8 w-24 animate-pulse rounded-full bg-[var(--surface-sunken)]" />
+        <div className="h-8 w-20 animate-pulse rounded-full bg-[var(--surface-sunken)]" />
+      </div>
+    </div>
+  );
 }
 
-export default async function DestinationsPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ category?: string | string[] }>;
-}) {
-  const { category } = await searchParams;
-  return <DestinationsRoute initialCat={destinationFilter(category)} />;
+export default function DestinationsPage() {
+  return (
+    <Suspense fallback={<DestinationsFallback />}>
+      <DestinationsRoute />
+    </Suspense>
+  );
 }

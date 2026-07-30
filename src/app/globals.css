@@ -284,6 +284,10 @@
   animation: sgpFade var(--dur-med) var(--ease-out) forwards;
 }
 
+.animate-sgp-route {
+  animation: sgpFade var(--dur-fast) var(--ease-out) forwards;
+}
+
 .animate-sgp-slide-in {
   animation: sgpSlideInR var(--dur-med) var(--ease-out) forwards;
 }
