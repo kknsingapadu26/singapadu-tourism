@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import {
   DESTINATION_FILTERS,
   type DestinationFilter,
@@ -23,7 +23,7 @@ export const DestinationsList: React.FC<DestinationsListProps> = ({
   initialCat = 'All',
   onNavigate
 }) => {
-  const [selectedCat, setSelectedCat] = useState<DestinationFilter>(initialCat);
+  const selectedCat = initialCat;
   const t = TRANSLATIONS[lang];
 
   const filteredDests = DESTS.filter((d) => {
@@ -56,7 +56,7 @@ export const DestinationsList: React.FC<DestinationsListProps> = ({
               label={(t.cats as Record<string, string>)[cat] || cat}
               count={count}
               selected={selectedCat === cat}
-              onClick={() => setSelectedCat(cat)}
+              onClick={() => onNavigate('destinations', { cat })}
             />
           );
         })}

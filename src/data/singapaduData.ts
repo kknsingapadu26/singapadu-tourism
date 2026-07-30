@@ -16,6 +16,7 @@ export const HERO_SLIDES = [
 export const DESTS = [
   {
     key: "barong",
+    slug: "barong-dance-pura-puseh",
     cat: "Culture",
     img: "https://images.unsplash.com/photo-1531778272849-d1dd22444c06?auto=format&fit=crop&q=80&w=900",
     tone: "green",
@@ -64,6 +65,7 @@ export const DESTS = [
   },
   {
     key: "zoo",
+    slug: "bali-zoo",
     cat: "Family",
     img: "https://images.unsplash.com/photo-1554457945-ba5df6648602?auto=format&fit=crop&q=80&w=900",
     tone: "green",
@@ -112,6 +114,7 @@ export const DESTS = [
   },
   {
     key: "carving",
+    slug: "stone-carving-workshop",
     cat: "Craft",
     img: "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&q=80&w=900",
     tone: "amber",
@@ -160,6 +163,7 @@ export const DESTS = [
   },
   {
     key: "subak",
+    slug: "subak-rice-terrace-walk",
     cat: "Nature",
     img: "https://images.unsplash.com/photo-1558005530-a7958896ec60?auto=format&fit=crop&q=80&w=900",
     tone: "sky",
@@ -208,6 +212,7 @@ export const DESTS = [
   },
   {
     key: "river",
+    slug: "tukad-oos-river-trail",
     cat: "Nature",
     img: "https://images.unsplash.com/photo-1559628233-100c798642d4?auto=format&fit=crop&q=80&w=900",
     tone: "navy",
@@ -256,6 +261,7 @@ export const DESTS = [
   },
   {
     key: "mask",
+    slug: "mask-making-studio",
     cat: "Craft",
     img: "https://images.unsplash.com/photo-1573790387438-4da905039392?auto=format&fit=crop&q=80&w=900",
     tone: "amber",

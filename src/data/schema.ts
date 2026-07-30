@@ -25,6 +25,7 @@ export interface DestinationContent {
 
 export type Destination<TKey extends string = string> = {
   key: TKey;
+  slug: string;
   cat: DestinationCategory;
   img?: string;
   tone?: 'green' | 'amber' | 'sky' | 'navy';

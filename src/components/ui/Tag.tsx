@@ -14,6 +14,7 @@ export const Tag: React.FC<TagProps> = ({ label, count, selected, onClick }) => 
     <button
       onClick={onClick}
       type="button"
+      aria-pressed={selected}
       className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide transition-all duration-[var(--dur-fast)] ease-[var(--ease-out)] active:scale-[.98] cursor-pointer border ${
         selected
           ? 'bg-[var(--brand-primary)] text-[var(--text-on-brand)] border-[var(--brand-primary)] shadow-sm'
