@@ -44,8 +44,11 @@ export const TRANSLATIONS = {
     menu: { lang: "Language", theme: "Dark mode", map: "Map", contact: "Help & contact", all: "All destinations" },
     home: {
       slides: [
+        { title: "A day among tropical birds.", sub: "Explore aviaries, educational shows, and conservation programs across two hectares.", loc: "Bali Bird Park · Singapadu", cta: "Visit bird park" },
+        { title: "Riverside daycation in Singapadu.", sub: "Relax by the cave-inspired infinity pool, restaurant, and valley views.", loc: "Tlaga Singha · Singapadu", cta: "Explore Tlaga Singha" },
         { title: "Silver shaped by your own hands.", sub: "Browse Balinese jewelry, then learn the process in a two-hour silver class.", loc: "Krisna Yuna Gallery · Banjar Apuan", cta: "Explore the gallery" },
-        { title: "From plantation to cup.", sub: "Meet local coffee, traditional firewood roasting, and the family behind Alam Sari.", loc: "Alam Sari · Singapadu", cta: "Discover the process" }
+        { title: "From plantation to cup.", sub: "Meet local coffee, traditional firewood roasting, and the family behind Alam Sari.", loc: "Alam Sari · Singapadu", cta: "Discover the process" },
+        { title: "Art and heritage of Singapadu.", sub: "Discover historical paintings, carvings, and masks visualising the village story.", loc: "Puri Anyar Art Space · Banjar Kebon", cta: "Visit art space" }
       ],
       quick: { all: "All destinations", plan: "Plan your visit" },
       destEyebrow: "Destinations", destTitle: "Places to explore", destAction: "See all destinations",
@@ -126,8 +129,11 @@ export const TRANSLATIONS = {
     menu: { lang: "Bahasa", theme: "Mode gelap", map: "Peta", contact: "Bantuan & kontak", all: "Semua destinasi" },
     home: {
       slides: [
+        { title: "Sehari bersama burung tropis.", sub: "Jelajahi aviari, pertunjukan edukatif, dan program konservasi di area dua hektare.", loc: "Bali Bird Park · Singapadu", cta: "Kunjungi taman burung" },
+        { title: "Daycation tepi sungai di Singapadu.", sub: "Bersantai di kolam infinity berkonsep gua, restoran, dan pemandangan lembah.", loc: "Tlaga Singha · Singapadu", cta: "Jelajahi Tlaga Singha" },
         { title: "Perak yang dibentuk tangan Anda.", sub: "Lihat perhiasan Bali, lalu kenali prosesnya melalui silver class selama dua jam.", loc: "Krisna Yuna Gallery · Banjar Apuan", cta: "Jelajahi galeri" },
-        { title: "Dari kebun hingga cangkir.", sub: "Kenali kopi lokal, penyangraian dengan kayu bakar, dan keluarga di balik Alam Sari.", loc: "Alam Sari · Singapadu", cta: "Kenali prosesnya" }
+        { title: "Dari kebun hingga cangkir.", sub: "Kenali kopi lokal, penyangraian dengan kayu bakar, dan keluarga di balik Alam Sari.", loc: "Alam Sari · Singapadu", cta: "Kenali prosesnya" },
+        { title: "Seni dan warisan budaya Singapadu.", sub: "Temukan lukisan sejarah, ukiran, dan topeng yang memvisualisasikan kisah desa.", loc: "Puri Anyar Art Space · Banjar Kebon", cta: "Kunjungi galeri seni" }
       ],
       quick: { all: "Semua destinasi", plan: "Rencanakan kunjungan" },
       destEyebrow: "Destinasi", destTitle: "Tempat untuk dijelajahi", destAction: "Lihat semua destinasi",

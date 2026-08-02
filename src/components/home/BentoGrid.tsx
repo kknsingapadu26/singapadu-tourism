@@ -29,7 +29,7 @@ function BentoMedia({
       className="object-cover transition-transform duration-[var(--dur-med)] ease-[var(--ease-out)] group-hover:scale-103"
     />
   ) : (
-    <ImagePlaceholder label={label} tone={destination.tone} />
+    <ImagePlaceholder label={label} tone={(destination as { tone?: 'green' | 'amber' | 'sky' | 'navy' }).tone} />
   );
 }
 

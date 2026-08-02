@@ -49,7 +49,7 @@ export const MustSeeSpotlight: React.FC<MustSeeSpotlightProps> = ({ lang, onNavi
                       className="object-cover"
                     />
                   ) : (
-                    <ImagePlaceholder label={spot[lang].title} tone={spot.tone} />
+                    <ImagePlaceholder label={(spot as Record<Language, { title: string }>)[lang].title} tone={(spot as { tone?: 'green' | 'amber' | 'sky' | 'navy' }).tone} />
                   )}
                 </div>
               );

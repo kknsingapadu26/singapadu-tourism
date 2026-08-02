@@ -23,5 +23,3864 @@
       }
     }
   },
-  "images": []
+  "images": [
+    {
+      "source": "alam_sari1.jpg",
+      "sourceHash": "b9bcfc2b9e372ada0a754b5e9f1d251f8ca65f028b53988b46fdfe4bc61d49af",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 6000,
+      "sourceHeight": 4000,
+      "sourceBytes": 5705727,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/alam_sari1-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 320,
+          "bytes": 39132
+        },
+        {
+          "output": "/gallery/alam_sari1-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 42954
+        },
+        {
+          "output": "/gallery/alam_sari1-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 512,
+          "bytes": 103021
+        },
+        {
+          "output": "/gallery/alam_sari1-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 108038
+        },
+        {
+          "output": "/gallery/alam_sari1-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 800,
+          "bytes": 247917
+        },
+        {
+          "output": "/gallery/alam_sari1-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 261842
+        },
+        {
+          "output": "/gallery/alam_sari1-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 487090
+        },
+        {
+          "output": "/gallery/alam_sari1-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 513362
+        }
+      ]
+    },
+    {
+      "source": "alam_sari2.jpg",
+      "sourceHash": "925af7469305e5416bdbc658291dad8ae9053079fab7c8592fd736d6f1139555",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 6000,
+      "sourceHeight": 4000,
+      "sourceBytes": 4842011,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/alam_sari2-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 320,
+          "bytes": 38744
+        },
+        {
+          "output": "/gallery/alam_sari2-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 42804
+        },
+        {
+          "output": "/gallery/alam_sari2-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 512,
+          "bytes": 89558
+        },
+        {
+          "output": "/gallery/alam_sari2-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 102120
+        },
+        {
+          "output": "/gallery/alam_sari2-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 800,
+          "bytes": 191433
+        },
+        {
+          "output": "/gallery/alam_sari2-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 224408
+        },
+        {
+          "output": "/gallery/alam_sari2-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 360783
+        },
+        {
+          "output": "/gallery/alam_sari2-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 425530
+        }
+      ]
+    },
+    {
+      "source": "alam_sari3.jpg",
+      "sourceHash": "4357257b0aa35afef487e55bf8eac0b1ae0c83957864df6441b11be29178c6b3",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 6000,
+      "sourceHeight": 4000,
+      "sourceBytes": 5284013,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/alam_sari3-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 320,
+          "bytes": 57110
+        },
+        {
+          "output": "/gallery/alam_sari3-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 58108
+        },
+        {
+          "output": "/gallery/alam_sari3-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 512,
+          "bytes": 134222
+        },
+        {
+          "output": "/gallery/alam_sari3-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 138374
+        },
+        {
+          "output": "/gallery/alam_sari3-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 800,
+          "bytes": 278904
+        },
+        {
+          "output": "/gallery/alam_sari3-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 305230
+        },
+        {
+          "output": "/gallery/alam_sari3-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 492796
+        },
+        {
+          "output": "/gallery/alam_sari3-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 548328
+        }
+      ]
+    },
+    {
+      "source": "alam_sari4.jpg",
+      "sourceHash": "96bcdd2ff35cb240a72461ac3e277fe68f436f71d80ce49d91e48cfb5b60c85f",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 6000,
+      "sourceHeight": 4000,
+      "sourceBytes": 5111821,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/alam_sari4-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 320,
+          "bytes": 21722
+        },
+        {
+          "output": "/gallery/alam_sari4-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 26728
+        },
+        {
+          "output": "/gallery/alam_sari4-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 512,
+          "bytes": 60970
+        },
+        {
+          "output": "/gallery/alam_sari4-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 72954
+        },
+        {
+          "output": "/gallery/alam_sari4-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 800,
+          "bytes": 167180
+        },
+        {
+          "output": "/gallery/alam_sari4-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 203468
+        },
+        {
+          "output": "/gallery/alam_sari4-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 366599
+        },
+        {
+          "output": "/gallery/alam_sari4-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 421368
+        }
+      ]
+    },
+    {
+      "source": "alam_sari5.jpg",
+      "sourceHash": "7776869c10679ff5a19c5c3ff5192f77e831ac5f35c6d840df3fdab5356c7c01",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 6000,
+      "sourceHeight": 4000,
+      "sourceBytes": 4412910,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/alam_sari5-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 320,
+          "bytes": 19129
+        },
+        {
+          "output": "/gallery/alam_sari5-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 25856
+        },
+        {
+          "output": "/gallery/alam_sari5-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 512,
+          "bytes": 61545
+        },
+        {
+          "output": "/gallery/alam_sari5-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 72680
+        },
+        {
+          "output": "/gallery/alam_sari5-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 800,
+          "bytes": 168909
+        },
+        {
+          "output": "/gallery/alam_sari5-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 194316
+        },
+        {
+          "output": "/gallery/alam_sari5-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 360900
+        },
+        {
+          "output": "/gallery/alam_sari5-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 405592
+        }
+      ]
+    },
+    {
+      "source": "alam_sari6.jpg",
+      "sourceHash": "d72a0e72b88fc2668219221f4b273da198a803f998862ae13a6e1c5e8f938194",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 6000,
+      "sourceHeight": 4000,
+      "sourceBytes": 5563654,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/alam_sari6-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 320,
+          "bytes": 53887
+        },
+        {
+          "output": "/gallery/alam_sari6-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 59542
+        },
+        {
+          "output": "/gallery/alam_sari6-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 512,
+          "bytes": 140094
+        },
+        {
+          "output": "/gallery/alam_sari6-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 149240
+        },
+        {
+          "output": "/gallery/alam_sari6-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 800,
+          "bytes": 310017
+        },
+        {
+          "output": "/gallery/alam_sari6-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 335556
+        },
+        {
+          "output": "/gallery/alam_sari6-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 557647
+        },
+        {
+          "output": "/gallery/alam_sari6-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 605588
+        }
+      ]
+    },
+    {
+      "source": "atv_1.jpeg",
+      "sourceHash": "0198f86062317c3e3fa1c8166169c9c5e987caa26c75280534fa22319be8a9e2",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 1080,
+      "sourceHeight": 1080,
+      "sourceBytes": 292130,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/atv_1-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 480,
+          "bytes": 77624
+        },
+        {
+          "output": "/gallery/atv_1-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 83454
+        },
+        {
+          "output": "/gallery/atv_1-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 768,
+          "bytes": 164509
+        },
+        {
+          "output": "/gallery/atv_1-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 768,
+          "bytes": 182470
+        },
+        {
+          "output": "/gallery/atv_1-1080w.avif",
+          "format": "heif",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 246707
+        },
+        {
+          "output": "/gallery/atv_1-1080w.webp",
+          "format": "webp",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 311382
+        }
+      ]
+    },
+    {
+      "source": "atv_2.jpeg",
+      "sourceHash": "c12badbdded2833f62196bd4ba336c69bf0849631327875faf23cc75cc074ccf",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 960,
+      "sourceHeight": 950,
+      "sourceBytes": 229108,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/atv_2-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 475,
+          "bytes": 69932
+        },
+        {
+          "output": "/gallery/atv_2-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 475,
+          "bytes": 74210
+        },
+        {
+          "output": "/gallery/atv_2-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 760,
+          "bytes": 158365
+        },
+        {
+          "output": "/gallery/atv_2-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 760,
+          "bytes": 175122
+        },
+        {
+          "output": "/gallery/atv_2-960w.avif",
+          "format": "heif",
+          "width": 960,
+          "height": 950,
+          "bytes": 193701
+        },
+        {
+          "output": "/gallery/atv_2-960w.webp",
+          "format": "webp",
+          "width": 960,
+          "height": 950,
+          "bytes": 255912
+        }
+      ]
+    },
+    {
+      "source": "atv_3.jpeg",
+      "sourceHash": "f22082e7a5618bc5650255f27b7ab4f08d2c85e932a307c0c42eefdb749053ee",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 4032,
+      "sourceHeight": 3024,
+      "sourceBytes": 1901820,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/atv_3-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 360,
+          "bytes": 62737
+        },
+        {
+          "output": "/gallery/atv_3-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 360,
+          "bytes": 66776
+        },
+        {
+          "output": "/gallery/atv_3-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 576,
+          "bytes": 142399
+        },
+        {
+          "output": "/gallery/atv_3-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 576,
+          "bytes": 154092
+        },
+        {
+          "output": "/gallery/atv_3-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 900,
+          "bytes": 317105
+        },
+        {
+          "output": "/gallery/atv_3-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 900,
+          "bytes": 353326
+        },
+        {
+          "output": "/gallery/atv_3-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 1200,
+          "bytes": 513596
+        },
+        {
+          "output": "/gallery/atv_3-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 1200,
+          "bytes": 584172
+        }
+      ]
+    },
+    {
+      "source": "bali_bird_park1.jpg",
+      "sourceHash": "49417d5f48054c4095f1bfd62f30ba6a9b01799daaa031a2a80f2fc651cd92f6",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 3936,
+      "sourceHeight": 2624,
+      "sourceBytes": 900270,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/bali_bird_park1-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 320,
+          "bytes": 30941
+        },
+        {
+          "output": "/gallery/bali_bird_park1-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 36284
+        },
+        {
+          "output": "/gallery/bali_bird_park1-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 512,
+          "bytes": 54783
+        },
+        {
+          "output": "/gallery/bali_bird_park1-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 67854
+        },
+        {
+          "output": "/gallery/bali_bird_park1-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 800,
+          "bytes": 95926
+        },
+        {
+          "output": "/gallery/bali_bird_park1-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 128056
+        },
+        {
+          "output": "/gallery/bali_bird_park1-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 138604
+        },
+        {
+          "output": "/gallery/bali_bird_park1-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 194690
+        }
+      ]
+    },
+    {
+      "source": "bali_bird_park2.jpg",
+      "sourceHash": "523f0b52415ecafe54822dd93ecea89b1a5a41048e7cf8391a1690fb857f74bc",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 3936,
+      "sourceHeight": 2624,
+      "sourceBytes": 1496938,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/bali_bird_park2-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 320,
+          "bytes": 48074
+        },
+        {
+          "output": "/gallery/bali_bird_park2-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 49406
+        },
+        {
+          "output": "/gallery/bali_bird_park2-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 512,
+          "bytes": 112042
+        },
+        {
+          "output": "/gallery/bali_bird_park2-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 116348
+        },
+        {
+          "output": "/gallery/bali_bird_park2-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 800,
+          "bytes": 239477
+        },
+        {
+          "output": "/gallery/bali_bird_park2-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 260734
+        },
+        {
+          "output": "/gallery/bali_bird_park2-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 375921
+        },
+        {
+          "output": "/gallery/bali_bird_park2-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 429978
+        }
+      ]
+    },
+    {
+      "source": "bali_bird_park3.jpg",
+      "sourceHash": "55ac92b84bc5caeee77be409af42e893d21bd04a2e6a4087cb032fc1446a001f",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 3936,
+      "sourceHeight": 2624,
+      "sourceBytes": 2701814,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/bali_bird_park3-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 320,
+          "bytes": 23912
+        },
+        {
+          "output": "/gallery/bali_bird_park3-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 28824
+        },
+        {
+          "output": "/gallery/bali_bird_park3-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 512,
+          "bytes": 58633
+        },
+        {
+          "output": "/gallery/bali_bird_park3-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 71804
+        },
+        {
+          "output": "/gallery/bali_bird_park3-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 800,
+          "bytes": 174488
+        },
+        {
+          "output": "/gallery/bali_bird_park3-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 217526
+        },
+        {
+          "output": "/gallery/bali_bird_park3-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 395431
+        },
+        {
+          "output": "/gallery/bali_bird_park3-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 463562
+        }
+      ]
+    },
+    {
+      "source": "bali_bird_park4.jpg",
+      "sourceHash": "0e8982bde324867b1e555562b15e847389a9cb9965817b57a9a6a9c6c3b73b81",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 3819,
+      "sourceHeight": 2624,
+      "sourceBytes": 1435484,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/bali_bird_park4-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 330,
+          "bytes": 16021
+        },
+        {
+          "output": "/gallery/bali_bird_park4-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 330,
+          "bytes": 20288
+        },
+        {
+          "output": "/gallery/bali_bird_park4-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 528,
+          "bytes": 27647
+        },
+        {
+          "output": "/gallery/bali_bird_park4-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 528,
+          "bytes": 40442
+        },
+        {
+          "output": "/gallery/bali_bird_park4-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 825,
+          "bytes": 55615
+        },
+        {
+          "output": "/gallery/bali_bird_park4-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 825,
+          "bytes": 101336
+        },
+        {
+          "output": "/gallery/bali_bird_park4-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 1099,
+          "bytes": 155056
+        },
+        {
+          "output": "/gallery/bali_bird_park4-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 1099,
+          "bytes": 247060
+        }
+      ]
+    },
+    {
+      "source": "bali_bird_park5.jpg",
+      "sourceHash": "422865f83de05fc5988c813477becc853287c1daa04521c82dd0cf58e8f5b173",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 3936,
+      "sourceHeight": 2624,
+      "sourceBytes": 1159213,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/bali_bird_park5-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 320,
+          "bytes": 24848
+        },
+        {
+          "output": "/gallery/bali_bird_park5-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 29690
+        },
+        {
+          "output": "/gallery/bali_bird_park5-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 512,
+          "bytes": 42307
+        },
+        {
+          "output": "/gallery/bali_bird_park5-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 56996
+        },
+        {
+          "output": "/gallery/bali_bird_park5-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 800,
+          "bytes": 95477
+        },
+        {
+          "output": "/gallery/bali_bird_park5-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 139116
+        },
+        {
+          "output": "/gallery/bali_bird_park5-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 185177
+        },
+        {
+          "output": "/gallery/bali_bird_park5-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 259892
+        }
+      ]
+    },
+    {
+      "source": "bali_bird_park6.jpg",
+      "sourceHash": "1c3d24a524b106d5f17892bf778466f1646975744e327f84daaee295b8920245",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 3936,
+      "sourceHeight": 2624,
+      "sourceBytes": 1837827,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/bali_bird_park6-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 320,
+          "bytes": 66252
+        },
+        {
+          "output": "/gallery/bali_bird_park6-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 63204
+        },
+        {
+          "output": "/gallery/bali_bird_park6-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 512,
+          "bytes": 156492
+        },
+        {
+          "output": "/gallery/bali_bird_park6-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 149056
+        },
+        {
+          "output": "/gallery/bali_bird_park6-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 800,
+          "bytes": 337318
+        },
+        {
+          "output": "/gallery/bali_bird_park6-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 333430
+        },
+        {
+          "output": "/gallery/bali_bird_park6-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 518867
+        },
+        {
+          "output": "/gallery/bali_bird_park6-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 539062
+        }
+      ]
+    },
+    {
+      "source": "geoks1.jpg",
+      "sourceHash": "f211030486d76c4feb5fc66065c66edd675027b7546c1072675a0a24d44de203",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 6192,
+      "sourceHeight": 3480,
+      "sourceBytes": 3724113,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/geoks1-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 270,
+          "bytes": 13275
+        },
+        {
+          "output": "/gallery/geoks1-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 270,
+          "bytes": 17560
+        },
+        {
+          "output": "/gallery/geoks1-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 432,
+          "bytes": 28090
+        },
+        {
+          "output": "/gallery/geoks1-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 432,
+          "bytes": 41070
+        },
+        {
+          "output": "/gallery/geoks1-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 674,
+          "bytes": 78780
+        },
+        {
+          "output": "/gallery/geoks1-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 674,
+          "bytes": 116658
+        },
+        {
+          "output": "/gallery/geoks1-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 899,
+          "bytes": 181162
+        },
+        {
+          "output": "/gallery/geoks1-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 899,
+          "bytes": 253908
+        }
+      ]
+    },
+    {
+      "source": "geoks2.jpg",
+      "sourceHash": "5396b4c2f258c7d698344d3d236122275837cf0559aafefad678e4f4ccc1da5e",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 6192,
+      "sourceHeight": 3480,
+      "sourceBytes": 3659700,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/geoks2-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 270,
+          "bytes": 12884
+        },
+        {
+          "output": "/gallery/geoks2-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 270,
+          "bytes": 16646
+        },
+        {
+          "output": "/gallery/geoks2-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 432,
+          "bytes": 28505
+        },
+        {
+          "output": "/gallery/geoks2-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 432,
+          "bytes": 40328
+        },
+        {
+          "output": "/gallery/geoks2-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 674,
+          "bytes": 82187
+        },
+        {
+          "output": "/gallery/geoks2-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 674,
+          "bytes": 116150
+        },
+        {
+          "output": "/gallery/geoks2-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 899,
+          "bytes": 184257
+        },
+        {
+          "output": "/gallery/geoks2-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 899,
+          "bytes": 253594
+        }
+      ]
+    },
+    {
+      "source": "geoks3.jpg",
+      "sourceHash": "879758d82c965f91aee23a5a4a34ffc7bdfdf3faa466a33970b915acdab8ff5d",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 6192,
+      "sourceHeight": 3480,
+      "sourceBytes": 4124933,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/geoks3-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 270,
+          "bytes": 25932
+        },
+        {
+          "output": "/gallery/geoks3-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 270,
+          "bytes": 32616
+        },
+        {
+          "output": "/gallery/geoks3-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 432,
+          "bytes": 58804
+        },
+        {
+          "output": "/gallery/geoks3-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 432,
+          "bytes": 76522
+        },
+        {
+          "output": "/gallery/geoks3-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 674,
+          "bytes": 139570
+        },
+        {
+          "output": "/gallery/geoks3-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 674,
+          "bytes": 180268
+        },
+        {
+          "output": "/gallery/geoks3-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 899,
+          "bytes": 270697
+        },
+        {
+          "output": "/gallery/geoks3-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 899,
+          "bytes": 351290
+        }
+      ]
+    },
+    {
+      "source": "geoks4.jpg",
+      "sourceHash": "072e97f9cdda0057b6e7a977e0b820f855a8a66aa101785a72e34cbf3ecc6eb1",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 6192,
+      "sourceHeight": 3480,
+      "sourceBytes": 3652329,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/geoks4-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 270,
+          "bytes": 18883
+        },
+        {
+          "output": "/gallery/geoks4-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 270,
+          "bytes": 23078
+        },
+        {
+          "output": "/gallery/geoks4-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 432,
+          "bytes": 39204
+        },
+        {
+          "output": "/gallery/geoks4-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 432,
+          "bytes": 52116
+        },
+        {
+          "output": "/gallery/geoks4-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 674,
+          "bytes": 95198
+        },
+        {
+          "output": "/gallery/geoks4-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 674,
+          "bytes": 132024
+        },
+        {
+          "output": "/gallery/geoks4-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 899,
+          "bytes": 193483
+        },
+        {
+          "output": "/gallery/geoks4-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 899,
+          "bytes": 269138
+        }
+      ]
+    },
+    {
+      "source": "geoks5.jpg",
+      "sourceHash": "2e01fcb79d65c5912ef83685dd5e777d2da6d6692971c84993eaf0165f16ed16",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 6192,
+      "sourceHeight": 3480,
+      "sourceBytes": 4395844,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/geoks5-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 270,
+          "bytes": 25850
+        },
+        {
+          "output": "/gallery/geoks5-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 270,
+          "bytes": 31260
+        },
+        {
+          "output": "/gallery/geoks5-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 432,
+          "bytes": 54495
+        },
+        {
+          "output": "/gallery/geoks5-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 432,
+          "bytes": 70754
+        },
+        {
+          "output": "/gallery/geoks5-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 674,
+          "bytes": 129871
+        },
+        {
+          "output": "/gallery/geoks5-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 674,
+          "bytes": 166458
+        },
+        {
+          "output": "/gallery/geoks5-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 899,
+          "bytes": 257689
+        },
+        {
+          "output": "/gallery/geoks5-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 899,
+          "bytes": 331176
+        }
+      ]
+    },
+    {
+      "source": "geoks6.jpg",
+      "sourceHash": "e85cb81705267ddb251ae571526c9bc852f2f5d54b3712a8ec13250afb232a15",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 6192,
+      "sourceHeight": 3480,
+      "sourceBytes": 3698966,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/geoks6-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 270,
+          "bytes": 12196
+        },
+        {
+          "output": "/gallery/geoks6-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 270,
+          "bytes": 16188
+        },
+        {
+          "output": "/gallery/geoks6-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 432,
+          "bytes": 26782
+        },
+        {
+          "output": "/gallery/geoks6-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 432,
+          "bytes": 40194
+        },
+        {
+          "output": "/gallery/geoks6-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 674,
+          "bytes": 79626
+        },
+        {
+          "output": "/gallery/geoks6-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 674,
+          "bytes": 111824
+        },
+        {
+          "output": "/gallery/geoks6-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 899,
+          "bytes": 174753
+        },
+        {
+          "output": "/gallery/geoks6-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 899,
+          "bytes": 245282
+        }
+      ]
+    },
+    {
+      "source": "mutiara_graha1.JPG",
+      "sourceHash": "410f3d4f563034100c12b1f0e63d1d34f3e66367e3d0ce94748dc7dfc530632a",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 6000,
+      "sourceHeight": 4000,
+      "sourceBytes": 13917264,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/mutiara_graha1-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 320,
+          "bytes": 16871
+        },
+        {
+          "output": "/gallery/mutiara_graha1-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 20968
+        },
+        {
+          "output": "/gallery/mutiara_graha1-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 512,
+          "bytes": 33202
+        },
+        {
+          "output": "/gallery/mutiara_graha1-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 43038
+        },
+        {
+          "output": "/gallery/mutiara_graha1-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 800,
+          "bytes": 65915
+        },
+        {
+          "output": "/gallery/mutiara_graha1-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 93140
+        },
+        {
+          "output": "/gallery/mutiara_graha1-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 107869
+        },
+        {
+          "output": "/gallery/mutiara_graha1-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 161736
+        }
+      ]
+    },
+    {
+      "source": "mutiara_graha2.JPG",
+      "sourceHash": "39651f310317bdc0ebc29c5b68ff2f0c48ef750a85a62761a5792ace39d801d0",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 6000,
+      "sourceHeight": 4000,
+      "sourceBytes": 14103489,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/mutiara_graha2-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 320,
+          "bytes": 26330
+        },
+        {
+          "output": "/gallery/mutiara_graha2-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 30636
+        },
+        {
+          "output": "/gallery/mutiara_graha2-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 512,
+          "bytes": 50641
+        },
+        {
+          "output": "/gallery/mutiara_graha2-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 60462
+        },
+        {
+          "output": "/gallery/mutiara_graha2-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 800,
+          "bytes": 83838
+        },
+        {
+          "output": "/gallery/mutiara_graha2-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 109464
+        },
+        {
+          "output": "/gallery/mutiara_graha2-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 123362
+        },
+        {
+          "output": "/gallery/mutiara_graha2-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 164454
+        }
+      ]
+    },
+    {
+      "source": "mutiara_graha3.JPG",
+      "sourceHash": "b65778d07dd84097de5eabc0dfbc2b7ca44e6650106a40954389c0abc48b4a03",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 6000,
+      "sourceHeight": 4000,
+      "sourceBytes": 14354298,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/mutiara_graha3-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 320,
+          "bytes": 6832
+        },
+        {
+          "output": "/gallery/mutiara_graha3-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 8782
+        },
+        {
+          "output": "/gallery/mutiara_graha3-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 512,
+          "bytes": 10827
+        },
+        {
+          "output": "/gallery/mutiara_graha3-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 15766
+        },
+        {
+          "output": "/gallery/mutiara_graha3-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 800,
+          "bytes": 16251
+        },
+        {
+          "output": "/gallery/mutiara_graha3-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 27630
+        },
+        {
+          "output": "/gallery/mutiara_graha3-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 22234
+        },
+        {
+          "output": "/gallery/mutiara_graha3-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 42494
+        }
+      ]
+    },
+    {
+      "source": "mutiara_graha4.JPG",
+      "sourceHash": "cb1cf70f985830eaf9f72dd692b07ae001703bdc332d46f2a5a1bf9d2ee697c5",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 6000,
+      "sourceHeight": 4000,
+      "sourceBytes": 13381812,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/mutiara_graha4-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 320,
+          "bytes": 37383
+        },
+        {
+          "output": "/gallery/mutiara_graha4-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 40154
+        },
+        {
+          "output": "/gallery/mutiara_graha4-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 512,
+          "bytes": 94597
+        },
+        {
+          "output": "/gallery/mutiara_graha4-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 102026
+        },
+        {
+          "output": "/gallery/mutiara_graha4-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 800,
+          "bytes": 200050
+        },
+        {
+          "output": "/gallery/mutiara_graha4-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 230176
+        },
+        {
+          "output": "/gallery/mutiara_graha4-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 347312
+        },
+        {
+          "output": "/gallery/mutiara_graha4-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 397308
+        }
+      ]
+    },
+    {
+      "source": "mutiara_graha5.JPG",
+      "sourceHash": "12e182a44b3f341ef3c7db63c3b2f3cd0c671828c9b73b5b03cb1836ce33da9e",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 6000,
+      "sourceHeight": 4000,
+      "sourceBytes": 14427952,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/mutiara_graha5-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 320,
+          "bytes": 14440
+        },
+        {
+          "output": "/gallery/mutiara_graha5-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 18954
+        },
+        {
+          "output": "/gallery/mutiara_graha5-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 512,
+          "bytes": 29657
+        },
+        {
+          "output": "/gallery/mutiara_graha5-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 40428
+        },
+        {
+          "output": "/gallery/mutiara_graha5-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 800,
+          "bytes": 54060
+        },
+        {
+          "output": "/gallery/mutiara_graha5-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 80256
+        },
+        {
+          "output": "/gallery/mutiara_graha5-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 92926
+        },
+        {
+          "output": "/gallery/mutiara_graha5-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 144960
+        }
+      ]
+    },
+    {
+      "source": "mutiara_graha6.JPG",
+      "sourceHash": "73545e25eb6b06169a08e70954f7ee3d4f6a9eea2277ce37b267485761193d79",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 6000,
+      "sourceHeight": 4000,
+      "sourceBytes": 14623215,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/mutiara_graha6-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 320,
+          "bytes": 19893
+        },
+        {
+          "output": "/gallery/mutiara_graha6-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 24184
+        },
+        {
+          "output": "/gallery/mutiara_graha6-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 512,
+          "bytes": 39505
+        },
+        {
+          "output": "/gallery/mutiara_graha6-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 49530
+        },
+        {
+          "output": "/gallery/mutiara_graha6-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 800,
+          "bytes": 71865
+        },
+        {
+          "output": "/gallery/mutiara_graha6-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 97920
+        },
+        {
+          "output": "/gallery/mutiara_graha6-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 119366
+        },
+        {
+          "output": "/gallery/mutiara_graha6-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 172270
+        }
+      ]
+    },
+    {
+      "source": "OKA_0764.JPG",
+      "sourceHash": "a791c6589a7cc78e450f16d4eed265b8abc2f72a59b727b612e08d39b0394156",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 6000,
+      "sourceHeight": 4000,
+      "sourceBytes": 14329028,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/OKA_0764-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 320,
+          "bytes": 12774
+        },
+        {
+          "output": "/gallery/OKA_0764-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 16708
+        },
+        {
+          "output": "/gallery/OKA_0764-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 512,
+          "bytes": 25343
+        },
+        {
+          "output": "/gallery/OKA_0764-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 34972
+        },
+        {
+          "output": "/gallery/OKA_0764-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 800,
+          "bytes": 48529
+        },
+        {
+          "output": "/gallery/OKA_0764-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 70776
+        },
+        {
+          "output": "/gallery/OKA_0764-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 86610
+        },
+        {
+          "output": "/gallery/OKA_0764-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 135058
+        }
+      ]
+    },
+    {
+      "source": "pura_desa1.JPG",
+      "sourceHash": "bc86c878089444c1ba5e17a84696c0bd9b47e25c28c7d7448be166299fb8f4fa",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 3936,
+      "sourceHeight": 2624,
+      "sourceBytes": 5472256,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/pura_desa1-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 320,
+          "bytes": 16126
+        },
+        {
+          "output": "/gallery/pura_desa1-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 20824
+        },
+        {
+          "output": "/gallery/pura_desa1-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 512,
+          "bytes": 24972
+        },
+        {
+          "output": "/gallery/pura_desa1-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 35148
+        },
+        {
+          "output": "/gallery/pura_desa1-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 800,
+          "bytes": 37176
+        },
+        {
+          "output": "/gallery/pura_desa1-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 60086
+        },
+        {
+          "output": "/gallery/pura_desa1-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 48805
+        },
+        {
+          "output": "/gallery/pura_desa1-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 85438
+        }
+      ]
+    },
+    {
+      "source": "pura_desa2.JPG",
+      "sourceHash": "11fcf6fae90f001ec786108d03b6c4f59309811668e6f532cceee24360aed4ac",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 3936,
+      "sourceHeight": 2624,
+      "sourceBytes": 7929856,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/pura_desa2-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 320,
+          "bytes": 26919
+        },
+        {
+          "output": "/gallery/pura_desa2-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 31116
+        },
+        {
+          "output": "/gallery/pura_desa2-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 512,
+          "bytes": 55567
+        },
+        {
+          "output": "/gallery/pura_desa2-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 64276
+        },
+        {
+          "output": "/gallery/pura_desa2-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 800,
+          "bytes": 118029
+        },
+        {
+          "output": "/gallery/pura_desa2-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 139476
+        },
+        {
+          "output": "/gallery/pura_desa2-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 195728
+        },
+        {
+          "output": "/gallery/pura_desa2-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 234978
+        }
+      ]
+    },
+    {
+      "source": "pura_desa3.JPG",
+      "sourceHash": "7a99e2555ce898a651581174dbca0acb34c066e53dd230ed64ad51c1978d29ba",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 3936,
+      "sourceHeight": 2624,
+      "sourceBytes": 8192000,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/pura_desa3-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 320,
+          "bytes": 34666
+        },
+        {
+          "output": "/gallery/pura_desa3-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 39324
+        },
+        {
+          "output": "/gallery/pura_desa3-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 512,
+          "bytes": 77047
+        },
+        {
+          "output": "/gallery/pura_desa3-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 88376
+        },
+        {
+          "output": "/gallery/pura_desa3-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 800,
+          "bytes": 169164
+        },
+        {
+          "output": "/gallery/pura_desa3-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 193952
+        },
+        {
+          "output": "/gallery/pura_desa3-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 284183
+        },
+        {
+          "output": "/gallery/pura_desa3-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 329790
+        }
+      ]
+    },
+    {
+      "source": "pura_desa4.JPG",
+      "sourceHash": "35ea92409628fb6ee2d0631fe07f9bc9f9106cc3fdbda45b81a6fa73275538da",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 3936,
+      "sourceHeight": 2624,
+      "sourceBytes": 7536640,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/pura_desa4-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 320,
+          "bytes": 45026
+        },
+        {
+          "output": "/gallery/pura_desa4-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 47706
+        },
+        {
+          "output": "/gallery/pura_desa4-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 512,
+          "bytes": 85067
+        },
+        {
+          "output": "/gallery/pura_desa4-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 96066
+        },
+        {
+          "output": "/gallery/pura_desa4-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 800,
+          "bytes": 155619
+        },
+        {
+          "output": "/gallery/pura_desa4-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 180724
+        },
+        {
+          "output": "/gallery/pura_desa4-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 226264
+        },
+        {
+          "output": "/gallery/pura_desa4-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 273702
+        }
+      ]
+    },
+    {
+      "source": "pura_desa5.JPG",
+      "sourceHash": "81a9c92494332fc1780d91a2cf7384d8347d33aa4c0286e54d9506294acd0b03",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 3936,
+      "sourceHeight": 2624,
+      "sourceBytes": 7176192,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/pura_desa5-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 320,
+          "bytes": 33793
+        },
+        {
+          "output": "/gallery/pura_desa5-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 36692
+        },
+        {
+          "output": "/gallery/pura_desa5-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 512,
+          "bytes": 69291
+        },
+        {
+          "output": "/gallery/pura_desa5-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 77062
+        },
+        {
+          "output": "/gallery/pura_desa5-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 800,
+          "bytes": 138491
+        },
+        {
+          "output": "/gallery/pura_desa5-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 158148
+        },
+        {
+          "output": "/gallery/pura_desa5-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 210208
+        },
+        {
+          "output": "/gallery/pura_desa5-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 247100
+        }
+      ]
+    },
+    {
+      "source": "pura_desa6.JPG",
+      "sourceHash": "9ac93997c416e045f66077006688547d6bfa49949bb175027e206c9387f9a457",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 3936,
+      "sourceHeight": 2624,
+      "sourceBytes": 9895936,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/pura_desa6-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 320,
+          "bytes": 41475
+        },
+        {
+          "output": "/gallery/pura_desa6-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 45904
+        },
+        {
+          "output": "/gallery/pura_desa6-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 512,
+          "bytes": 93367
+        },
+        {
+          "output": "/gallery/pura_desa6-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 103416
+        },
+        {
+          "output": "/gallery/pura_desa6-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 800,
+          "bytes": 206955
+        },
+        {
+          "output": "/gallery/pura_desa6-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 234786
+        },
+        {
+          "output": "/gallery/pura_desa6-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 347289
+        },
+        {
+          "output": "/gallery/pura_desa6-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 396886
+        }
+      ]
+    },
+    {
+      "source": "puri_anyar1.JPG",
+      "sourceHash": "531b22a9bfd0ab1c749e10a1f13523c5f5d2470852a756908c7585d86e0dd0ca",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 6000,
+      "sourceHeight": 4000,
+      "sourceBytes": 14148946,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/puri_anyar1-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 320,
+          "bytes": 14734
+        },
+        {
+          "output": "/gallery/puri_anyar1-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 17478
+        },
+        {
+          "output": "/gallery/puri_anyar1-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 512,
+          "bytes": 29512
+        },
+        {
+          "output": "/gallery/puri_anyar1-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 36044
+        },
+        {
+          "output": "/gallery/puri_anyar1-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 800,
+          "bytes": 53345
+        },
+        {
+          "output": "/gallery/puri_anyar1-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 70018
+        },
+        {
+          "output": "/gallery/puri_anyar1-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 84520
+        },
+        {
+          "output": "/gallery/puri_anyar1-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 114012
+        }
+      ]
+    },
+    {
+      "source": "puri_anyar2.JPG",
+      "sourceHash": "f99571bd9e637125fbf9f76a4e962c470d0abc248717f71bee42f0a531fa6857",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 6000,
+      "sourceHeight": 4000,
+      "sourceBytes": 14601751,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/puri_anyar2-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 320,
+          "bytes": 18303
+        },
+        {
+          "output": "/gallery/puri_anyar2-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 22290
+        },
+        {
+          "output": "/gallery/puri_anyar2-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 512,
+          "bytes": 34653
+        },
+        {
+          "output": "/gallery/puri_anyar2-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 46408
+        },
+        {
+          "output": "/gallery/puri_anyar2-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 800,
+          "bytes": 68162
+        },
+        {
+          "output": "/gallery/puri_anyar2-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 93576
+        },
+        {
+          "output": "/gallery/puri_anyar2-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 144423
+        },
+        {
+          "output": "/gallery/puri_anyar2-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 196692
+        }
+      ]
+    },
+    {
+      "source": "puri_anyar3.JPG",
+      "sourceHash": "84a9a9762c1cb6c735e57a5d7b7d4b4ff6b0995478cffc6ddb3873ca292eca83",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 6000,
+      "sourceHeight": 4000,
+      "sourceBytes": 16136982,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/puri_anyar3-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 320,
+          "bytes": 16800
+        },
+        {
+          "output": "/gallery/puri_anyar3-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 20148
+        },
+        {
+          "output": "/gallery/puri_anyar3-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 512,
+          "bytes": 34057
+        },
+        {
+          "output": "/gallery/puri_anyar3-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 42254
+        },
+        {
+          "output": "/gallery/puri_anyar3-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 800,
+          "bytes": 59258
+        },
+        {
+          "output": "/gallery/puri_anyar3-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 78330
+        },
+        {
+          "output": "/gallery/puri_anyar3-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 88510
+        },
+        {
+          "output": "/gallery/puri_anyar3-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 121404
+        }
+      ]
+    },
+    {
+      "source": "puri_anyar4.JPG",
+      "sourceHash": "0169dca07005eff94c904ea8711c4ef37b0e7c0910149e124d04ea2360497138",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 6000,
+      "sourceHeight": 4000,
+      "sourceBytes": 16220241,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/puri_anyar4-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 320,
+          "bytes": 14005
+        },
+        {
+          "output": "/gallery/puri_anyar4-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 17402
+        },
+        {
+          "output": "/gallery/puri_anyar4-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 512,
+          "bytes": 28041
+        },
+        {
+          "output": "/gallery/puri_anyar4-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 35686
+        },
+        {
+          "output": "/gallery/puri_anyar4-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 800,
+          "bytes": 49341
+        },
+        {
+          "output": "/gallery/puri_anyar4-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 66848
+        },
+        {
+          "output": "/gallery/puri_anyar4-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 75625
+        },
+        {
+          "output": "/gallery/puri_anyar4-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 106450
+        }
+      ]
+    },
+    {
+      "source": "puri_anyar5.JPG",
+      "sourceHash": "3705fcb2dd301259536e94a3487ec4e8c921c3c084c4ddf37739431db7164ba2",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 6000,
+      "sourceHeight": 4000,
+      "sourceBytes": 14235299,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/puri_anyar5-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 320,
+          "bytes": 12975
+        },
+        {
+          "output": "/gallery/puri_anyar5-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 15338
+        },
+        {
+          "output": "/gallery/puri_anyar5-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 512,
+          "bytes": 28660
+        },
+        {
+          "output": "/gallery/puri_anyar5-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 34610
+        },
+        {
+          "output": "/gallery/puri_anyar5-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 800,
+          "bytes": 52870
+        },
+        {
+          "output": "/gallery/puri_anyar5-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 68674
+        },
+        {
+          "output": "/gallery/puri_anyar5-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 80688
+        },
+        {
+          "output": "/gallery/puri_anyar5-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 109294
+        }
+      ]
+    },
+    {
+      "source": "puri_anyar6.JPG",
+      "sourceHash": "3a6d1c4966a1db6dd539e7574d240906d065bbae8d70e558d501eb4501c5aa8c",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 6000,
+      "sourceHeight": 4000,
+      "sourceBytes": 14564920,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/puri_anyar6-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 320,
+          "bytes": 21167
+        },
+        {
+          "output": "/gallery/puri_anyar6-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 25310
+        },
+        {
+          "output": "/gallery/puri_anyar6-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 512,
+          "bytes": 46667
+        },
+        {
+          "output": "/gallery/puri_anyar6-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 56800
+        },
+        {
+          "output": "/gallery/puri_anyar6-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 800,
+          "bytes": 87206
+        },
+        {
+          "output": "/gallery/puri_anyar6-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 112532
+        },
+        {
+          "output": "/gallery/puri_anyar6-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 139075
+        },
+        {
+          "output": "/gallery/puri_anyar6-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 183716
+        }
+      ]
+    },
+    {
+      "source": "puspa_aman1.JPG",
+      "sourceHash": "90749271c6187dc62ffe1c9a2bd7340671ce5cece09a30854d29e3494ff78e22",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 3936,
+      "sourceHeight": 2624,
+      "sourceBytes": 6914048,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/puspa_aman1-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 320,
+          "bytes": 45791
+        },
+        {
+          "output": "/gallery/puspa_aman1-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 46238
+        },
+        {
+          "output": "/gallery/puspa_aman1-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 512,
+          "bytes": 91560
+        },
+        {
+          "output": "/gallery/puspa_aman1-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 96530
+        },
+        {
+          "output": "/gallery/puspa_aman1-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 800,
+          "bytes": 173836
+        },
+        {
+          "output": "/gallery/puspa_aman1-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 192410
+        },
+        {
+          "output": "/gallery/puspa_aman1-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 252681
+        },
+        {
+          "output": "/gallery/puspa_aman1-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 287188
+        }
+      ]
+    },
+    {
+      "source": "puspa_aman2.JPG",
+      "sourceHash": "1da072879057e7da3364ebc67cddfd30dc00e722cb0106439f5400405dc4c21b",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 3936,
+      "sourceHeight": 2624,
+      "sourceBytes": 4849664,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/puspa_aman2-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 320,
+          "bytes": 25920
+        },
+        {
+          "output": "/gallery/puspa_aman2-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 27726
+        },
+        {
+          "output": "/gallery/puspa_aman2-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 512,
+          "bytes": 43986
+        },
+        {
+          "output": "/gallery/puspa_aman2-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 49858
+        },
+        {
+          "output": "/gallery/puspa_aman2-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 800,
+          "bytes": 71788
+        },
+        {
+          "output": "/gallery/puspa_aman2-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 89038
+        },
+        {
+          "output": "/gallery/puspa_aman2-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 97234
+        },
+        {
+          "output": "/gallery/puspa_aman2-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 128256
+        }
+      ]
+    },
+    {
+      "source": "puspa_aman3.JPG",
+      "sourceHash": "1cfcc74b3d9833e0bb8d400ffd154b6ed484539fc76925d43f98e652018c06cb",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 3936,
+      "sourceHeight": 2624,
+      "sourceBytes": 6881280,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/puspa_aman3-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 320,
+          "bytes": 31725
+        },
+        {
+          "output": "/gallery/puspa_aman3-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 36322
+        },
+        {
+          "output": "/gallery/puspa_aman3-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 512,
+          "bytes": 61456
+        },
+        {
+          "output": "/gallery/puspa_aman3-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 71714
+        },
+        {
+          "output": "/gallery/puspa_aman3-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 800,
+          "bytes": 117238
+        },
+        {
+          "output": "/gallery/puspa_aman3-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 142610
+        },
+        {
+          "output": "/gallery/puspa_aman3-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 177829
+        },
+        {
+          "output": "/gallery/puspa_aman3-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 220898
+        }
+      ]
+    },
+    {
+      "source": "puspa_aman4.JPG",
+      "sourceHash": "381236e4932cf5302d92745d02e2d52cf6b4d14c4ce9a72628f3c3f5e21ab3fc",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 3936,
+      "sourceHeight": 2624,
+      "sourceBytes": 4161536,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/puspa_aman4-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 320,
+          "bytes": 7626
+        },
+        {
+          "output": "/gallery/puspa_aman4-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 10042
+        },
+        {
+          "output": "/gallery/puspa_aman4-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 512,
+          "bytes": 11689
+        },
+        {
+          "output": "/gallery/puspa_aman4-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 16824
+        },
+        {
+          "output": "/gallery/puspa_aman4-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 800,
+          "bytes": 18071
+        },
+        {
+          "output": "/gallery/puspa_aman4-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 29614
+        },
+        {
+          "output": "/gallery/puspa_aman4-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 23872
+        },
+        {
+          "output": "/gallery/puspa_aman4-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 42748
+        }
+      ]
+    },
+    {
+      "source": "puspa_aman5.JPG",
+      "sourceHash": "a2bc11ce76aaa1c644610277316943fff344ac62f1f2e47095d2491bccf7e124",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 3936,
+      "sourceHeight": 2624,
+      "sourceBytes": 6324224,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/puspa_aman5-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 320,
+          "bytes": 27544
+        },
+        {
+          "output": "/gallery/puspa_aman5-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 32180
+        },
+        {
+          "output": "/gallery/puspa_aman5-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 512,
+          "bytes": 56036
+        },
+        {
+          "output": "/gallery/puspa_aman5-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 66872
+        },
+        {
+          "output": "/gallery/puspa_aman5-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 800,
+          "bytes": 110047
+        },
+        {
+          "output": "/gallery/puspa_aman5-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 135710
+        },
+        {
+          "output": "/gallery/puspa_aman5-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 170675
+        },
+        {
+          "output": "/gallery/puspa_aman5-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 215930
+        }
+      ]
+    },
+    {
+      "source": "puspa_aman6.JPG",
+      "sourceHash": "8b0c3b95e59645f9b90ed20adc2d389b8082f10918c2987480ad64db12164d98",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 3936,
+      "sourceHeight": 2624,
+      "sourceBytes": 6979584,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/puspa_aman6-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 320,
+          "bytes": 33008
+        },
+        {
+          "output": "/gallery/puspa_aman6-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 39282
+        },
+        {
+          "output": "/gallery/puspa_aman6-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 512,
+          "bytes": 61247
+        },
+        {
+          "output": "/gallery/puspa_aman6-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 76552
+        },
+        {
+          "output": "/gallery/puspa_aman6-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 800,
+          "bytes": 109488
+        },
+        {
+          "output": "/gallery/puspa_aman6-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 143324
+        },
+        {
+          "output": "/gallery/puspa_aman6-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 155513
+        },
+        {
+          "output": "/gallery/puspa_aman6-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 212122
+        }
+      ]
+    },
+    {
+      "source": "silver_class1.jpg",
+      "sourceHash": "c65aec0ccfaf3417380d572670eb8f427e40becc529f11ab14cd8646961e16bf",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 6000,
+      "sourceHeight": 4000,
+      "sourceBytes": 5528743,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/silver_class1-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 320,
+          "bytes": 47745
+        },
+        {
+          "output": "/gallery/silver_class1-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 51542
+        },
+        {
+          "output": "/gallery/silver_class1-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 512,
+          "bytes": 131072
+        },
+        {
+          "output": "/gallery/silver_class1-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 139382
+        },
+        {
+          "output": "/gallery/silver_class1-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 800,
+          "bytes": 313505
+        },
+        {
+          "output": "/gallery/silver_class1-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 340778
+        },
+        {
+          "output": "/gallery/silver_class1-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 575477
+        },
+        {
+          "output": "/gallery/silver_class1-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 631044
+        }
+      ]
+    },
+    {
+      "source": "silver_class2.jpg",
+      "sourceHash": "e3f3c9c49d1ec8670002bd7d114b1d484e58d0b175076f10d17b824da7696fd6",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 6000,
+      "sourceHeight": 4000,
+      "sourceBytes": 5160928,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/silver_class2-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 320,
+          "bytes": 41950
+        },
+        {
+          "output": "/gallery/silver_class2-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 45504
+        },
+        {
+          "output": "/gallery/silver_class2-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 512,
+          "bytes": 100093
+        },
+        {
+          "output": "/gallery/silver_class2-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 114096
+        },
+        {
+          "output": "/gallery/silver_class2-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 800,
+          "bytes": 227682
+        },
+        {
+          "output": "/gallery/silver_class2-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 271178
+        },
+        {
+          "output": "/gallery/silver_class2-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 428795
+        },
+        {
+          "output": "/gallery/silver_class2-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 514794
+        }
+      ]
+    },
+    {
+      "source": "silver_class3.jpg",
+      "sourceHash": "1f17a3a3ac55a2767518da6b46cb9d0811bcc1f42d181e2fe5b3ce9b26362aee",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 6000,
+      "sourceHeight": 4000,
+      "sourceBytes": 4586846,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/silver_class3-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 320,
+          "bytes": 29378
+        },
+        {
+          "output": "/gallery/silver_class3-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 35310
+        },
+        {
+          "output": "/gallery/silver_class3-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 512,
+          "bytes": 63661
+        },
+        {
+          "output": "/gallery/silver_class3-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 79672
+        },
+        {
+          "output": "/gallery/silver_class3-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 800,
+          "bytes": 143382
+        },
+        {
+          "output": "/gallery/silver_class3-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 187660
+        },
+        {
+          "output": "/gallery/silver_class3-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 291033
+        },
+        {
+          "output": "/gallery/silver_class3-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 381658
+        }
+      ]
+    },
+    {
+      "source": "silver_class4.jpg",
+      "sourceHash": "d8caf0d8a78f0e71083367b30d569872e50dea414179c4b62d6c1e44ab3d7671",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 6000,
+      "sourceHeight": 4000,
+      "sourceBytes": 3765128,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/silver_class4-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 320,
+          "bytes": 11951
+        },
+        {
+          "output": "/gallery/silver_class4-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 16592
+        },
+        {
+          "output": "/gallery/silver_class4-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 512,
+          "bytes": 27861
+        },
+        {
+          "output": "/gallery/silver_class4-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 42266
+        },
+        {
+          "output": "/gallery/silver_class4-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 800,
+          "bytes": 88067
+        },
+        {
+          "output": "/gallery/silver_class4-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 122518
+        },
+        {
+          "output": "/gallery/silver_class4-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 206076
+        },
+        {
+          "output": "/gallery/silver_class4-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 270688
+        }
+      ]
+    },
+    {
+      "source": "silver_class5.jpg",
+      "sourceHash": "530a5d4ccb1827b61cf2fb77f28f3b54c1e1dca35ecd1b223b5a46be0a1e75d0",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 6000,
+      "sourceHeight": 4000,
+      "sourceBytes": 2677163,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/silver_class5-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 320,
+          "bytes": 12096
+        },
+        {
+          "output": "/gallery/silver_class5-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 12472
+        },
+        {
+          "output": "/gallery/silver_class5-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 512,
+          "bytes": 21504
+        },
+        {
+          "output": "/gallery/silver_class5-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 25596
+        },
+        {
+          "output": "/gallery/silver_class5-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 800,
+          "bytes": 38746
+        },
+        {
+          "output": "/gallery/silver_class5-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 68370
+        },
+        {
+          "output": "/gallery/silver_class5-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 92973
+        },
+        {
+          "output": "/gallery/silver_class5-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 156042
+        }
+      ]
+    },
+    {
+      "source": "silver_class6.jpg",
+      "sourceHash": "9fa3d718f5c649927734d750b4b6a1fe9fb187db415cba8976960a94bc3f94e8",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 6000,
+      "sourceHeight": 4000,
+      "sourceBytes": 4469857,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/silver_class6-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 320,
+          "bytes": 37146
+        },
+        {
+          "output": "/gallery/silver_class6-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 40454
+        },
+        {
+          "output": "/gallery/silver_class6-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 512,
+          "bytes": 71739
+        },
+        {
+          "output": "/gallery/silver_class6-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 83966
+        },
+        {
+          "output": "/gallery/silver_class6-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 800,
+          "bytes": 154838
+        },
+        {
+          "output": "/gallery/silver_class6-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 193614
+        },
+        {
+          "output": "/gallery/silver_class6-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 306139
+        },
+        {
+          "output": "/gallery/silver_class6-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 390398
+        }
+      ]
+    },
+    {
+      "source": "tlaga_singha1.jpg",
+      "sourceHash": "f83f55f7daac545350cac70a3761465d34be1a74db05f14d333324ec018eb9d2",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 6192,
+      "sourceHeight": 3480,
+      "sourceBytes": 3701213,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/tlaga_singha1-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 270,
+          "bytes": 28016
+        },
+        {
+          "output": "/gallery/tlaga_singha1-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 270,
+          "bytes": 32904
+        },
+        {
+          "output": "/gallery/tlaga_singha1-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 432,
+          "bytes": 68617
+        },
+        {
+          "output": "/gallery/tlaga_singha1-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 432,
+          "bytes": 82404
+        },
+        {
+          "output": "/gallery/tlaga_singha1-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 674,
+          "bytes": 158993
+        },
+        {
+          "output": "/gallery/tlaga_singha1-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 674,
+          "bytes": 190404
+        },
+        {
+          "output": "/gallery/tlaga_singha1-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 899,
+          "bytes": 294891
+        },
+        {
+          "output": "/gallery/tlaga_singha1-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 899,
+          "bytes": 350754
+        }
+      ]
+    },
+    {
+      "source": "tlaga_singha2.jpg",
+      "sourceHash": "d74fb3352d9eeb4152783067760ba95bef7622912b78c6e9ed11fa7f3f4a8f94",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 6192,
+      "sourceHeight": 3480,
+      "sourceBytes": 3164208,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/tlaga_singha2-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 270,
+          "bytes": 18027
+        },
+        {
+          "output": "/gallery/tlaga_singha2-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 270,
+          "bytes": 21632
+        },
+        {
+          "output": "/gallery/tlaga_singha2-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 432,
+          "bytes": 44108
+        },
+        {
+          "output": "/gallery/tlaga_singha2-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 432,
+          "bytes": 54638
+        },
+        {
+          "output": "/gallery/tlaga_singha2-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 674,
+          "bytes": 106478
+        },
+        {
+          "output": "/gallery/tlaga_singha2-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 674,
+          "bytes": 131676
+        },
+        {
+          "output": "/gallery/tlaga_singha2-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 899,
+          "bytes": 205765
+        },
+        {
+          "output": "/gallery/tlaga_singha2-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 899,
+          "bytes": 260246
+        }
+      ]
+    },
+    {
+      "source": "tlaga_singha3.jpg",
+      "sourceHash": "964996ee74ac0f65e02e11799ffd202e5eba3c4eeed5a020a98b4c1da75060aa",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 6192,
+      "sourceHeight": 3480,
+      "sourceBytes": 4232568,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/tlaga_singha3-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 270,
+          "bytes": 31904
+        },
+        {
+          "output": "/gallery/tlaga_singha3-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 270,
+          "bytes": 40412
+        },
+        {
+          "output": "/gallery/tlaga_singha3-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 432,
+          "bytes": 70469
+        },
+        {
+          "output": "/gallery/tlaga_singha3-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 432,
+          "bytes": 94088
+        },
+        {
+          "output": "/gallery/tlaga_singha3-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 674,
+          "bytes": 154752
+        },
+        {
+          "output": "/gallery/tlaga_singha3-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 674,
+          "bytes": 209348
+        },
+        {
+          "output": "/gallery/tlaga_singha3-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 899,
+          "bytes": 286705
+        },
+        {
+          "output": "/gallery/tlaga_singha3-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 899,
+          "bytes": 383564
+        }
+      ]
+    },
+    {
+      "source": "tlaga_singha4.jpg",
+      "sourceHash": "ef60907ac40d9c51461eecd44bc1524aae40b5cb61ff6115fbc4e5c1029aa046",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 6192,
+      "sourceHeight": 3480,
+      "sourceBytes": 4038271,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/tlaga_singha4-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 270,
+          "bytes": 27791
+        },
+        {
+          "output": "/gallery/tlaga_singha4-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 270,
+          "bytes": 31516
+        },
+        {
+          "output": "/gallery/tlaga_singha4-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 432,
+          "bytes": 61487
+        },
+        {
+          "output": "/gallery/tlaga_singha4-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 432,
+          "bytes": 75742
+        },
+        {
+          "output": "/gallery/tlaga_singha4-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 674,
+          "bytes": 146513
+        },
+        {
+          "output": "/gallery/tlaga_singha4-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 674,
+          "bytes": 186004
+        },
+        {
+          "output": "/gallery/tlaga_singha4-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 899,
+          "bytes": 275460
+        },
+        {
+          "output": "/gallery/tlaga_singha4-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 899,
+          "bytes": 355830
+        }
+      ]
+    },
+    {
+      "source": "tlaga_singha5.jpg",
+      "sourceHash": "add1477e4dba54d0eedb2681126e0755d7173b50e7edd04d6e1b4e4b11ffb808",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 6192,
+      "sourceHeight": 3480,
+      "sourceBytes": 3846316,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/tlaga_singha5-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 270,
+          "bytes": 24348
+        },
+        {
+          "output": "/gallery/tlaga_singha5-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 270,
+          "bytes": 29568
+        },
+        {
+          "output": "/gallery/tlaga_singha5-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 432,
+          "bytes": 47595
+        },
+        {
+          "output": "/gallery/tlaga_singha5-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 432,
+          "bytes": 64692
+        },
+        {
+          "output": "/gallery/tlaga_singha5-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 674,
+          "bytes": 104382
+        },
+        {
+          "output": "/gallery/tlaga_singha5-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 674,
+          "bytes": 146312
+        },
+        {
+          "output": "/gallery/tlaga_singha5-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 899,
+          "bytes": 208499
+        },
+        {
+          "output": "/gallery/tlaga_singha5-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 899,
+          "bytes": 298384
+        }
+      ]
+    },
+    {
+      "source": "tlaga_singha6.jpg",
+      "sourceHash": "965f94d04d32d35cc5b4f13b6f6a423567e6de4ec680fbd985c0b923b198574d",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 6192,
+      "sourceHeight": 3480,
+      "sourceBytes": 3911401,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/tlaga_singha6-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 270,
+          "bytes": 18235
+        },
+        {
+          "output": "/gallery/tlaga_singha6-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 270,
+          "bytes": 23706
+        },
+        {
+          "output": "/gallery/tlaga_singha6-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 432,
+          "bytes": 36380
+        },
+        {
+          "output": "/gallery/tlaga_singha6-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 432,
+          "bytes": 53070
+        },
+        {
+          "output": "/gallery/tlaga_singha6-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 674,
+          "bytes": 97951
+        },
+        {
+          "output": "/gallery/tlaga_singha6-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 674,
+          "bytes": 137876
+        },
+        {
+          "output": "/gallery/tlaga_singha6-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 899,
+          "bytes": 209429
+        },
+        {
+          "output": "/gallery/tlaga_singha6-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 899,
+          "bytes": 289270
+        }
+      ]
+    }
+  ]
 }

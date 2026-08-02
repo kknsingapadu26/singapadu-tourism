@@ -23,7 +23,7 @@ export const DestinationDetail: React.FC<DestinationDetailProps> = ({
   onNavigate
 }) => {
   const t = TRANSLATIONS[lang];
-  const dest = DESTS.find((d) => d.key === destKey) || DESTS[0];
+  const dest = DESTS.find((d) => d.key === (destKey as string)) || DESTS[0];
   const loc = dest[lang];
 
   const waMsg = t.waMsg.replace('{x}', loc.title);
@@ -80,7 +80,7 @@ export const DestinationDetail: React.FC<DestinationDetailProps> = ({
               className="object-cover object-center"
             />
           ) : (
-            <ImagePlaceholder label={loc.title} tone={dest.tone} />
+            <ImagePlaceholder label={loc.title} tone={(dest as { tone?: 'green' | 'amber' | 'sky' | 'navy' }).tone} />
           )}
         </div>
       </div>
@@ -198,58 +198,76 @@ export const DestinationDetail: React.FC<DestinationDetailProps> = ({
       </div>
 
       {/* Gallery Section */}
-      {galleryImgs.length >= 4 ? <div className="mt-20">
-        <SectionHeader
-          eyebrow={t.detail.galleryEyebrow}
-          title={t.detail.galleryTitle}
-        />
+      {galleryImgs.length > 0 ? (
+        <div className="mt-20">
+          <SectionHeader
+            eyebrow={t.detail.galleryEyebrow}
+            title={t.detail.galleryTitle}
+          />
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 auto-rows-[190px] gap-3">
-          {/* Mosaic Item 1: 2x2 Span */}
-          <div className="sm:col-span-2 sm:row-span-2 relative overflow-hidden rounded-sm bg-[var(--surface-sunken)] group">
-            <Image
-              src={galleryImgs[0]}
-              alt={`${loc.title} gallery 1`}
-              fill
-              sizes="(max-width: 640px) 100vw, (max-width: 1200px) 66vw, 800px"
-              className="object-cover transition-transform duration-[var(--dur-med)] ease-[var(--ease-out)] group-hover:scale-103"
-            />
-          </div>
+          {galleryImgs.length >= 4 ? (
+            <div className="grid grid-cols-1 sm:grid-cols-3 auto-rows-[190px] gap-3">
+              {/* Mosaic Item 1: 2x2 Span */}
+              <div className="sm:col-span-2 sm:row-span-2 relative overflow-hidden rounded-sm bg-[var(--surface-sunken)] group">
+                <Image
+                  src={galleryImgs[0]}
+                  alt={`${loc.title} gallery 1`}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1200px) 66vw, 800px"
+                  className="object-cover transition-transform duration-[var(--dur-med)] ease-[var(--ease-out)] group-hover:scale-103"
+                />
+              </div>
 
-          {/* Mosaic Item 2 */}
-          <div className="relative overflow-hidden rounded-sm bg-[var(--surface-sunken)] group">
-            <Image
-              src={galleryImgs[1]}
-              alt={`${loc.title} gallery 2`}
-              fill
-              sizes="(max-width: 640px) 100vw, (max-width: 1200px) 33vw, 400px"
-              className="object-cover transition-transform duration-[var(--dur-med)] ease-[var(--ease-out)] group-hover:scale-103"
-            />
-          </div>
+              {/* Mosaic Item 2 */}
+              <div className="relative overflow-hidden rounded-sm bg-[var(--surface-sunken)] group">
+                <Image
+                  src={galleryImgs[1]}
+                  alt={`${loc.title} gallery 2`}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1200px) 33vw, 400px"
+                  className="object-cover transition-transform duration-[var(--dur-med)] ease-[var(--ease-out)] group-hover:scale-103"
+                />
+              </div>
 
-          {/* Mosaic Item 3 */}
-          <div className="relative overflow-hidden rounded-sm bg-[var(--surface-sunken)] group">
-            <Image
-              src={galleryImgs[2]}
-              alt={`${loc.title} gallery 3`}
-              fill
-              sizes="(max-width: 640px) 100vw, (max-width: 1200px) 33vw, 400px"
-              className="object-cover transition-transform duration-[var(--dur-med)] ease-[var(--ease-out)] group-hover:scale-103"
-            />
-          </div>
+              {/* Mosaic Item 3 */}
+              <div className="relative overflow-hidden rounded-sm bg-[var(--surface-sunken)] group">
+                <Image
+                  src={galleryImgs[2]}
+                  alt={`${loc.title} gallery 3`}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1200px) 33vw, 400px"
+                  className="object-cover transition-transform duration-[var(--dur-med)] ease-[var(--ease-out)] group-hover:scale-103"
+                />
+              </div>
 
-          {/* Mosaic Item 4: Full Row Width */}
-          <div className="sm:col-span-3 relative overflow-hidden rounded-sm bg-[var(--surface-sunken)] group h-[190px]">
-            <Image
-              src={galleryImgs[3]}
-              alt={`${loc.title} gallery 4`}
-              fill
-              sizes="(max-width: 1200px) 100vw, 1200px"
-              className="object-cover transition-transform duration-[var(--dur-med)] ease-[var(--ease-out)] group-hover:scale-103"
-            />
-          </div>
+              {/* Mosaic Item 4: Full Row Width */}
+              <div className="sm:col-span-3 relative overflow-hidden rounded-sm bg-[var(--surface-sunken)] group h-[190px]">
+                <Image
+                  src={galleryImgs[3]}
+                  alt={`${loc.title} gallery 4`}
+                  fill
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  className="object-cover transition-transform duration-[var(--dur-med)] ease-[var(--ease-out)] group-hover:scale-103"
+                />
+              </div>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 auto-rows-[240px]">
+              {galleryImgs.map((img, i) => (
+                <div key={i} className="relative overflow-hidden rounded-sm bg-[var(--surface-sunken)] group">
+                  <Image
+                    src={img}
+                    alt={`${loc.title} gallery ${i + 1}`}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1200px) 50vw, 600px"
+                    className="object-cover transition-transform duration-[var(--dur-med)] ease-[var(--ease-out)] group-hover:scale-103"
+                  />
+                </div>
+              ))}
+            </div>
+          )}
         </div>
-      </div> : null}
+      ) : null}
 
       {/* Tips & Map Section (2 Columns) */}
       <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">

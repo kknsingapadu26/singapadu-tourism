@@ -39,7 +39,7 @@ export const Hero: React.FC<HeroProps> = ({ lang, onNavigate }) => {
           {slide.img ? (
             <Image
               src={slide.img}
-              alt={t.home.slides[idx]?.title}
+              alt={t.home.slides[idx]?.title || `Singapadu Tourism - ${slide.cat}`}
               fill
               sizes="100vw"
               preload={idx === 0}
@@ -47,8 +47,8 @@ export const Hero: React.FC<HeroProps> = ({ lang, onNavigate }) => {
             />
           ) : (
             <ImagePlaceholder
-              label={t.home.slides[idx]?.title}
-              tone={slide.tone}
+              label={t.home.slides[idx]?.title || (slide as { cat: string }).cat}
+              tone={(slide as { tone?: 'green' | 'amber' | 'sky' | 'navy' }).tone}
               className="absolute inset-0"
             />
           )}
@@ -129,7 +129,7 @@ export const Hero: React.FC<HeroProps> = ({ lang, onNavigate }) => {
                 ) : (
                   <ImagePlaceholder
                     label={t.home.slides[idx]?.title}
-                    tone={slide.tone}
+                    tone={(slide as { tone?: 'green' | 'amber' | 'sky' | 'navy' }).tone}
                     className="absolute inset-0 !gap-0 !p-2 [&_svg]:hidden [&_span]:text-[8px]"
                   />
                 )}
