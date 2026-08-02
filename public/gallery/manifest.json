@@ -1874,11 +1874,11 @@
     },
     {
       "source": "pura_desa1.JPG",
-      "sourceHash": "bc86c878089444c1ba5e17a84696c0bd9b47e25c28c7d7448be166299fb8f4fa",
+      "sourceHash": "b5c5f2a976d4bcca1f5b12c53099e9af5f68cb3aee138d5ed4e431c62c795c83",
       "sourceFormat": "jpeg",
       "sourceWidth": 3936,
       "sourceHeight": 2624,
-      "sourceBytes": 5472256,
+      "sourceBytes": 6717440,
       "hasAlpha": false,
       "variants": [
         {
@@ -1886,56 +1886,56 @@
           "format": "heif",
           "width": 480,
           "height": 320,
-          "bytes": 16126
+          "bytes": 30596
         },
         {
           "output": "/gallery/pura_desa1-480w.webp",
           "format": "webp",
           "width": 480,
           "height": 320,
-          "bytes": 20824
+          "bytes": 34032
         },
         {
           "output": "/gallery/pura_desa1-768w.avif",
           "format": "heif",
           "width": 768,
           "height": 512,
-          "bytes": 24972
+          "bytes": 63095
         },
         {
           "output": "/gallery/pura_desa1-768w.webp",
           "format": "webp",
           "width": 768,
           "height": 512,
-          "bytes": 35148
+          "bytes": 71896
         },
         {
           "output": "/gallery/pura_desa1-1200w.avif",
           "format": "heif",
           "width": 1200,
           "height": 800,
-          "bytes": 37176
+          "bytes": 126868
         },
         {
           "output": "/gallery/pura_desa1-1200w.webp",
           "format": "webp",
           "width": 1200,
           "height": 800,
-          "bytes": 60086
+          "bytes": 150292
         },
         {
           "output": "/gallery/pura_desa1-1600w.avif",
           "format": "heif",
           "width": 1600,
           "height": 1067,
-          "bytes": 48805
+          "bytes": 195747
         },
         {
           "output": "/gallery/pura_desa1-1600w.webp",
           "format": "webp",
           "width": 1600,
           "height": 1067,
-          "bytes": 85438
+          "bytes": 235790
         }
       ]
     },
