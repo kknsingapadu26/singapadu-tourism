@@ -1002,6 +1002,140 @@
       ]
     },
     {
+      "source": "geok_7.jpg",
+      "sourceHash": "2ed4da5e892489ebdefc25ad8e0ea2578a7ae88a198215819b9ef69497e663e1",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 1918,
+      "sourceHeight": 1080,
+      "sourceBytes": 547203,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/geok_7-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 270,
+          "bytes": 27733
+        },
+        {
+          "output": "/gallery/geok_7-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 270,
+          "bytes": 29960
+        },
+        {
+          "output": "/gallery/geok_7-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 432,
+          "bytes": 52914
+        },
+        {
+          "output": "/gallery/geok_7-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 432,
+          "bytes": 61232
+        },
+        {
+          "output": "/gallery/geok_7-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 676,
+          "bytes": 91210
+        },
+        {
+          "output": "/gallery/geok_7-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 676,
+          "bytes": 111548
+        },
+        {
+          "output": "/gallery/geok_7-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 901,
+          "bytes": 121539
+        },
+        {
+          "output": "/gallery/geok_7-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 901,
+          "bytes": 158528
+        }
+      ]
+    },
+    {
+      "source": "geoks_8.jpg",
+      "sourceHash": "c4b01ebf8167d34aba306df07c588d0c480a95090498d601794c8236192244ab",
+      "sourceFormat": "jpeg",
+      "sourceWidth": 1920,
+      "sourceHeight": 1078,
+      "sourceBytes": 1145224,
+      "hasAlpha": false,
+      "variants": [
+        {
+          "output": "/gallery/geoks_8-480w.avif",
+          "format": "heif",
+          "width": 480,
+          "height": 270,
+          "bytes": 23219
+        },
+        {
+          "output": "/gallery/geoks_8-480w.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 270,
+          "bytes": 25316
+        },
+        {
+          "output": "/gallery/geoks_8-768w.avif",
+          "format": "heif",
+          "width": 768,
+          "height": 431,
+          "bytes": 44707
+        },
+        {
+          "output": "/gallery/geoks_8-768w.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 431,
+          "bytes": 51742
+        },
+        {
+          "output": "/gallery/geoks_8-1200w.avif",
+          "format": "heif",
+          "width": 1200,
+          "height": 674,
+          "bytes": 77300
+        },
+        {
+          "output": "/gallery/geoks_8-1200w.webp",
+          "format": "webp",
+          "width": 1200,
+          "height": 674,
+          "bytes": 94602
+        },
+        {
+          "output": "/gallery/geoks_8-1600w.avif",
+          "format": "heif",
+          "width": 1600,
+          "height": 898,
+          "bytes": 103814
+        },
+        {
+          "output": "/gallery/geoks_8-1600w.webp",
+          "format": "webp",
+          "width": 1600,
+          "height": 898,
+          "bytes": 133932
+        }
+      ]
+    },
+    {
       "source": "geoks1.jpg",
       "sourceHash": "f211030486d76c4feb5fc66065c66edd675027b7546c1072675a0a24d44de203",
       "sourceFormat": "jpeg",
