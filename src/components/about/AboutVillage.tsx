@@ -37,7 +37,7 @@ export const AboutVillage: React.FC<AboutVillageProps> = ({ lang }) => {
         {/* Feature Village Photo */}
         <div className="relative aspect-[7/8] lg:col-span-5 rounded-sm overflow-hidden shadow-md">
           <Image
-            src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&q=80&w=1000"
+            src="/gallery/pura_desa2-768w.webp"
             alt="Singapadu village tradition"
             fill
             sizes="(max-width: 1024px) 100vw, 460px"
@@ -86,18 +86,28 @@ export const AboutVillage: React.FC<AboutVillageProps> = ({ lang }) => {
           {/* Institutional Partner Badges */}
           <div className="flex items-center gap-7 pt-2 flex-wrap">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-sm bg-[var(--tint-brand)] border border-[var(--category-culture-border)] text-[var(--category-culture-text)] flex items-center justify-center font-black text-xs shadow-xs">
-                DESA
-              </div>
+              <Image
+                src="/logos/logo-desa-singapadu.webp"
+                alt="Pemerintah Desa Singapadu"
+                width={56}
+                height={56}
+                sizes="56px"
+                className="h-14 w-14 shrink-0 object-contain"
+              />
               <span className="text-xs font-semibold text-[var(--text-secondary)] leading-snug">
                 Pemerintah<br />Desa Singapadu
               </span>
             </div>
 
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-sm bg-[var(--tint-info)] border border-[var(--category-nature-border)] text-[var(--category-nature-text)] flex items-center justify-center font-black text-xs shadow-xs">
-                PNB
-              </div>
+              <Image
+                src="/logos/logo-pnb.webp"
+                alt="Politeknik Negeri Bali"
+                width={56}
+                height={56}
+                sizes="56px"
+                className="h-14 w-14 shrink-0 object-contain"
+              />
               <span className="text-xs font-semibold text-[var(--text-secondary)] leading-snug">
                 Politeknik<br />Negeri Bali
               </span>
