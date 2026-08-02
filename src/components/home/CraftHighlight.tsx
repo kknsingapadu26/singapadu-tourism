@@ -2,9 +2,10 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { type Language, type Navigate, TRANSLATIONS } from '@/data';
+import { type Language, type Navigate, TRANSLATIONS, DESTS } from '@/data';
 import { Button } from '../ui/Button';
 import { Icon } from '../ui/Icon';
+import { ImagePlaceholder } from '../ui/ImagePlaceholder';
 
 interface CraftHighlightProps {
   lang: Language;
@@ -13,19 +14,24 @@ interface CraftHighlightProps {
 
 export const CraftHighlight: React.FC<CraftHighlightProps> = ({ lang, onNavigate }) => {
   const t = TRANSLATIONS[lang];
+  const craftDestination = DESTS.find((destination) => destination.key === 'krisna-yuna') ?? DESTS[0];
 
   return (
     <section className="max-w-[1200px] mx-auto px-6 pt-20">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         {/* Left Image */}
         <div className="relative aspect-[4/3] lg:col-span-6 rounded-sm overflow-hidden shadow-md">
-          <Image
-            src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&q=80&w=1000"
-            alt="Paras stone & mask carving Singapadu"
-            fill
-            sizes="(max-width: 1024px) 100vw, 600px"
-            className="object-cover"
-          />
+          {craftDestination.img ? (
+            <Image
+              src={craftDestination.img}
+              alt={craftDestination[lang].title}
+              fill
+              sizes="(max-width: 1024px) 100vw, 600px"
+              className="object-cover"
+            />
+          ) : (
+            <ImagePlaceholder label={craftDestination[lang].title} tone={craftDestination.tone} />
+          )}
         </div>
 
         {/* Right Content */}

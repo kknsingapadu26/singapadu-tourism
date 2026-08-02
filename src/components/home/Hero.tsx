@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { type Language, type Navigate, TRANSLATIONS, HERO_SLIDES, CONTACT_INFO } from '@/data';
 import { Icon } from '../ui/Icon';
+import { ImagePlaceholder } from '../ui/ImagePlaceholder';
 
 interface HeroProps {
   lang: Language;
@@ -35,14 +36,22 @@ export const Hero: React.FC<HeroProps> = ({ lang, onNavigate }) => {
             idx === activeIdx ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
           }`}
         >
-          <Image
-            src={slide.img}
-            alt={t.home.slides[idx]?.title}
-            fill
-            sizes="100vw"
-            preload={idx === 0}
-            className="object-cover object-center"
-          />
+          {slide.img ? (
+            <Image
+              src={slide.img}
+              alt={t.home.slides[idx]?.title}
+              fill
+              sizes="100vw"
+              preload={idx === 0}
+              className="object-cover object-center"
+            />
+          ) : (
+            <ImagePlaceholder
+              label={t.home.slides[idx]?.title}
+              tone={slide.tone}
+              className="absolute inset-0"
+            />
+          )}
           {/* Scrim Overlay */}
           <div className="absolute inset-0" style={{ backgroundImage: 'var(--scrim)' }} />
         </div>
@@ -109,13 +118,21 @@ export const Hero: React.FC<HeroProps> = ({ lang, onNavigate }) => {
                     : 'border-white/35 opacity-75 hover:opacity-100'
                 }`}
               >
-                <Image
-                  src={slide.img}
-                  alt=""
-                  fill
-                  sizes="128px"
-                  className="object-cover"
-                />
+                {slide.img ? (
+                  <Image
+                    src={slide.img}
+                    alt=""
+                    fill
+                    sizes="128px"
+                    className="object-cover"
+                  />
+                ) : (
+                  <ImagePlaceholder
+                    label={t.home.slides[idx]?.title}
+                    tone={slide.tone}
+                    className="absolute inset-0 !gap-0 !p-2 [&_svg]:hidden [&_span]:text-[8px]"
+                  />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                 <span className="absolute left-2 bottom-1.5 z-10 text-[10.5px] font-bold uppercase tracking-wider text-white">
                   {(t.cats as Record<string, string>)[slide.cat]}

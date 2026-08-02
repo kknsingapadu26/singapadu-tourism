@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { Badge } from './Badge';
 import { Icon } from './Icon';
+import { ImagePlaceholder } from './ImagePlaceholder';
 
 interface DestinationCardProps {
   title: string;
@@ -12,6 +13,7 @@ interface DestinationCardProps {
   blurb: string;
   img?: string;
   imgLabel?: string;
+  tone?: 'green' | 'amber' | 'sky' | 'navy';
   price?: string;
   hours?: string;
   eager?: boolean;
@@ -26,6 +28,7 @@ export const DestinationCard: React.FC<DestinationCardProps> = ({
   blurb,
   img,
   imgLabel,
+  tone,
   price,
   hours,
   eager = false,
@@ -49,9 +52,7 @@ export const DestinationCard: React.FC<DestinationCardProps> = ({
             className="object-cover transition-transform duration-[var(--dur-med)] ease-[var(--ease-out)] group-hover:scale-103"
           />
         ) : (
-          <div className="w-full h-full flex flex-col items-center justify-center bg-[var(--tint-accent)] text-[var(--category-craft-text)] p-4 text-center">
-            <span className="text-sm font-semibold">{imgLabel || title}</span>
-          </div>
+          <ImagePlaceholder label={imgLabel || title} tone={tone} />
         )}
         <div className="absolute top-3 left-3 z-10">
           <Badge category={category}>{category}</Badge>

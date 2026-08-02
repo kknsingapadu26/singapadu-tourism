@@ -37,6 +37,7 @@ export const PlacesToExplore: React.FC<PlacesToExploreProps> = ({ lang, onNaviga
               blurb={loc.blurb}
               img={dest.img}
               imgLabel={dest.imgLabel}
+              tone={dest.tone}
               price={loc.price}
               hours={loc.hours}
               lang={lang}

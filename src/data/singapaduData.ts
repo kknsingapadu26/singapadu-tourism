@@ -1,317 +1,8 @@
 import type {
   ContactInfo,
-  Destination as DestinationSchema,
   EventItem,
-  HeroSlide,
   Localized,
 } from './schema';
-
-export const HERO_SLIDES = [
-  { key: "barong", img: "https://images.unsplash.com/photo-1531778272849-d1dd22444c06?auto=format&fit=crop&q=80&w=1600", cat: "Culture" },
-  { key: "subak", img: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&q=80&w=1600", cat: "Nature" },
-  { key: "carving", img: "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&q=80&w=1600", cat: "Craft" },
-  { key: "zoo", img: "https://images.unsplash.com/photo-1554457945-ba5df6648602?auto=format&fit=crop&q=80&w=1600", cat: "Family" }
-] as const satisfies readonly HeroSlide<DestinationKey>[];
-
-export const DESTS = [
-  {
-    key: "barong",
-    slug: "barong-dance-pura-puseh",
-    cat: "Culture",
-    img: "https://images.unsplash.com/photo-1531778272849-d1dd22444c06?auto=format&fit=crop&q=80&w=900",
-    tone: "green",
-    imgLabel: undefined,
-    mapQ: "Pura Puseh Singapadu Gianyar",
-    gallery: [
-      "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&q=80&w=1200",
-      "https://images.unsplash.com/photo-1555400038-63f5ba517a47?auto=format&fit=crop&q=80&w=700",
-      "https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&q=80&w=700",
-      "https://images.unsplash.com/photo-1558005530-a7958896ec60?auto=format&fit=crop&q=80&w=1600"
-    ],
-    en: {
-      title: "Barong dance at Pura Puseh",
-      location: "Pura Puseh · village center",
-      blurb: "You'll hear the gamelan before you see the mask. Singapadu's barong is carved, blessed and danced by the same families — and has been for generations.",
-      hours: "Performances Tue & Fri, 19:00",
-      price: "IDR 100k · children free",
-      distance: "0.4 km from village center",
-      story: [
-        "Singapadu is one of Bali's great barong villages. The mask you'll see tonight was carved from sacred pule wood by a village master, blessed at the temple, and treated as a living being — it receives offerings before every performance.",
-        "Performances happen on the open stage beside Pura Puseh. Come early to watch the gamelan warm up, and stay after: the dancers often let visitors see the masks up close."
-      ],
-      tips: [
-        "Wear a sash (selendang) — provided at the gate",
-        "Bring cash for tickets and offerings",
-        "Photography is welcome, but no flash during trance scenes"
-      ]
-    },
-    id: {
-      title: "Tari Barong di Pura Puseh",
-      location: "Pura Puseh · pusat desa",
-      blurb: "Suara gamelan terdengar sebelum sang topeng terlihat. Barong Singapadu diukir, disucikan, dan ditarikan oleh keluarga yang sama — turun-temurun lintas generasi.",
-      hours: "Pentas Selasa & Jumat, 19.00",
-      price: "IDR 100 rb · anak-anak gratis",
-      distance: "0,4 km dari pusat desa",
-      story: [
-        "Singapadu adalah salah satu desa barong terkemuka di Bali. Topeng yang Anda saksikan malam ini ditatah dari kayu pule yang disakralkan oleh seorang undagi desa, disucikan di pura, dan diperlakukan sebagai sosok yang hidup — selalu dihaturkan banten sebelum pentas.",
-        "Pentas digelar di panggung terbuka di samping Pura Puseh. Datanglah lebih awal untuk melihat penabuh gamelan bersiap, dan jangan buru-buru pulang: para penari kerap mempersilakan pengunjung melihat topeng dari dekat."
-      ],
-      tips: [
-        "Kenakan selendang — disediakan di gerbang",
-        "Bawa uang tunai untuk tiket dan punia",
-        "Boleh memotret, tanpa lampu kilat saat adegan trance"
-      ]
-    }
-  },
-  {
-    key: "zoo",
-    slug: "bali-zoo",
-    cat: "Family",
-    img: "https://images.unsplash.com/photo-1554457945-ba5df6648602?auto=format&fit=crop&q=80&w=900",
-    tone: "green",
-    imgLabel: undefined,
-    mapQ: "Bali Zoo Singapadu",
-    gallery: [
-      "https://images.unsplash.com/photo-1463852247062-1bbca38f7805?auto=format&fit=crop&q=80&w=1200",
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&q=80&w=700",
-      "https://images.unsplash.com/photo-1559628233-100c798642d4?auto=format&fit=crop&q=80&w=700",
-      "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&q=80&w=1600"
-    ],
-    en: {
-      title: "Bali Zoo",
-      location: "Jl. Raya Singapadu",
-      blurb: "Six hectares of gardens along the village road, home to sun bears, gibbons and the breakfast-with-orangutans everyone photographs.",
-      hours: "Daily, 09:00–17:00",
-      price: "From IDR 150k",
-      distance: "1.1 km from village center",
-      story: [
-        "The zoo grew out of a family bird park and still feels like a garden first: shaded paths, temple trees, and enclosures built into the river valley's edge.",
-        "Mornings are best — the animals are active, tour buses haven't arrived, and the breakfast sessions run until 10:30. Night safaris run on weekends."
-      ],
-      tips: [
-        "Book the animal-encounter sessions a day ahead",
-        "Strollers are fine — paths are paved",
-        "Combine with the river trail next door for a full day"
-      ]
-    },
-    id: {
-      title: "Bali Zoo",
-      location: "Jl. Raya Singapadu",
-      blurb: "Enam hektare taman di sepanjang jalan desa, rumah bagi beruang madu, owa, dan sarapan bersama orangutan yang paling banyak difoto.",
-      hours: "Setiap hari, 09.00–17.00",
-      price: "Mulai IDR 150 rb",
-      distance: "1,1 km dari pusat desa",
-      story: [
-        "Kebun binatang ini berawal dari taman burung keluarga dan tetap terasa seperti taman: jalur teduh, pepohonan pura, dan kandang yang menyatu dengan tepi lembah sungai.",
-        "Pagi hari adalah waktu terbaik — satwa sedang aktif, bus wisata belum tiba, dan sesi sarapan berlangsung hingga 10.30. Safari malam dibuka tiap akhir pekan."
-      ],
-      tips: [
-        "Pesan sesi interaksi satwa sehari sebelumnya",
-        "Kereta bayi aman — jalur sudah berpaving",
-        "Gabungkan dengan jalur sungai di sebelahnya untuk seharian penuh"
-      ]
-    }
-  },
-  {
-    key: "carving",
-    slug: "stone-carving-workshop",
-    cat: "Craft",
-    img: "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&q=80&w=900",
-    tone: "amber",
-    imgLabel: undefined,
-    mapQ: "Banjar Sengguan Singapadu",
-    gallery: [
-      "https://images.unsplash.com/photo-1531778272849-d1dd22444c06?auto=format&fit=crop&q=80&w=1200",
-      "https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&q=80&w=700",
-      "https://images.unsplash.com/photo-1555400038-63f5ba517a47?auto=format&fit=crop&q=80&w=700",
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&q=80&w=1600"
-    ],
-    en: {
-      title: "Stone carving workshop",
-      location: "Banjar Sengguan",
-      blurb: "Learn paras-stone carving from the sculptors who restore Gianyar's temples. Two hours, tools included, dust guaranteed.",
-      hours: "Mon–Sat, 10:00 & 14:00",
-      price: "IDR 250k per person",
-      distance: "0.8 km from village center",
-      story: [
-        "Paras is soft volcanic stone — soft enough that a beginner can rough out a lotus panel in an afternoon, which is exactly what you'll do.",
-        "Your teachers are working sculptors; between lessons they cut temple guardians and gate reliefs on commission. Finished pieces can be shipped home."
-      ],
-      tips: [
-        "Wear clothes that can get dusty",
-        "Workshops run in small groups — book ahead",
-        "Your carving needs 2–3 days to dry before shipping"
-      ]
-    },
-    id: {
-      title: "Sanggar ukir batu paras",
-      location: "Banjar Sengguan",
-      blurb: "Belajar mengukir batu paras dari para pematung yang memugar pura-pura Gianyar. Dua jam, alat disediakan, dijamin berdebu.",
-      hours: "Sen–Sab, 10.00 & 14.00",
-      price: "IDR 250 rb per orang",
-      distance: "0,8 km dari pusat desa",
-      story: [
-        "Paras adalah batu vulkanik yang lunak — cukup lunak sehingga pemula bisa membentuk panel teratai dalam satu sore, dan itulah yang akan Anda kerjakan.",
-        "Para pengajar adalah pematung aktif; di sela mengajar mereka mengerjakan pesanan arca penjaga pura dan relief gerbang. Karya jadi bisa dikirim ke rumah Anda."
-      ],
-      tips: [
-        "Kenakan pakaian yang boleh kotor berdebu",
-        "Kelas berkelompok kecil — pesan lebih dulu",
-        "Ukiran Anda perlu 2–3 hari mengering sebelum dikirim"
-      ]
-    }
-  },
-  {
-    key: "subak",
-    slug: "subak-rice-terrace-walk",
-    cat: "Nature",
-    img: "https://images.unsplash.com/photo-1558005530-a7958896ec60?auto=format&fit=crop&q=80&w=900",
-    tone: "sky",
-    imgLabel: undefined,
-    mapQ: "Singapadu Kaler Gianyar",
-    gallery: [
-      "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&q=80&w=1200",
-      "https://images.unsplash.com/photo-1559628233-100c798642d4?auto=format&fit=crop&q=80&w=700",
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&q=80&w=700",
-      "https://images.unsplash.com/photo-1555400038-63f5ba517a47?auto=format&fit=crop&q=80&w=1600"
-    ],
-    en: {
-      title: "Subak rice terrace walk",
-      location: "North Singapadu",
-      blurb: "A guided hour through the UNESCO-listed subak irrigation landscape, ending with young coconut at a farmer warung.",
-      hours: "Daily, best 07:00–10:00",
-      price: "IDR 75k with guide",
-      distance: "1.6 km from village center",
-      story: [
-        "Subak is Bali's thousand-year-old system of shared irrigation — water temples, canals and farmer councils that UNESCO lists as world heritage. Your guide is one of the farmers.",
-        "The loop is flat and unhurried: weirs and water splits, a shrine to Dewi Sri, herons trailing the plough. Go at dawn if you can — the light on the paddies is the photograph."
-      ],
-      tips: [
-        "Wear shoes you can rinse — bunds are muddy",
-        "Bring a hat; there is little shade after 09:00",
-        "Small notes appreciated at the warung"
-      ]
-    },
-    id: {
-      title: "Susur sawah subak",
-      location: "Singapadu Utara",
-      blurb: "Satu jam berjalan bersama pemandu menyusuri lanskap irigasi subak yang diakui UNESCO, ditutup kelapa muda di warung petani.",
-      hours: "Setiap hari, terbaik 07.00–10.00",
-      price: "IDR 75 rb dengan pemandu",
-      distance: "1,6 km dari pusat desa",
-      story: [
-        "Subak adalah sistem irigasi gotong royong Bali yang berusia seribu tahun — pura air, saluran, dan paruman petani yang tercatat sebagai warisan dunia UNESCO. Pemandu Anda adalah salah satu petaninya.",
-        "Rutenya datar dan santai: bendung dan bagi air, pelinggih Dewi Sri, kuntul mengikuti bajak. Usahakan berangkat subuh — cahaya pagi di atas sawah itulah fotonya."
-      ],
-      tips: [
-        "Kenakan alas kaki yang mudah dibilas — pematang berlumpur",
-        "Bawa topi; nyaris tak ada naungan setelah pukul 09.00",
-        "Uang kecil sangat dihargai di warung"
-      ]
-    }
-  },
-  {
-    key: "river",
-    slug: "tukad-oos-river-trail",
-    cat: "Nature",
-    img: "https://images.unsplash.com/photo-1559628233-100c798642d4?auto=format&fit=crop&q=80&w=900",
-    tone: "navy",
-    imgLabel: undefined,
-    mapQ: "Tukad Oos Gianyar",
-    gallery: [
-      "https://images.unsplash.com/photo-1558005530-a7958896ec60?auto=format&fit=crop&q=80&w=1200",
-      "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&q=80&w=700",
-      "https://images.unsplash.com/photo-1531778272849-d1dd22444c06?auto=format&fit=crop&q=80&w=700",
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&q=80&w=1600"
-    ],
-    en: {
-      title: "Tukad Oos river trail",
-      location: "West ridge",
-      blurb: "Shaded river-valley path past bathing temples and kingfishers. Bring sandals you can get wet.",
-      hours: "Open all day",
-      price: "Free",
-      distance: "2.0 km from village center",
-      story: [
-        "The Oos river cuts a green gorge along Singapadu's western edge. The trail drops past ferns and carved bathing spots, some still in daily use — greet before you photograph.",
-        "It links well with the subak walk: down the valley in the cool morning, up through the rice fields before lunch."
-      ],
-      tips: [
-        "The stone steps are slippery after rain",
-        "Respect bathing temples — no swimwear photos",
-        "No entrance fee, but guides can be arranged at the office"
-      ]
-    },
-    id: {
-      title: "Jalur sungai Tukad Oos",
-      location: "Tebing barat desa",
-      blurb: "Jalur teduh menyusuri lembah sungai melewati pura pemandian dan burung raja udang. Bawa sandal yang boleh basah.",
-      hours: "Buka sepanjang hari",
-      price: "Gratis",
-      distance: "2,0 km dari pusat desa",
-      story: [
-        "Tukad Oos membelah ngarai hijau di tepi barat Singapadu. Jalurnya menurun melewati pakis dan pancuran pemandian berukir, sebagian masih dipakai sehari-hari — sapalah dahulu sebelum memotret.",
-        "Jalur ini pas digabung dengan susur sawah: turun ke lembah saat pagi masih sejuk, naik lewat persawahan sebelum makan siang."
-      ],
-      tips: [
-        "Anak tangga batu licin setelah hujan",
-        "Hormati pura pemandian — jangan berfoto berpakaian renang",
-        "Tanpa tiket masuk, pemandu bisa diatur di kantor desa"
-      ]
-    }
-  },
-  {
-    key: "mask",
-    slug: "mask-making-studio",
-    cat: "Craft",
-    img: "https://images.unsplash.com/photo-1573790387438-4da905039392?auto=format&fit=crop&q=80&w=900",
-    tone: "amber",
-    imgLabel: "Photo: mask carver at work",
-    mapQ: "Banjar Mukti Singapadu",
-    gallery: [
-      "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&q=80&w=1200",
-      "https://images.unsplash.com/photo-1531778272849-d1dd22444c06?auto=format&fit=crop&q=80&w=700",
-      "https://images.unsplash.com/photo-1555400038-63f5ba517a47?auto=format&fit=crop&q=80&w=700",
-      "https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&q=80&w=1600"
-    ],
-    en: {
-      title: "Mask making studio",
-      location: "Banjar Mukti",
-      blurb: "Watch pule wood become a topeng face — or carve your own blank under a master carver's eye.",
-      hours: "Mon–Sat, 09:00–16:00",
-      price: "Visits free · workshop IDR 300k",
-      distance: "0.6 km from village center",
-      story: [
-        "Singapadu's mask carvers supply barong and topeng faces to temples across Bali. The studio is a family compound: grandfather sanding, grandson sketching, chickens underfoot.",
-        "Visits are free and unhurried. The half-day workshop starts you on a pre-cut blank; the full topeng course, if you have a week, ends with a blessing."
-      ],
-      tips: [
-        "Mornings are the best time to see carving",
-        "Masks range from IDR 200k to several million",
-        "Ask before touching finished masks — some are consecrated"
-      ]
-    },
-    id: {
-      title: "Studio tatah topeng",
-      location: "Banjar Mukti",
-      blurb: "Saksikan kayu pule menjelma wajah topeng — atau tatah topeng Anda sendiri di bawah bimbingan sang maestro.",
-      hours: "Sen–Sab, 09.00–16.00",
-      price: "Kunjungan gratis · lokakarya IDR 300 rb",
-      distance: "0,6 km dari pusat desa",
-      story: [
-        "Para penatah topeng Singapadu memasok wajah barong dan topeng untuk pura-pura di seluruh Bali. Studionya berupa pekarangan keluarga: kakek mengamplas, cucu menggambar pola, ayam berkeliaran.",
-        "Kunjungan gratis dan santai. Lokakarya setengah hari dimulai dari bakalan topeng; kursus topeng penuh, bila Anda punya waktu seminggu, ditutup dengan upacara pemberkatan."
-      ],
-      tips: [
-        "Pagi hari waktu terbaik melihat proses menatah",
-        "Harga topeng mulai IDR 200 rb hingga jutaan",
-        "Minta izin sebelum menyentuh topeng jadi — sebagian telah dipasupati"
-      ]
-    }
-  }
-] as const satisfies readonly DestinationSchema[];
-
-export type DestinationRecord = (typeof DESTS)[number];
-export type DestinationKey = DestinationRecord['key'];
 
 export const EVENTS: EventItem[] = [
   {
@@ -353,10 +44,8 @@ export const TRANSLATIONS = {
     menu: { lang: "Language", theme: "Dark mode", map: "Map", contact: "Help & contact", all: "All destinations" },
     home: {
       slides: [
-        { title: "Where the barong comes alive.", sub: "Masks carved, blessed and danced by the same families for generations.", loc: "Pura Puseh · village center", cta: "See the dance" },
-        { title: "Mornings that begin in the rice fields.", sub: "Walk the UNESCO-listed subak channels with the farmers who tend them.", loc: "Subak fields · north Singapadu", cta: "Walk the subak" },
-        { title: "Carved in stone, danced in fire.", sub: "Paras stone and pule wood — workshops open along one village road.", loc: "Banjar Sengguan", cta: "Meet the makers" },
-        { title: "Small travellers, big mornings.", sub: "Breakfast beside orangutans, then cool feet in the river valley.", loc: "Jl. Raya Singapadu", cta: "Take the kids" }
+        { title: "Silver shaped by your own hands.", sub: "Browse Balinese jewelry, then learn the process in a two-hour silver class.", loc: "Krisna Yuna Gallery · Banjar Apuan", cta: "Explore the gallery" },
+        { title: "From plantation to cup.", sub: "Meet local coffee, traditional firewood roasting, and the family behind Alam Sari.", loc: "Alam Sari · Singapadu", cta: "Discover the process" }
       ],
       quick: { all: "All destinations", plan: "Plan your visit" },
       destEyebrow: "Destinations", destTitle: "Places to explore", destAction: "See all destinations",
@@ -364,17 +53,17 @@ export const TRANSLATIONS = {
         eyebrow: "Experiences",
         title: "Pick your kind of day",
         tag: "Events",
-        f: "The ceremony season",
-        fSub: "Odalan, Galungan and the ngelawang barong — the calendar worth planning around.",
-        c1: "Craft workshops",
-        c2: "Morning in the subak",
-        c3: "With kids",
-        c4: "Sacred Singapadu"
+        f: "Living stages and village ceremonies",
+        fSub: "Performances and sacred dates follow the rhythm of the village calendar.",
+        c1: "Make silver by hand",
+        c2: "Coffee from plantation to cup",
+        c3: "A day with birds",
+        c4: "Sacred places"
       },
       spotEyebrow: "Must-see", spotCta: "Discover",
-      craftEyebrow: "Craft", craftTitle: "The village that carves its gods",
-      craftBody: "Singapadu's sculptors cut temple guardians from paras stone and barong masks from sacred pule wood. Spend an afternoon in their workshops — most welcome visitors, and a few will hand you a chisel.",
-      craftCta: "Meet the makers",
+      craftEyebrow: "Craft", craftTitle: "Shape a piece of Bali in silver.",
+      craftBody: "At Krisna Yuna Gallery, you can browse more than 1,000 reported jewelry designs or join a guided silver class that takes you from the first sketch to the final polish.",
+      craftCta: "Explore the gallery",
       evEyebrow: "Ceremonies", evTitle: "On the village calendar", evAction: "See all events",
       tipsEyebrow: "Good to know", tipsTitle: "Plan an easy visit",
       tips: [
@@ -393,11 +82,12 @@ export const TRANSLATIONS = {
         btn2: "See events"
       }
     },
-    dests: { eyebrow: "Destinations", title: "All of Singapadu, sorted.", sub: "Six places, one village road. Filter by what kind of morning you're after." },
+    dests: { eyebrow: "Destinations", title: "All of Singapadu, sorted.", sub: "Eleven destinations from the village inventory. Filter by the kind of visit you're planning." },
     detail: {
       plan: "Plan your visit", hours: "Hours", tickets: "Tickets", getting: "Getting there",
       waBtn: "Ask via WhatsApp", allBtn: "All destinations",
       galleryEyebrow: "Gallery", galleryTitle: "A closer look",
+      facilitiesEyebrow: "Facilities", facilitiesTitle: "What's available",
       tipsEyebrow: "Tips", tipsTitle: "Good to know",
       mapEyebrow: "Map", mapTitle: "Where you'll find it", mapOpen: "Open in Google Maps",
       nearbyEyebrow: "Nearby", nearbyTitle: "Keep exploring"
@@ -436,10 +126,8 @@ export const TRANSLATIONS = {
     menu: { lang: "Bahasa", theme: "Mode gelap", map: "Peta", contact: "Bantuan & kontak", all: "Semua destinasi" },
     home: {
       slides: [
-        { title: "Tempat barong menjadi hidup.", sub: "Topeng ditatah, disucikan, dan ditarikan keluarga yang sama lintas generasi.", loc: "Pura Puseh · pusat desa", cta: "Saksikan tarinya" },
-        { title: "Pagi yang dimulai di sawah.", sub: "Susuri saluran subak warisan UNESCO bersama para petani penggarapnya.", loc: "Persawahan subak · Singapadu utara", cta: "Susur subak" },
-        { title: "Terpahat di batu, hidup di tarian.", sub: "Batu paras dan kayu pule — sanggar terbuka di sepanjang satu jalan desa.", loc: "Banjar Sengguan", cta: "Temui perajin" },
-        { title: "Penjelajah kecil, pagi yang besar.", sub: "Sarapan di samping orangutan, lalu main air di lembah sungai.", loc: "Jl. Raya Singapadu", cta: "Ajak si kecil" }
+        { title: "Perak yang dibentuk tangan Anda.", sub: "Lihat perhiasan Bali, lalu kenali prosesnya melalui silver class selama dua jam.", loc: "Krisna Yuna Gallery · Banjar Apuan", cta: "Jelajahi galeri" },
+        { title: "Dari kebun hingga cangkir.", sub: "Kenali kopi lokal, penyangraian dengan kayu bakar, dan keluarga di balik Alam Sari.", loc: "Alam Sari · Singapadu", cta: "Kenali prosesnya" }
       ],
       quick: { all: "Semua destinasi", plan: "Rencanakan kunjungan" },
       destEyebrow: "Destinasi", destTitle: "Tempat untuk dijelajahi", destAction: "Lihat semua destinasi",
@@ -447,17 +135,17 @@ export const TRANSLATIONS = {
         eyebrow: "Pengalaman",
         title: "Pilih hari versi Anda",
         tag: "Acara",
-        f: "Musim upacara",
-        fSub: "Odalan, Galungan, dan ngelawang barong — kalender yang layak direncanakan.",
-        c1: "Lokakarya kriya",
-        c2: "Pagi di subak",
-        c3: "Bersama anak",
-        c4: "Singapadu yang sakral"
+        f: "Panggung hidup dan upacara desa",
+        fSub: "Pementasan dan hari sakral mengikuti irama kalender desa.",
+        c1: "Buat perhiasan perak",
+        c2: "Kopi dari kebun ke cangkir",
+        c3: "Sehari bersama burung",
+        c4: "Tempat-tempat sakral"
       },
       spotEyebrow: "Wajib disinggahi", spotCta: "Jelajahi",
-      craftEyebrow: "Kriya", craftTitle: "Desa yang memahat para dewanya",
-      craftBody: "Para pematung Singapadu memahat penjaga pura dari batu paras dan topeng barong dari kayu pule yang disakralkan. Habiskan sore di sanggar mereka — sebagian besar terbuka untuk pengunjung, dan beberapa akan menyerahkan pahatnya ke tangan Anda.",
-      craftCta: "Temui para perajin",
+      craftEyebrow: "Kriya", craftTitle: "Bentuk sepotong Bali dalam perak.",
+      craftBody: "Di Krisna Yuna Gallery, Anda dapat melihat lebih dari 1.000 desain perhiasan yang dilaporkan tersedia atau mengikuti silver class dari sketsa pertama hingga pemolesan akhir.",
+      craftCta: "Jelajahi galeri",
       evEyebrow: "Upacara", evTitle: "Di kalender desa", evAction: "Lihat semua acara",
       tipsEyebrow: "Perlu diketahui", tipsTitle: "Kunjungan tanpa repot",
       tips: [
@@ -476,11 +164,12 @@ export const TRANSLATIONS = {
         btn2: "Lihat acara"
       }
     },
-    dests: { eyebrow: "Destinasi", title: "Seluruh Singapadu, tersusun rapi.", sub: "Enam tempat, satu jalan desa. Saring sesuai pagi seperti apa yang Anda cari." },
+    dests: { eyebrow: "Destinasi", title: "Seluruh Singapadu, tersusun rapi.", sub: "Sebelas destinasi dari inventaris desa. Saring sesuai kunjungan yang Anda rencanakan." },
     detail: {
       plan: "Rencanakan kunjungan", hours: "Jam buka", tickets: "Tiket", getting: "Menuju lokasi",
       waBtn: "Tanya via WhatsApp", allBtn: "Semua destinasi",
       galleryEyebrow: "Galeri", galleryTitle: "Lebih dekat",
+      facilitiesEyebrow: "Fasilitas", facilitiesTitle: "Yang tersedia",
       tipsEyebrow: "Kiat", tipsTitle: "Perlu diketahui",
       mapEyebrow: "Peta", mapTitle: "Lokasi", mapOpen: "Buka di Google Maps",
       nearbyEyebrow: "Di sekitar", nearbyTitle: "Lanjutkan menjelajah"

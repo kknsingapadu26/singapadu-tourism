@@ -9,6 +9,7 @@ import { Button } from '../ui/Button';
 import { SectionHeader } from '../ui/SectionHeader';
 import { DestinationCard } from '../ui/DestinationCard';
 import { Icon } from '../ui/Icon';
+import { ImagePlaceholder } from '../ui/ImagePlaceholder';
 
 interface DestinationDetailProps {
   lang: Language;
@@ -32,13 +33,7 @@ export const DestinationDetail: React.FC<DestinationDetailProps> = ({
 
   const related = DESTS.filter((d) => d.key !== dest.key).slice(0, 4);
 
-  // Gallery image fallback helper
-  const galleryImgs = dest.gallery && dest.gallery.length >= 4 ? dest.gallery : [
-    dest.img || "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&q=80&w=1200",
-    "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1531778272849-d1dd22444c06?auto=format&fit=crop&q=80&w=1600"
-  ];
+  const galleryImgs = dest.gallery.slice(0, 4);
 
   return (
     <article className="pt-32 pb-24 max-w-[1200px] mx-auto px-6">
@@ -75,14 +70,18 @@ export const DestinationDetail: React.FC<DestinationDetailProps> = ({
       {/* Main Wide Cover Image Banner */}
       <div className="rounded-sm overflow-hidden mb-8 border border-[var(--border)] shadow-sm bg-[var(--surface-sunken)]">
         <div className="relative w-full aspect-[21/9] min-h-[220px] max-h-[460px]">
-          <Image
-            src={dest.img || "https://images.unsplash.com/photo-1531778272849-d1dd22444c06?auto=format&fit=crop&q=80&w=2000"}
-            alt={loc.title}
-            fill
-            sizes="(max-width: 1200px) 100vw, 1200px"
-            preload
-            className="object-cover object-center"
-          />
+          {dest.img ? (
+            <Image
+              src={dest.img}
+              alt={loc.title}
+              fill
+              sizes="(max-width: 1200px) 100vw, 1200px"
+              preload
+              className="object-cover object-center"
+            />
+          ) : (
+            <ImagePlaceholder label={loc.title} tone={dest.tone} />
+          )}
         </div>
       </div>
 
@@ -108,6 +107,27 @@ export const DestinationDetail: React.FC<DestinationDetailProps> = ({
               <p key={i}>{paragraph}</p>
             ))}
           </div>
+
+          {/* Facilities stay in the content column so the visit card remains sticky beside them. */}
+          <section className="mt-8">
+            <SectionHeader
+              eyebrow={t.detail.facilitiesEyebrow}
+              title={t.detail.facilitiesTitle}
+            />
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {loc.facilities.map((facility) => (
+                <li
+                  key={facility}
+                  className="flex items-start gap-3 bg-[var(--surface-card)] border border-[var(--border)] rounded-sm p-4 text-sm font-medium text-[var(--text-primary)]"
+                >
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--surface-sunken)] text-[var(--brand-primary)]">
+                    <Icon name="check" className="h-4 w-4" />
+                  </span>
+                  <span className="pt-1.5 leading-relaxed">{facility}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
         </div>
 
         {/* Right Column: Sticky Sidebar Box */}
@@ -178,7 +198,7 @@ export const DestinationDetail: React.FC<DestinationDetailProps> = ({
       </div>
 
       {/* Gallery Section */}
-      <div className="mt-20">
+      {galleryImgs.length >= 4 ? <div className="mt-20">
         <SectionHeader
           eyebrow={t.detail.galleryEyebrow}
           title={t.detail.galleryTitle}
@@ -229,7 +249,7 @@ export const DestinationDetail: React.FC<DestinationDetailProps> = ({
             />
           </div>
         </div>
-      </div>
+      </div> : null}
 
       {/* Tips & Map Section (2 Columns) */}
       <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
@@ -300,6 +320,7 @@ export const DestinationDetail: React.FC<DestinationDetailProps> = ({
               blurb={item[lang].blurb}
               img={item.img}
               imgLabel={item.imgLabel}
+              tone={item.tone}
               price={item[lang].price}
               hours={item[lang].hours}
               lang={lang}

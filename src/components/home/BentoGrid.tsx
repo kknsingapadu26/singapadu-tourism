@@ -2,23 +2,46 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { type Language, type Navigate, TRANSLATIONS, DESTS } from '@/data';
+import { type DestinationRecord, type Language, type Navigate, TRANSLATIONS, DESTS } from '@/data';
 import { SectionHeader } from '../ui/SectionHeader';
+import { ImagePlaceholder } from '../ui/ImagePlaceholder';
 
 interface BentoGridProps {
   lang: Language;
   onNavigate: Navigate;
 }
 
+function BentoMedia({
+  destination,
+  label,
+  sizes,
+}: {
+  destination: DestinationRecord;
+  label: string;
+  sizes: string;
+}) {
+  return destination.img ? (
+    <Image
+      src={destination.img}
+      alt={label}
+      fill
+      sizes={sizes}
+      className="object-cover transition-transform duration-[var(--dur-med)] ease-[var(--ease-out)] group-hover:scale-103"
+    />
+  ) : (
+    <ImagePlaceholder label={label} tone={destination.tone} />
+  );
+}
+
 export const BentoGrid: React.FC<BentoGridProps> = ({ lang, onNavigate }) => {
   const t = TRANSLATIONS[lang];
   const rec = t.home.rec;
 
-  // Destination images for bento grid cards
-  const barongDest = DESTS.find((d) => d.key === 'barong');
-  const subakDest = DESTS.find((d) => d.key === 'subak');
-  const carvingDest = DESTS.find((d) => d.key === 'carving');
-  const zooDest = DESTS.find((d) => d.key === 'zoo');
+  const barongDest = DESTS.find((d) => d.key === 'barong-seraya') ?? DESTS[0];
+  const craftDest = DESTS.find((d) => d.key === 'krisna-yuna') ?? DESTS[0];
+  const natureDest = DESTS.find((d) => d.key === 'alam-sari') ?? DESTS[1];
+  const familyDest = DESTS.find((d) => d.key === 'bali-bird-park') ?? DESTS[0];
+  const sacredDest = DESTS.find((d) => d.key === 'wisata-religi') ?? DESTS[0];
 
   return (
     <section className="max-w-[1200px] mx-auto px-6 pt-16">
@@ -37,13 +60,7 @@ export const BentoGrid: React.FC<BentoGridProps> = ({ lang, onNavigate }) => {
           onClick={() => onNavigate('events')}
           className="group relative sm:col-span-2 sm:row-span-2 rounded-sm overflow-hidden cursor-pointer shadow-md"
         >
-          <Image
-            src={barongDest?.img || "https://images.unsplash.com/photo-1531778272849-d1dd22444c06?auto=format&fit=crop&q=80&w=1200"}
-            alt={rec.f}
-            fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
-            className="object-cover transition-transform duration-[var(--dur-med)] ease-[var(--ease-out)] group-hover:scale-103"
-          />
+          <BentoMedia destination={barongDest} label={barongDest[lang].title} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/10" />
 
           <div className="absolute left-5 right-5 bottom-4 flex flex-col gap-1.5 z-10 text-white">
@@ -64,13 +81,7 @@ export const BentoGrid: React.FC<BentoGridProps> = ({ lang, onNavigate }) => {
           onClick={() => onNavigate('destinations', { cat: 'Craft' })}
           className="group relative rounded-sm overflow-hidden cursor-pointer shadow-sm"
         >
-          <Image
-            src={carvingDest?.img || "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&q=80&w=800"}
-            alt={rec.c1}
-            fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 300px"
-            className="object-cover transition-transform duration-[var(--dur-med)] ease-[var(--ease-out)] group-hover:scale-103"
-          />
+          <BentoMedia destination={craftDest} label={craftDest[lang].title} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 300px" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/10" />
           <span className="absolute left-4 right-4 bottom-3.5 z-10 font-bold text-lg text-white leading-snug">
             {rec.c1}
@@ -79,16 +90,10 @@ export const BentoGrid: React.FC<BentoGridProps> = ({ lang, onNavigate }) => {
 
         {/* Small Bento 2: Morning in the subak */}
         <div
-          onClick={() => onNavigate('detail', { destKey: 'subak' })}
+          onClick={() => onNavigate('detail', { destKey: natureDest.key })}
           className="group relative rounded-sm overflow-hidden cursor-pointer shadow-sm"
         >
-          <Image
-            src={subakDest?.img || "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&q=80&w=800"}
-            alt={rec.c2}
-            fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 300px"
-            className="object-cover transition-transform duration-[var(--dur-med)] ease-[var(--ease-out)] group-hover:scale-103"
-          />
+          <BentoMedia destination={natureDest} label={natureDest[lang].title} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 300px" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/10" />
           <span className="absolute left-4 right-4 bottom-3.5 z-10 font-bold text-lg text-white leading-snug">
             {rec.c2}
@@ -97,16 +102,10 @@ export const BentoGrid: React.FC<BentoGridProps> = ({ lang, onNavigate }) => {
 
         {/* Small Bento 3: With kids */}
         <div
-          onClick={() => onNavigate('detail', { destKey: 'zoo' })}
+          onClick={() => onNavigate('detail', { destKey: familyDest.key })}
           className="group relative rounded-sm overflow-hidden cursor-pointer shadow-sm"
         >
-          <Image
-            src={zooDest?.img || "https://images.unsplash.com/photo-1554457945-ba5df6648602?auto=format&fit=crop&q=80&w=800"}
-            alt={rec.c3}
-            fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 300px"
-            className="object-cover transition-transform duration-[var(--dur-med)] ease-[var(--ease-out)] group-hover:scale-103"
-          />
+          <BentoMedia destination={familyDest} label={familyDest[lang].title} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 300px" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/10" />
           <span className="absolute left-4 right-4 bottom-3.5 z-10 font-bold text-lg text-white leading-snug">
             {rec.c3}
@@ -115,16 +114,10 @@ export const BentoGrid: React.FC<BentoGridProps> = ({ lang, onNavigate }) => {
 
         {/* Small Bento 4: Sacred Singapadu */}
         <div
-          onClick={() => onNavigate('detail', { destKey: 'barong' })}
+          onClick={() => onNavigate('detail', { destKey: sacredDest.key })}
           className="group relative rounded-sm overflow-hidden cursor-pointer shadow-sm"
         >
-          <Image
-            src={barongDest?.img || "https://images.unsplash.com/photo-1531778272849-d1dd22444c06?auto=format&fit=crop&q=80&w=800"}
-            alt={rec.c4}
-            fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 300px"
-            className="object-cover transition-transform duration-[var(--dur-med)] ease-[var(--ease-out)] group-hover:scale-103"
-          />
+          <BentoMedia destination={sacredDest} label={sacredDest[lang].title} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 300px" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/10" />
           <span className="absolute left-4 right-4 bottom-3.5 z-10 font-bold text-lg text-white leading-snug">
             {rec.c4}

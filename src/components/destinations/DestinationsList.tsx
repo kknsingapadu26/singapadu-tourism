@@ -77,6 +77,7 @@ export const DestinationsList: React.FC<DestinationsListProps> = ({
               blurb={loc.blurb}
               img={dest.img}
               imgLabel={dest.imgLabel}
+              tone={dest.tone}
               price={loc.price}
               hours={loc.hours}
               eager={index === 0}
