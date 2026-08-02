@@ -65,7 +65,6 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     router.prefetch('/destinations');
-    router.prefetch('/events');
     router.prefetch('/about');
   }, [router]);
 
@@ -99,11 +98,9 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
 
   const activeNavLabel = pathname.startsWith('/destinations')
     ? TRANSLATIONS[lang].nav.destinations
-    : pathname.startsWith('/events')
-      ? TRANSLATIONS[lang].nav.events
-      : pathname.startsWith('/about')
-        ? TRANSLATIONS[lang].nav.about
-        : TRANSLATIONS[lang].nav.home;
+    : pathname.startsWith('/about')
+      ? TRANSLATIONS[lang].nav.about
+      : TRANSLATIONS[lang].nav.home;
 
   const contextValue = useMemo(() => ({ lang, navigate }), [lang, navigate]);
 

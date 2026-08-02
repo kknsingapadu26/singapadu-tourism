@@ -2,7 +2,6 @@ import type { TourismContentSource } from './schema';
 import { DESTS, HERO_SLIDES } from './destinations';
 import {
   CONTACT_INFO,
-  EVENTS,
   TRANSLATIONS,
 } from './singapaduData';
 
@@ -13,13 +12,11 @@ import {
  */
 export const LOCAL_TOURISM_SOURCE = {
   destinations: DESTS,
-  events: EVENTS,
   heroSlides: HERO_SLIDES,
   translations: TRANSLATIONS,
   contact: CONTACT_INFO,
 } as const satisfies TourismContentSource<
   (typeof DESTS)[number],
-  (typeof EVENTS)[number],
   (typeof HERO_SLIDES)[number],
   typeof TRANSLATIONS
 >;

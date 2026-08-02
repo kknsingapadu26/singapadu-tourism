@@ -6,7 +6,7 @@ The data layer separates the shape consumed by the UI from the place where conte
 
 - `schema.ts` defines source-independent entities and shared enumerations.
 - `destinations.ts` contains the current destination inventory and bilingual destination copy.
-- `singapaduData.ts` contains the remaining local events, translations, and contact content.
+- `singapaduData.ts` contains shared translations and contact content.
 - `localSource.ts` adapts that local content to `TourismContentSource` and checks it at compile time.
 - `index.ts` is the public application boundary and retains the existing convenience exports.
 - `siteMetadata.ts` resolves deployment metadata that is not tourism content.
@@ -22,9 +22,6 @@ TourismContentSource
 │   └── localized fields
 │       ├── en: DestinationContent
 │       └── id: DestinationContent
-├── events[]
-│   ├── shared fields (key, category)
-│   └── localized fields
 ├── heroSlides[]
 ├── translations
 └── contact

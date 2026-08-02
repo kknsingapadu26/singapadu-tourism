@@ -42,7 +42,7 @@ export const CtaBanner: React.FC<CtaBannerProps> = ({ lang, onNavigate }) => {
           </a>
 
           <button
-            onClick={() => onNavigate('events')}
+            onClick={() => onNavigate('destinations')}
             className="px-5 py-2.5 border-1.5 border-white/55 rounded-sm bg-transparent text-white font-semibold text-sm hover:bg-white/10 transition-colors cursor-pointer whitespace-nowrap"
           >
             {t.home.cta.btn2}

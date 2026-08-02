@@ -88,7 +88,6 @@ export const Header: React.FC<HeaderProps> = ({
   const navItems: Array<{ label: string; key: AppPage; href: string }> = [
     { label: t.nav.home, key: 'home', href: getNavigationHref('home') },
     { label: t.nav.destinations, key: 'destinations', href: getNavigationHref('destinations') },
-    { label: t.nav.events, key: 'events', href: getNavigationHref('events') },
     { label: t.nav.about, key: 'about', href: getNavigationHref('about') }
   ];
 
@@ -286,17 +285,9 @@ export const Header: React.FC<HeaderProps> = ({
               </div>
 
               <Link
-                href={getNavigationHref('events')}
-                onClick={() => setMenuOpen(false)}
-                className={`block w-full border-b border-white/8 bg-[var(--mobile-nav-level-3)] px-6 py-5 text-left text-2xl font-extrabold transition-colors duration-[var(--dur-fast)] hover:bg-white/8 ${activeNav === t.nav.events ? 'border-l-4 border-l-[var(--accent)]' : ''}`}
-              >
-                {t.nav.events}
-              </Link>
-
-              <Link
                 href={getNavigationHref('about')}
                 onClick={() => setMenuOpen(false)}
-                className={`block w-full border-b border-white/8 bg-[var(--mobile-nav-level-4)] px-6 py-5 text-left text-2xl font-extrabold transition-colors duration-[var(--dur-fast)] hover:bg-white/8 ${activeNav === t.nav.about ? 'border-l-4 border-l-[var(--accent)]' : ''}`}
+                className={`block w-full border-b border-white/8 bg-[var(--mobile-nav-level-3)] px-6 py-5 text-left text-2xl font-extrabold transition-colors duration-[var(--dur-fast)] hover:bg-white/8 ${activeNav === t.nav.about ? 'border-l-4 border-l-[var(--accent)]' : ''}`}
               >
                 {t.nav.about}
               </Link>

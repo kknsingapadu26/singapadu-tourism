@@ -59,14 +59,6 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
               </li>
               <li>
                 <Link
-                  href={getNavigationHref('events')}
-                  className="hover:text-white transition-colors cursor-pointer"
-                >
-                  {t.nav.events}
-                </Link>
-              </li>
-              <li>
-                <Link
                   href={getNavigationHref('about')}
                   className="hover:text-white transition-colors cursor-pointer"
                 >

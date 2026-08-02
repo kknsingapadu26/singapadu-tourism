@@ -15,8 +15,6 @@ export type {
   DestinationCategory,
   DestinationContent,
   DestinationFilter,
-  EventContent,
-  EventItem,
   HeroSlide,
   Language,
   Localized,
@@ -36,7 +34,6 @@ export const TOURISM_CONTENT = LOCAL_TOURISM_SOURCE;
 // Compatibility selectors keep existing imports small. New source adapters should
 // be wired through TOURISM_CONTENT rather than imported directly by components.
 export const DESTS = TOURISM_CONTENT.destinations;
-export const EVENTS = TOURISM_CONTENT.events;
 export const HERO_SLIDES = TOURISM_CONTENT.heroSlides;
 export const TRANSLATIONS = TOURISM_CONTENT.translations;
 export const CONTACT_INFO = TOURISM_CONTENT.contact;

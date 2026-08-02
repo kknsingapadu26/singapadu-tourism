@@ -9,7 +9,6 @@ export function getNavigationHref(
   options?: NavigationOptions,
 ): string {
   if (page === 'home') return '/';
-  if (page === 'events') return '/events';
   if (page === 'about') return '/about';
 
   if (page === 'detail') {

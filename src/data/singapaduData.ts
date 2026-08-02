@@ -1,45 +1,11 @@
 import type {
   ContactInfo,
-  EventItem,
   Localized,
 } from './schema';
 
-export const EVENTS: EventItem[] = [
-  {
-    key: "perf",
-    cat: "Culture",
-    en: { tag: "Weekly", date: "Tue & Fri", title: "Barong & keris dance", desc: "The village troupe performs the barong ket with full gamelan on the Pura Puseh stage. About 60 minutes.", loc: "Pura Puseh stage" },
-    id: { tag: "Mingguan", date: "Sel & Jum", title: "Tari Barong & keris", desc: "Sekaa desa mementaskan barong ket dengan gamelan lengkap di panggung Pura Puseh. Sekitar 60 menit.", loc: "Panggung Pura Puseh" }
-  },
-  {
-    key: "odalan",
-    cat: "Sacred",
-    en: { tag: "Aug 2026", date: "28 Aug", title: "Odalan at Pura Puseh", desc: "The temple's anniversary by the 210-day pawukon calendar: three days of decoration, procession and night gamelan.", loc: "Pura Puseh" },
-    id: { tag: "Agu 2026", date: "28 Agu", title: "Odalan Pura Puseh", desc: "Piodalan pura menurut kalender pawukon 210 hari: tiga hari penuh hiasan, iring-iringan, dan gamelan malam.", loc: "Pura Puseh" }
-  },
-  {
-    key: "purnama",
-    cat: "Sacred",
-    en: { tag: "Monthly", date: "Full moon", title: "Purnama offerings", desc: "On every full moon the temples fill with offerings and prayer from dusk. Visitors may watch respectfully from the outer courtyard.", loc: "All village temples" },
-    id: { tag: "Tiap bulan", date: "Purnama", title: "Persembahyangan Purnama", desc: "Setiap purnama, pura dipenuhi banten dan persembahyangan sejak senja. Pengunjung dipersilakan menyaksikan dengan hormat dari jaba pura.", loc: "Seluruh pura desa" }
-  },
-  {
-    key: "galungan",
-    cat: "Culture",
-    en: { tag: "Jan 2027", date: "13 & 23 Jan", title: "Galungan & Kuningan", desc: "Bali's great homecoming of the ancestors. Penjor poles arch over every street, and each family compound opens its shrines.", loc: "Village-wide" },
-    id: { tag: "Jan 2027", date: "13 & 23 Jan", title: "Galungan & Kuningan", desc: "Hari kemenangan dharma dan pulangnya para leluhur. Penjor melengkung di sepanjang jalan, dan sanggah setiap pekarangan dibuka.", loc: "Seluruh desa" }
-  },
-  {
-    key: "ngelawang",
-    cat: "Culture",
-    en: { tag: "Jan 2027", date: "14–22 Jan", title: "Ngelawang barong processions", desc: "Between Galungan and Kuningan, children and elders carry the barong door to door to cleanse the village. Small offerings welcome.", loc: "Village lanes" },
-    id: { tag: "Jan 2027", date: "14–22 Jan", title: "Ngelawang barong", desc: "Di antara Galungan dan Kuningan, barong diarak dari pintu ke pintu untuk menyucikan desa. Sesari seikhlasnya.", loc: "Gang-gang desa" }
-  }
-];
-
 export const TRANSLATIONS = {
   en: {
-    nav: { home: "Home", destinations: "Destinations", events: "Events", about: "About the village" },
+    nav: { home: "Home", destinations: "Destinations", about: "About the village" },
     cats: { All: "All", Culture: "Culture", Nature: "Nature", Craft: "Craft", Family: "Family", Sacred: "Sacred" },
     menu: { lang: "Language", theme: "Dark mode", map: "Map", contact: "Help & contact", all: "All destinations" },
     home: {
@@ -55,9 +21,9 @@ export const TRANSLATIONS = {
       rec: {
         eyebrow: "Experiences",
         title: "Pick your kind of day",
-        tag: "Events",
-        f: "Living stages and village ceremonies",
-        fSub: "Performances and sacred dates follow the rhythm of the village calendar.",
+        tag: "Culture",
+        f: "Art and heritage, gathered in one place",
+        fSub: "Paintings, carvings, and masks trace the creative history of Singapadu.",
         c1: "Make silver by hand",
         c2: "Coffee from plantation to cup",
         c3: "A day with birds",
@@ -67,7 +33,6 @@ export const TRANSLATIONS = {
       craftEyebrow: "Craft", craftTitle: "Shape a piece of Bali in silver.",
       craftBody: "At Krisna Yuna Gallery, you can browse more than 1,000 reported jewelry designs or join a guided silver class that takes you from the first sketch to the final polish.",
       craftCta: "Explore the gallery",
-      evEyebrow: "Ceremonies", evTitle: "On the village calendar", evAction: "See all events",
       tipsEyebrow: "Good to know", tipsTitle: "Plan an easy visit",
       tips: [
         { t: "Getting here", b: "Twenty minutes south of Ubud, forty-five from the airport. Every driver knows Jl. Raya Singapadu." },
@@ -82,7 +47,7 @@ export const TRANSLATIONS = {
         title: "One message to the village office.",
         body: "Tickets, guides and workshop seats — the office answers on WhatsApp, Monday to Friday, 08:00–15:00.",
         btn: "WhatsApp the village",
-        btn2: "See events"
+        btn2: "See destinations"
       }
     },
     dests: { eyebrow: "Destinations", title: "All of Singapadu, sorted.", sub: "Eleven destinations from the village inventory. Filter by the kind of visit you're planning." },
@@ -94,11 +59,6 @@ export const TRANSLATIONS = {
       tipsEyebrow: "Tips", tipsTitle: "Good to know",
       mapEyebrow: "Map", mapTitle: "Where you'll find it", mapOpen: "Open in Google Maps",
       nearbyEyebrow: "Nearby", nearbyTitle: "Keep exploring"
-    },
-    events: {
-      eyebrow: "Events", title: "Ceremonies and performances", sub: "The village lives by the pawukon and lunar calendars. These are the moments worth planning around.",
-      note: "Ceremony dates follow the Balinese pawukon and lunar calendars — confirm at the village office before you travel.",
-      ask: "Ask the village"
     },
     about: {
       eyebrow: "About the village", title: "Get to know Singapadu.",
@@ -124,7 +84,7 @@ export const TRANSLATIONS = {
     waGeneral: "Hello! I have a question about visiting Singapadu."
   },
   id: {
-    nav: { home: "Beranda", destinations: "Destinasi", events: "Acara", about: "Tentang Desa" },
+    nav: { home: "Beranda", destinations: "Destinasi", about: "Tentang Desa" },
     cats: { All: "Semua", Culture: "Budaya", Nature: "Alam", Craft: "Kriya", Family: "Keluarga", Sacred: "Sakral" },
     menu: { lang: "Bahasa", theme: "Mode gelap", map: "Peta", contact: "Bantuan & kontak", all: "Semua destinasi" },
     home: {
@@ -140,9 +100,9 @@ export const TRANSLATIONS = {
       rec: {
         eyebrow: "Pengalaman",
         title: "Pilih hari versi Anda",
-        tag: "Acara",
-        f: "Panggung hidup dan upacara desa",
-        fSub: "Pementasan dan hari sakral mengikuti irama kalender desa.",
+        tag: "Budaya",
+        f: "Seni dan warisan dalam satu ruang",
+        fSub: "Lukisan, ukiran, dan topeng menelusuri sejarah kreatif Singapadu.",
         c1: "Buat perhiasan perak",
         c2: "Kopi dari kebun ke cangkir",
         c3: "Sehari bersama burung",
@@ -152,7 +112,6 @@ export const TRANSLATIONS = {
       craftEyebrow: "Kriya", craftTitle: "Bentuk sepotong Bali dalam perak.",
       craftBody: "Di Krisna Yuna Gallery, Anda dapat melihat lebih dari 1.000 desain perhiasan yang dilaporkan tersedia atau mengikuti silver class dari sketsa pertama hingga pemolesan akhir.",
       craftCta: "Jelajahi galeri",
-      evEyebrow: "Upacara", evTitle: "Di kalender desa", evAction: "Lihat semua acara",
       tipsEyebrow: "Perlu diketahui", tipsTitle: "Kunjungan tanpa repot",
       tips: [
         { t: "Menuju desa", b: "Dua puluh menit di selatan Ubud, empat puluh lima dari bandara. Semua sopir tahu Jl. Raya Singapadu." },
@@ -167,7 +126,7 @@ export const TRANSLATIONS = {
         title: "Cukup satu pesan ke kantor desa.",
         body: "Tiket, pemandu, dan kursi lokakarya — kantor desa membalas lewat WhatsApp, Senin–Jumat, 08.00–15.00.",
         btn: "WhatsApp desa",
-        btn2: "Lihat acara"
+        btn2: "Lihat destinasi"
       }
     },
     dests: { eyebrow: "Destinasi", title: "Seluruh Singapadu, tersusun rapi.", sub: "Sebelas destinasi dari inventaris desa. Saring sesuai kunjungan yang Anda rencanakan." },
@@ -179,11 +138,6 @@ export const TRANSLATIONS = {
       tipsEyebrow: "Kiat", tipsTitle: "Perlu diketahui",
       mapEyebrow: "Peta", mapTitle: "Lokasi", mapOpen: "Buka di Google Maps",
       nearbyEyebrow: "Di sekitar", nearbyTitle: "Lanjutkan menjelajah"
-    },
-    events: {
-      eyebrow: "Acara", title: "Upacara dan pementasan", sub: "Desa ini hidup mengikuti kalender pawukon dan sasih. Inilah momen-momen yang layak direncanakan.",
-      note: "Tanggal upacara mengikuti kalender pawukon dan sasih Bali — pastikan di kantor desa sebelum berkunjung.",
-      ask: "Tanya desa"
     },
     about: {
       eyebrow: "Tentang desa", title: "Mengenal Singapadu.",

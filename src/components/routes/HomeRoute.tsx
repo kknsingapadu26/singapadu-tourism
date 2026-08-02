@@ -3,7 +3,6 @@
 import { BentoGrid } from '@/components/home/BentoGrid';
 import { CraftHighlight } from '@/components/home/CraftHighlight';
 import { CtaBanner } from '@/components/home/CtaBanner';
-import { EventsPreview } from '@/components/home/EventsPreview';
 import { Hero } from '@/components/home/Hero';
 import { MustSeeSpotlight } from '@/components/home/MustSeeSpotlight';
 import { PlacesToExplore } from '@/components/home/PlacesToExplore';
@@ -22,7 +21,6 @@ export function HomeRoute() {
       <BentoGrid lang={lang} onNavigate={navigate} />
       <MustSeeSpotlight lang={lang} onNavigate={navigate} />
       <CraftHighlight lang={lang} onNavigate={navigate} />
-      <EventsPreview lang={lang} onNavigate={navigate} />
       <TipsSection lang={lang} />
       <CtaBanner lang={lang} onNavigate={navigate} />
     </div>

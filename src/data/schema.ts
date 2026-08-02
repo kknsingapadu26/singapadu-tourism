@@ -11,7 +11,7 @@ export const DESTINATION_FILTERS = ['All', ...DESTINATION_CATEGORIES] as const;
 export type DestinationFilter = (typeof DESTINATION_FILTERS)[number];
 
 /** Logical application destinations used by the legacy callback navigation API. */
-export const APP_PAGES = ['home', 'destinations', 'detail', 'events', 'about'] as const;
+export const APP_PAGES = ['home', 'destinations', 'detail', 'about'] as const;
 export type AppPage = (typeof APP_PAGES)[number];
 
 /** A value that must be supplied once for every supported language. */
@@ -67,28 +67,6 @@ export type Destination<TKey extends string = string> = {
   gallery: readonly string[];
 } & Localized<DestinationContent>;
 
-/** Visitor-facing event copy. Every field in this object is localized. */
-export interface EventContent {
-  /** Short uppercase-style event label shown above the title. */
-  tag: string;
-  /** Display-ready date or date range. */
-  date: string;
-  /** Event name. */
-  title: string;
-  /** Concise event summary. */
-  desc: string;
-  /** Human-readable venue or area. */
-  loc: string;
-}
-
-/** An event with language-neutral identity/category and localized display copy. */
-export type EventItem<TKey extends string = string> = {
-  /** Stable internal identifier suitable for future API/CMS reconciliation. */
-  key: TKey;
-  /** Category reused from destinations for consistent visual labeling. */
-  cat: DestinationCategory;
-} & Localized<EventContent>;
-
 /** A homepage hero entry that references a destination instead of duplicating it. */
 export interface HeroSlide<TDestinationKey extends string = string> {
   /** Foreign key matching `Destination.key`. */
@@ -128,12 +106,10 @@ export type NavigateTo<TDestinationKey extends string = string> = (
  */
 export interface TourismContentSource<
   TDestination extends Destination = Destination,
-  TEvent extends EventItem = EventItem,
   THeroSlide extends HeroSlide = HeroSlide,
   TTranslations extends Localized<unknown> = Localized<unknown>,
 > {
   destinations: readonly TDestination[];
-  events: readonly TEvent[];
   heroSlides: readonly THeroSlide[];
   translations: TTranslations;
   contact: ContactInfo;

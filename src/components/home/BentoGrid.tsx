@@ -55,9 +55,9 @@ export const BentoGrid: React.FC<BentoGridProps> = ({ lang, onNavigate }) => {
       />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 auto-rows-[205px] gap-3">
-        {/* Main 2x2 Bento Card: The ceremony season */}
+        {/* Main 2x2 Bento Card: village art and heritage */}
         <div
-          onClick={() => onNavigate('events')}
+          onClick={() => onNavigate('detail', { destKey: cultureDest.key })}
           className="group relative sm:col-span-2 sm:row-span-2 rounded-sm overflow-hidden cursor-pointer shadow-md"
         >
           <BentoMedia destination={cultureDest} label={cultureDest[lang].title} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px" />
