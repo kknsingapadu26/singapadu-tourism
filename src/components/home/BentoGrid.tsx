@@ -37,7 +37,7 @@ export const BentoGrid: React.FC<BentoGridProps> = ({ lang, onNavigate }) => {
   const t = TRANSLATIONS[lang];
   const rec = t.home.rec;
 
-  const barongDest = DESTS.find((d) => d.key === 'barong-seraya') ?? DESTS[0];
+  const cultureDest = DESTS.find((d) => d.key === 'puri-anyar-art-space') ?? DESTS[0];
   const craftDest = DESTS.find((d) => d.key === 'krisna-yuna') ?? DESTS[0];
   const natureDest = DESTS.find((d) => d.key === 'alam-sari') ?? DESTS[1];
   const familyDest = DESTS.find((d) => d.key === 'bali-bird-park') ?? DESTS[0];
@@ -60,7 +60,7 @@ export const BentoGrid: React.FC<BentoGridProps> = ({ lang, onNavigate }) => {
           onClick={() => onNavigate('events')}
           className="group relative sm:col-span-2 sm:row-span-2 rounded-sm overflow-hidden cursor-pointer shadow-md"
         >
-          <BentoMedia destination={barongDest} label={barongDest[lang].title} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px" />
+          <BentoMedia destination={cultureDest} label={cultureDest[lang].title} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/10" />
 
           <div className="absolute left-5 right-5 bottom-4 flex flex-col gap-1.5 z-10 text-white">

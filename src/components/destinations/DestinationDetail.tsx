@@ -10,6 +10,7 @@ import { SectionHeader } from '../ui/SectionHeader';
 import { DestinationCard } from '../ui/DestinationCard';
 import { Icon } from '../ui/Icon';
 import { ImagePlaceholder } from '../ui/ImagePlaceholder';
+import { DestinationGallery } from './DestinationGallery';
 
 interface DestinationDetailProps {
   lang: Language;
@@ -33,7 +34,7 @@ export const DestinationDetail: React.FC<DestinationDetailProps> = ({
 
   const related = DESTS.filter((d) => d.key !== dest.key).slice(0, 4);
 
-  const galleryImgs = dest.gallery.slice(0, 4);
+  const galleryImgs = dest.gallery;
 
   return (
     <article className="pt-32 pb-24 max-w-[1200px] mx-auto px-6">
@@ -197,77 +198,12 @@ export const DestinationDetail: React.FC<DestinationDetailProps> = ({
         </aside>
       </div>
 
-      {/* Gallery Section */}
-      {galleryImgs.length > 0 ? (
-        <div className="mt-20">
-          <SectionHeader
-            eyebrow={t.detail.galleryEyebrow}
-            title={t.detail.galleryTitle}
-          />
-
-          {galleryImgs.length >= 4 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-3 auto-rows-[190px] gap-3">
-              {/* Mosaic Item 1: 2x2 Span */}
-              <div className="sm:col-span-2 sm:row-span-2 relative overflow-hidden rounded-sm bg-[var(--surface-sunken)] group">
-                <Image
-                  src={galleryImgs[0]}
-                  alt={`${loc.title} gallery 1`}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1200px) 66vw, 800px"
-                  className="object-cover transition-transform duration-[var(--dur-med)] ease-[var(--ease-out)] group-hover:scale-103"
-                />
-              </div>
-
-              {/* Mosaic Item 2 */}
-              <div className="relative overflow-hidden rounded-sm bg-[var(--surface-sunken)] group">
-                <Image
-                  src={galleryImgs[1]}
-                  alt={`${loc.title} gallery 2`}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1200px) 33vw, 400px"
-                  className="object-cover transition-transform duration-[var(--dur-med)] ease-[var(--ease-out)] group-hover:scale-103"
-                />
-              </div>
-
-              {/* Mosaic Item 3 */}
-              <div className="relative overflow-hidden rounded-sm bg-[var(--surface-sunken)] group">
-                <Image
-                  src={galleryImgs[2]}
-                  alt={`${loc.title} gallery 3`}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1200px) 33vw, 400px"
-                  className="object-cover transition-transform duration-[var(--dur-med)] ease-[var(--ease-out)] group-hover:scale-103"
-                />
-              </div>
-
-              {/* Mosaic Item 4: Full Row Width */}
-              <div className="sm:col-span-3 relative overflow-hidden rounded-sm bg-[var(--surface-sunken)] group h-[190px]">
-                <Image
-                  src={galleryImgs[3]}
-                  alt={`${loc.title} gallery 4`}
-                  fill
-                  sizes="(max-width: 1200px) 100vw, 1200px"
-                  className="object-cover transition-transform duration-[var(--dur-med)] ease-[var(--ease-out)] group-hover:scale-103"
-                />
-              </div>
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 auto-rows-[240px]">
-              {galleryImgs.map((img, i) => (
-                <div key={i} className="relative overflow-hidden rounded-sm bg-[var(--surface-sunken)] group">
-                  <Image
-                    src={img}
-                    alt={`${loc.title} gallery ${i + 1}`}
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1200px) 50vw, 600px"
-                    className="object-cover transition-transform duration-[var(--dur-med)] ease-[var(--ease-out)] group-hover:scale-103"
-                  />
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
-      ) : null}
+      <DestinationGallery
+        images={galleryImgs}
+        title={loc.title}
+        eyebrow={t.detail.galleryEyebrow}
+        heading={t.detail.galleryTitle}
+      />
 
       {/* Tips & Map Section (2 Columns) */}
       <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">

@@ -520,8 +520,8 @@ export const DESTS = [
     imgLabel: 'GEOKS Art Space',
     mapQ: 'GEOKS Art Space Jalan Raya Singapadu 87 Gianyar',
     gallery: [
-      '/gallery/geoks2-1200w.webp',
-      '/gallery/geoks3-1200w.webp',
+      '/gallery/geok_7-1200w.webp',
+      '/gallery/geoks_8-1200w.webp',
       '/gallery/geoks4-1200w.webp',
       '/gallery/geoks5-1200w.webp',
       '/gallery/geoks6-1200w.webp',
