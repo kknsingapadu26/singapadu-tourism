@@ -19,7 +19,6 @@ export const QuickLinks: React.FC<QuickLinksProps> = ({ lang, onNavigate }) => {
     { icon: 'trees', label: t.cats.Nature, action: () => onNavigate('destinations', { cat: 'Nature' }) },
     { icon: 'hammer', label: t.cats.Craft, action: () => onNavigate('destinations', { cat: 'Craft' }) },
     { icon: 'baby', label: t.cats.Family, action: () => onNavigate('destinations', { cat: 'Family' }) },
-    { icon: 'calendar', label: t.nav.events, action: () => onNavigate('events') },
     { icon: 'message-circle', label: t.home.quick.plan, action: () => window.open(waLink, '_blank') }
   ];
 

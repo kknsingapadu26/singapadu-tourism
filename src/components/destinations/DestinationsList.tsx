@@ -15,12 +15,14 @@ import { DestinationCard } from '../ui/DestinationCard';
 interface DestinationsListProps {
   lang: Language;
   initialCat?: DestinationFilter;
+  onFilterChange: (category: DestinationFilter) => void;
   onNavigate: Navigate;
 }
 
 export const DestinationsList: React.FC<DestinationsListProps> = ({
   lang,
   initialCat = 'All',
+  onFilterChange,
   onNavigate
 }) => {
   const selectedCat = initialCat;
@@ -56,7 +58,7 @@ export const DestinationsList: React.FC<DestinationsListProps> = ({
               label={(t.cats as Record<string, string>)[cat] || cat}
               count={count}
               selected={selectedCat === cat}
-              onClick={() => onNavigate('destinations', { cat })}
+              onClick={() => onFilterChange(cat)}
             />
           );
         })}
@@ -64,7 +66,7 @@ export const DestinationsList: React.FC<DestinationsListProps> = ({
 
       {/* Destinations Grid (3 Columns) */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {filteredDests.map((dest) => {
+        {filteredDests.map((dest, index) => {
           const loc = dest[lang];
           return (
             <DestinationCard
@@ -75,8 +77,10 @@ export const DestinationsList: React.FC<DestinationsListProps> = ({
               blurb={loc.blurb}
               img={dest.img}
               imgLabel={dest.imgLabel}
+              tone={dest.tone}
               price={loc.price}
               hours={loc.hours}
+              eager={index === 0}
               lang={lang}
               onClick={() => onNavigate('detail', { destKey: dest.key })}
             />

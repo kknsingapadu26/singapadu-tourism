@@ -1,7 +1,10 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { type AppPage, type DestinationKey, type Language, type Navigate, TRANSLATIONS, DESTS } from '@/data';
+import Image from 'next/image';
+import Link from 'next/link';
+import { type AppPage, type Language, TRANSLATIONS, DESTS } from '@/data';
+import { getNavigationHref } from '@/lib/navigation';
 import { ThemeToggle } from '../ui/ThemeToggle';
 import { Icon } from '../ui/Icon';
 
@@ -11,7 +14,6 @@ interface HeaderProps {
   dark: boolean;
   onToggleTheme: (dark: boolean) => void;
   activeNav: string;
-  onNavigate: Navigate;
   isTransparent?: boolean;
 }
 
@@ -21,7 +23,6 @@ export const Header: React.FC<HeaderProps> = ({
   dark,
   onToggleTheme,
   activeNav,
-  onNavigate,
   isTransparent = false
 }) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -84,22 +85,11 @@ export const Header: React.FC<HeaderProps> = ({
     return () => desktopQuery.removeEventListener('change', closeMobileMenu);
   }, []);
 
-  const navItems: Array<{ label: string; key: AppPage }> = [
-    { label: t.nav.home, key: 'home' },
-    { label: t.nav.destinations, key: 'destinations' },
-    { label: t.nav.events, key: 'events' },
-    { label: t.nav.about, key: 'about' }
+  const navItems: Array<{ label: string; key: AppPage; href: string }> = [
+    { label: t.nav.home, key: 'home', href: getNavigationHref('home') },
+    { label: t.nav.destinations, key: 'destinations', href: getNavigationHref('destinations') },
+    { label: t.nav.about, key: 'about', href: getNavigationHref('about') }
   ];
-
-  const handleNavClick = (key: AppPage) => {
-    setMenuOpen(false);
-    onNavigate(key);
-  };
-
-  const handleDestDetailClick = (destKey: DestinationKey) => {
-    setMenuOpen(false);
-    onNavigate('detail', { destKey });
-  };
 
   const isOverlay = isTransparent && !scrolled;
   const showUtilityBar = !scrolled || headerVisible;
@@ -168,13 +158,16 @@ export const Header: React.FC<HeaderProps> = ({
         {/* Main Navbar */}
         <div className={`max-w-[1200px] mx-auto px-4 sm:px-6 flex items-center justify-between gap-4 transition-[height] duration-[var(--dur-med)] ease-[var(--ease-out)] ${scrolled ? 'h-16' : 'h-16 sm:h-20'}`}>
           {/* Logo / Crest */}
-          <button
-            onClick={() => onNavigate('home')}
+          <Link
+            href={getNavigationHref('home')}
             className="flex items-center gap-3 cursor-pointer text-left group"
           >
-            <img
+            <Image
               src="/logos/logo-kkn-singapadu.webp"
               alt="Logo Desa Singapadu"
+              width={40}
+              height={40}
+              loading="eager"
               className="w-10 h-10 object-contain drop-shadow-[0_2px_8px_rgba(0,0,0,.65)] group-hover:scale-103 transition-transform duration-[var(--dur-med)] ease-[var(--ease-out)]"
             />
             <div>
@@ -189,16 +182,16 @@ export const Header: React.FC<HeaderProps> = ({
                 Village Tourism
               </span>
             </div>
-          </button>
+          </Link>
 
           {/* Desktop Navigation Links */}
           <nav className="hidden md:flex items-center gap-8">
             {navItems.map((item) => {
               const isActive = activeNav === item.label || (activeNav === '' && item.key === 'home');
               return (
-                <button
+                <Link
                   key={item.key}
-                  onClick={() => handleNavClick(item.key)}
+                  href={item.href}
                   data-active={isActive}
                   className={`text-sm font-semibold tracking-wide transition-colors duration-[var(--dur-fast)] cursor-pointer relative py-2 ${
                     isOverlay ? 'text-white hover:text-white' : 'text-[var(--text-primary)] hover:text-[var(--brand-primary)]'
@@ -208,7 +201,7 @@ export const Header: React.FC<HeaderProps> = ({
                   {isActive && (
                     <span className="absolute -bottom-0.5 left-0 right-0 h-0.5 bg-[var(--accent)] animate-sgp-fade" />
                   )}
-                </button>
+                </Link>
               );
             })}
           </nav>
@@ -250,12 +243,13 @@ export const Header: React.FC<HeaderProps> = ({
         >
           <div className="min-h-full flex flex-col">
             <nav aria-label="Mobile">
-              <button
-                onClick={() => handleNavClick('home')}
-                className={`w-full border-b border-white/8 bg-[var(--mobile-nav-level-1)] px-6 py-5 text-left text-2xl font-extrabold transition-colors duration-[var(--dur-fast)] hover:bg-white/8 ${activeNav === t.nav.home || activeNav === '' ? 'border-l-4 border-l-[var(--accent)]' : ''}`}
+              <Link
+                href={getNavigationHref('home')}
+                onClick={() => setMenuOpen(false)}
+                className={`block w-full border-b border-white/8 bg-[var(--mobile-nav-level-1)] px-6 py-5 text-left text-2xl font-extrabold transition-colors duration-[var(--dur-fast)] hover:bg-white/8 ${activeNav === t.nav.home || activeNav === '' ? 'border-l-4 border-l-[var(--accent)]' : ''}`}
               >
                 {t.nav.home}
-              </button>
+              </Link>
 
               <div className="border-b border-white/8 bg-[var(--mobile-nav-level-2)]">
                 <button
@@ -269,38 +263,34 @@ export const Header: React.FC<HeaderProps> = ({
 
                 {destSubOpen && (
                   <div className="border-t border-white/8 bg-black/12 px-6 py-3 animate-sgp-fade">
-                    <button
-                      onClick={() => handleNavClick('destinations')}
-                      className="w-full py-2 text-left text-sm font-bold text-[var(--green-300)] hover:underline underline-offset-4"
+                    <Link
+                      href={getNavigationHref('destinations')}
+                      onClick={() => setMenuOpen(false)}
+                      className="block w-full py-2 text-left text-sm font-bold text-[var(--green-300)] hover:underline underline-offset-4"
                     >
                       {t.menu.all}
-                    </button>
+                    </Link>
                     {DESTS.map((d) => (
-                      <button
+                      <Link
                         key={d.key}
-                        onClick={() => handleDestDetailClick(d.key)}
+                        href={getNavigationHref('detail', { destKey: d.key })}
+                        onClick={() => setMenuOpen(false)}
                         className="block w-full truncate py-2 text-left text-sm text-white/80 hover:text-white transition-colors duration-[var(--dur-fast)]"
                       >
                         {d[lang].title}
-                      </button>
+                      </Link>
                     ))}
                   </div>
                 )}
               </div>
 
-              <button
-                onClick={() => handleNavClick('events')}
-                className={`w-full border-b border-white/8 bg-[var(--mobile-nav-level-3)] px-6 py-5 text-left text-2xl font-extrabold transition-colors duration-[var(--dur-fast)] hover:bg-white/8 ${activeNav === t.nav.events ? 'border-l-4 border-l-[var(--accent)]' : ''}`}
-              >
-                {t.nav.events}
-              </button>
-
-              <button
-                onClick={() => handleNavClick('about')}
-                className={`w-full border-b border-white/8 bg-[var(--mobile-nav-level-4)] px-6 py-5 text-left text-2xl font-extrabold transition-colors duration-[var(--dur-fast)] hover:bg-white/8 ${activeNav === t.nav.about ? 'border-l-4 border-l-[var(--accent)]' : ''}`}
+              <Link
+                href={getNavigationHref('about')}
+                onClick={() => setMenuOpen(false)}
+                className={`block w-full border-b border-white/8 bg-[var(--mobile-nav-level-3)] px-6 py-5 text-left text-2xl font-extrabold transition-colors duration-[var(--dur-fast)] hover:bg-white/8 ${activeNav === t.nav.about ? 'border-l-4 border-l-[var(--accent)]' : ''}`}
               >
                 {t.nav.about}
-              </button>
+              </Link>
             </nav>
 
             <div className="px-6 py-7">
@@ -326,20 +316,22 @@ export const Header: React.FC<HeaderProps> = ({
             </div>
 
             <div className="mt-auto grid grid-cols-2 gap-3 p-6 pt-10">
-              <button
-                onClick={() => handleNavClick('about')}
+              <Link
+                href={getNavigationHref('about')}
+                onClick={() => setMenuOpen(false)}
                 className="flex min-h-24 flex-col items-center justify-center gap-2 rounded-sm bg-[var(--mobile-nav-action)] px-3 py-4 font-bold transition-colors duration-[var(--dur-fast)] hover:bg-white/16"
               >
                 <Icon name="map" className="h-6 w-6" />
                 <span>{t.menu.map}</span>
-              </button>
-              <button
-                onClick={() => handleNavClick('about')}
+              </Link>
+              <Link
+                href={getNavigationHref('about')}
+                onClick={() => setMenuOpen(false)}
                 className="flex min-h-24 flex-col items-center justify-center gap-2 rounded-sm bg-[var(--mobile-nav-action)] px-3 py-4 font-bold transition-colors duration-[var(--dur-fast)] hover:bg-white/16"
               >
                 <Icon name="message-circle" className="h-6 w-6" />
                 <span>{t.menu.contact}</span>
-              </button>
+              </Link>
             </div>
           </div>
         </div>

@@ -1,9 +1,11 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { type Language, type Navigate, TRANSLATIONS, DESTS } from '@/data';
 import { Button } from '../ui/Button';
 import { Icon } from '../ui/Icon';
+import { ImagePlaceholder } from '../ui/ImagePlaceholder';
 
 interface MustSeeSpotlightProps {
   lang: Language;
@@ -30,16 +32,26 @@ export const MustSeeSpotlight: React.FC<MustSeeSpotlightProps> = ({ lang, onNavi
             {DESTS.map((spot, idx) => {
               const isSelected = idx === spotIdx;
               return (
-                <img
+                <div
                   key={spot.key}
-                  src={spot.img || "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&q=80&w=1600"}
-                  alt={isSelected ? spot[lang].title : ''}
                   aria-hidden={!isSelected}
                   style={{ clipPath: clipPathFor(idx) }}
-                  className={`absolute inset-0 h-full w-full object-cover transition-[clip-path,scale] duration-[var(--dur-carousel)] ease-[var(--ease-out)] ${
+                  className={`absolute inset-0 transition-[clip-path,scale] duration-[var(--dur-carousel)] ease-[var(--ease-out)] ${
                     isSelected ? 'z-10 scale-100' : 'z-0 scale-[1.025]'
                   }`}
-                />
+                >
+                  {spot.img ? (
+                    <Image
+                      src={spot.img}
+                      alt={isSelected ? spot[lang].title : ''}
+                      fill
+                      sizes="(max-width: 1360px) 100vw, 1360px"
+                      className="object-cover"
+                    />
+                  ) : (
+                    <ImagePlaceholder label={(spot as Record<Language, { title: string }>)[lang].title} tone={(spot as { tone?: 'green' | 'amber' | 'sky' | 'navy' }).tone} />
+                  )}
+                </div>
               );
             })}
             <div className="absolute inset-0 z-20 bg-gradient-to-t from-black/45 via-black/5 to-transparent" />

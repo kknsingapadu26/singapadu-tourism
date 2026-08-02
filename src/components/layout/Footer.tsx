@@ -1,15 +1,17 @@
 'use client';
 
 import React from 'react';
-import { type Language, type Navigate, TRANSLATIONS, CONTACT_INFO } from '@/data';
+import Image from 'next/image';
+import Link from 'next/link';
+import { type Language, TRANSLATIONS, CONTACT_INFO } from '@/data';
+import { getNavigationHref } from '@/lib/navigation';
 import { Icon } from '../ui/Icon';
 
 interface FooterProps {
   lang: Language;
-  onNavigate: Navigate;
 }
 
-export const Footer: React.FC<FooterProps> = ({ lang, onNavigate }) => {
+export const Footer: React.FC<FooterProps> = ({ lang }) => {
   const t = TRANSLATIONS[lang];
   const waLink = `https://wa.me/${CONTACT_INFO.whatsappNumber.replace(/\D/g, '')}?text=${encodeURIComponent(t.waGeneral)}`;
 
@@ -20,9 +22,11 @@ export const Footer: React.FC<FooterProps> = ({ lang, onNavigate }) => {
           {/* Col 1: Brand & Blurb */}
           <div className="md:col-span-1 space-y-4">
             <div className="flex items-center gap-3">
-              <img
+              <Image
                 src="/logos/logo-desa-singapadu.webp"
                 alt="Logo Desa Singapadu"
+                width={40}
+                height={40}
                 className="w-10 h-10 object-contain rounded-xl"
               />
               <div>
@@ -46,28 +50,20 @@ export const Footer: React.FC<FooterProps> = ({ lang, onNavigate }) => {
             </h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <button
-                  onClick={() => onNavigate('destinations')}
+                <Link
+                  href={getNavigationHref('destinations')}
                   className="hover:text-white transition-colors cursor-pointer"
                 >
                   {t.nav.destinations}
-                </button>
+                </Link>
               </li>
               <li>
-                <button
-                  onClick={() => onNavigate('events')}
-                  className="hover:text-white transition-colors cursor-pointer"
-                >
-                  {t.nav.events}
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => onNavigate('about')}
+                <Link
+                  href={getNavigationHref('about')}
                   className="hover:text-white transition-colors cursor-pointer"
                 >
                   {t.nav.about}
-                </button>
+                </Link>
               </li>
             </ul>
           </div>
@@ -79,20 +75,20 @@ export const Footer: React.FC<FooterProps> = ({ lang, onNavigate }) => {
             </h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <button
-                  onClick={() => onNavigate('about')}
+                <Link
+                  href={getNavigationHref('about')}
                   className="hover:text-white transition-colors cursor-pointer"
                 >
                   {t.footer.plan}
-                </button>
+                </Link>
               </li>
               <li>
-                <button
-                  onClick={() => onNavigate('about')}
+                <Link
+                  href={getNavigationHref('about')}
                   className="hover:text-white transition-colors cursor-pointer"
                 >
                   {t.footer.getting}
-                </button>
+                </Link>
               </li>
               <li>
                 <a
@@ -137,9 +133,11 @@ export const Footer: React.FC<FooterProps> = ({ lang, onNavigate }) => {
           <div className="flex items-center gap-6 flex-wrap">
             {/* Government Logo Crest */}
             <div className="flex items-center gap-2.5">
-              <img
+              <Image
                 src="/logos/logo-desa-singapadu.webp"
                 alt="Pemerintah Desa Singapadu"
+                width={36}
+                height={36}
                 className="w-9 h-9 object-contain"
               />
               <span className="text-xs text-[#9BA89D] leading-tight">
@@ -149,9 +147,11 @@ export const Footer: React.FC<FooterProps> = ({ lang, onNavigate }) => {
 
             {/* University Crest */}
             <div className="flex items-center gap-2.5">
-              <img
+              <Image
                 src="/logos/logo-pnb.webp"
                 alt="Politeknik Negeri Bali"
+                width={36}
+                height={36}
                 className="w-9 h-9 object-contain"
               />
               <span className="text-xs text-[#9BA89D] leading-tight">
@@ -161,9 +161,11 @@ export const Footer: React.FC<FooterProps> = ({ lang, onNavigate }) => {
 
             {/* KKN Logo Crest */}
             <div className="flex items-center gap-2.5">
-              <img
+              <Image
                 src="/logos/logo-kkn-singapadu.webp"
                 alt="KKN Singapadu"
+                width={36}
+                height={36}
                 className="w-9 h-9 object-contain rounded-full"
               />
               <span className="text-xs text-[#9BA89D] leading-tight">

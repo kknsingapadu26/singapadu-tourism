@@ -10,13 +10,11 @@ import React, {
 } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import {
-  type AppPage,
   type Language,
   type Navigate,
-  type NavigationOptions,
-  DESTS,
   TRANSLATIONS,
 } from '@/data';
+import { getNavigationHref } from '@/lib/navigation';
 import { Footer } from './Footer';
 import { Header } from './Header';
 
@@ -26,22 +24,6 @@ interface SiteContextValue {
 }
 
 const SiteContext = createContext<SiteContextValue | null>(null);
-
-function navigationHref(page: AppPage, options?: NavigationOptions) {
-  if (page === 'home') return '/';
-  if (page === 'events') return '/events';
-  if (page === 'about') return '/about';
-
-  if (page === 'detail') {
-    const destination = DESTS.find((item) => item.key === options?.destKey);
-    return destination ? `/destinations/${destination.slug}` : '/destinations';
-  }
-
-  if (!options?.cat || options.cat === 'All') return '/destinations';
-
-  const params = new URLSearchParams({ category: options.cat });
-  return `/destinations?${params.toString()}`;
-}
 
 export function useSite() {
   const context = useContext(SiteContext);
@@ -81,6 +63,11 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
     return () => cancelAnimationFrame(frame);
   }, []);
 
+  useEffect(() => {
+    router.prefetch('/destinations');
+    router.prefetch('/about');
+  }, [router]);
+
   const handleSetLang = useCallback((newLang: Language) => {
     setLang(newLang);
     document.documentElement.lang = newLang;
@@ -106,16 +93,14 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
   }, []);
 
   const navigate = useCallback<Navigate>((page, options) => {
-    router.push(navigationHref(page, options));
+    router.push(getNavigationHref(page, options));
   }, [router]);
 
   const activeNavLabel = pathname.startsWith('/destinations')
     ? TRANSLATIONS[lang].nav.destinations
-    : pathname.startsWith('/events')
-      ? TRANSLATIONS[lang].nav.events
-      : pathname.startsWith('/about')
-        ? TRANSLATIONS[lang].nav.about
-        : TRANSLATIONS[lang].nav.home;
+    : pathname.startsWith('/about')
+      ? TRANSLATIONS[lang].nav.about
+      : TRANSLATIONS[lang].nav.home;
 
   const contextValue = useMemo(() => ({ lang, navigate }), [lang, navigate]);
 
@@ -128,13 +113,12 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
           dark={dark}
           onToggleTheme={handleToggleTheme}
           activeNav={activeNavLabel}
-          onNavigate={navigate}
           isTransparent={pathname === '/'}
         />
 
         <main className="flex-1">{children}</main>
 
-        <Footer lang={lang} onNavigate={navigate} />
+        <Footer lang={lang} />
       </div>
     </SiteContext.Provider>
   );
